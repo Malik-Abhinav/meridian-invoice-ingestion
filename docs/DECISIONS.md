@@ -29,3 +29,11 @@
 - **Decision:** Domain money values must be finite, nonnegative `Decimal` instances. Float, integer, and string inputs are rejected. The domain does not round or choose a currency scale yet.
 - **Reason:** Callers must parse money deliberately, preserving exact input precision. Database precision and currency policy will be defined with the schema.
 - **Decision:** Timestamps must be timezone-aware `datetime` values and are normalized to UTC at the domain boundary.
+
+## 6. Canonical invoice identity and upload attempts
+
+- **Decision:** Store immutable document identity by SHA-256, record every upload attempt separately, and create/link a canonical invoice only after supplier identity is known. A partial unique index protects `(supplier_id, invoice_number_normalized)` when a number exists.
+- **Reason:** Repeated bytes and conflicting documents remain traceable without creating duplicate canonical invoice obligations. Missing invoice numbers can remain unresolved.
+- **Trade-off:** Hash matching, number normalization, and conflict classification need explicit service logic later. Database uniqueness cannot decide whether two different documents represent the same invoice.
+- **Decision:** Use SQLAlchemy 2.x typed declarative models and PostgreSQL-compatible UUID, `NUMERIC(18,4)`, and timezone-aware timestamp columns. Only SQLAlchemy is added as a runtime dependency; a PostgreSQL driver waits until database execution is needed.
+- **Trade-off:** Model metadata tests do not prove that PostgreSQL enforces constraints. Task 5 will verify the migration and live constraints.
