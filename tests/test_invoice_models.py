@@ -21,9 +21,9 @@ def test_database_url_requires_environment(monkeypatch: pytest.MonkeyPatch) -> N
 
 def test_expected_tables_and_relationships() -> None:
     configure_mappers()
-    assert set(Base.metadata.tables) == {
+    assert {
         "suppliers", "products", "invoices", "invoice_lines", "invoice_documents", "invoice_upload_attempts"
-    }
+    } <= set(Base.metadata.tables)
     assert Invoice.supplier.property.mapper.class_ is Supplier
     assert Invoice.lines.property.mapper.class_ is InvoiceLine
     assert Invoice.upload_attempts.property.mapper.class_ is InvoiceUploadAttempt

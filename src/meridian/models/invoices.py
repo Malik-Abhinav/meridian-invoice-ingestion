@@ -23,6 +23,7 @@ class Supplier(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utc_now, server_default=func.now())
 
     invoices: Mapped[list["Invoice"]] = relationship(back_populates="supplier")
+    purchase_orders: Mapped[list["PurchaseOrder"]] = relationship(back_populates="supplier")
 
     __table_args__ = (
         CheckConstraint("length(trim(code)) > 0", name="ck_suppliers_code_not_blank"),
@@ -40,6 +41,9 @@ class Product(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utc_now, server_default=func.now())
 
     invoice_lines: Mapped[list["InvoiceLine"]] = relationship(back_populates="product")
+    purchase_order_lines: Mapped[list["PurchaseOrderLine"]] = relationship(back_populates="product")
+    inventory_balances: Mapped[list["InventoryBalance"]] = relationship(back_populates="product")
+    inventory_movements: Mapped[list["InventoryMovement"]] = relationship(back_populates="product")
 
     __table_args__ = (
         CheckConstraint("length(trim(name)) > 0", name="ck_products_name_not_blank"),
@@ -96,6 +100,7 @@ class InvoiceLine(Base):
 
     invoice: Mapped[Invoice] = relationship(back_populates="lines")
     product: Mapped[Product | None] = relationship(back_populates="invoice_lines")
+    receipt_movements: Mapped[list["InventoryMovement"]] = relationship(back_populates="invoice_line")
 
     __table_args__ = (
         CheckConstraint("line_number > 0", name="ck_invoice_lines_number_positive"),

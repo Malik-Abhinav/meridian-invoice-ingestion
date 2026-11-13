@@ -37,3 +37,12 @@
 - **Trade-off:** Hash matching, number normalization, and conflict classification need explicit service logic later. Database uniqueness cannot decide whether two different documents represent the same invoice.
 - **Decision:** Use SQLAlchemy 2.x typed declarative models and PostgreSQL-compatible UUID, `NUMERIC(18,4)`, and timezone-aware timestamp columns. Only SQLAlchemy is added as a runtime dependency; a PostgreSQL driver waits until database execution is needed.
 - **Trade-off:** Model metadata tests do not prove that PostgreSQL enforces constraints. Task 5 will verify the migration and live constraints.
+
+## 7. Purchase orders, inventory, and audit schema
+
+- **Decision:** Use `draft`, `open`, `closed`, and `cancelled` purchase-order statuses. Keep ordered quantities on PO lines and derive received quantities from receipt movements and their reversals.
+- **Reason:** Partial receipts are visible without maintaining a second counter that can diverge from the movement ledger. A closed order need not equal its ordered quantity.
+- **Decision:** Keep one nonnegative integer balance per product/location and an append-only movement ledger with `receipt`, `adjustment`, and `reversal` types. Unique posting keys, receipt invoice-line keys, and reversal targets support idempotent future operations.
+- **Trade-off:** Schema constraints alone do not ensure atomic posting, safe concurrent balance updates, or immutable records. Those require a transaction service and PostgreSQL verification in later tasks.
+- **Decision:** Store audit events separately from extraction data, with actor and entity identity plus optional JSONB before/after snapshots. Staff events require an actor ID; system events may omit one.
+- **Decision:** Retain four decimal places for unit cost and monetary fields. Future input services must reject values with excess scale and apply explicit currency rounding rules; the database must not silently decide business rounding.
