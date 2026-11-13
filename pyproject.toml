@@ -11,6 +11,7 @@ dependencies = ["SQLAlchemy>=2.0,<2.1"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
+db = ["psycopg[binary]>=3.2,<4"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

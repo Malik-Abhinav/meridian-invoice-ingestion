@@ -46,3 +46,11 @@
 - **Trade-off:** Schema constraints alone do not ensure atomic posting, safe concurrent balance updates, or immutable records. Those require a transaction service and PostgreSQL verification in later tasks.
 - **Decision:** Store audit events separately from extraction data, with actor and entity identity plus optional JSONB before/after snapshots. Staff events require an actor ID; system events may omit one.
 - **Decision:** Retain four decimal places for unit cost and monetary fields. Future input services must reject values with excess scale and apply explicit currency rounding rules; the database must not silently decide business rounding.
+
+## 8. Local Docker foundation
+
+- **Decision:** Use one PostgreSQL 16 service and one Python 3.12 test/development service on a private Compose network. Persist database files in a named volume, without publishing the database port to the host.
+- **Reason:** The test container can reach the database by service name while keeping the local stack small and isolated. Compose waits for PostgreSQL's health check before starting the Python service.
+- **Decision:** Install the project from `pyproject.toml` in the Python image with `test` and `db` extras. The optional `db` extra adds psycopg only where PostgreSQL access is needed.
+- **Decision:** Put development-only credentials in an ignored `.env` file copied from `.env.example`; Compose constructs `DATABASE_URL` for the Python service. No credentials are embedded in application code.
+- **Verification:** The Python Compose service ran all 80 tests and connected to PostgreSQL 16 with `SELECT 1`. A health check is a startup gate, not a guarantee that the database remains available for the lifetime of a command.
