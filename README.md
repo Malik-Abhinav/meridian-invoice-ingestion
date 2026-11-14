@@ -52,4 +52,27 @@ Reset the **local** PostgreSQL volume when you want a fresh database (this delet
 docker compose down -v
 ```
 
-The current tests inspect model definitions and generic constraints. Live PostgreSQL constraint tests and migrations are planned for a later task.
+The test suite includes model checks and live PostgreSQL constraint tests.
+
+## Database migrations and live constraint tests
+
+Alembic reads `DATABASE_URL` from the environment and includes every model registered in `meridian.models`. With the Compose database running, apply the initial revision to the local development database:
+
+```sh
+docker compose run --rm test alembic upgrade head
+docker compose run --rm test alembic current
+```
+
+Run the full suite, including live PostgreSQL checks:
+
+```sh
+docker compose run --rm test
+```
+
+The integration tests create uniquely named temporary databases, run upgrade/downgrade/reupgrade and insert checks, then drop only those temporary databases. They do not reset the development database. The configured database user needs permission to create databases for these tests. To run only package and model tests locally without a PostgreSQL connection:
+
+```sh
+python -m pytest -m 'not postgres'
+```
+
+Use `alembic downgrade base` only on a disposable database; it drops the application tables in that database. The migration cycle test exercises this safely in its own temporary database.

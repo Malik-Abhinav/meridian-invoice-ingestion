@@ -7,6 +7,8 @@ WORKDIR /workspace
 
 COPY pyproject.toml README.md ./
 COPY src ./src
+COPY alembic.ini ./
+COPY alembic ./alembic
 COPY tests ./tests
 
 RUN python -m pip install --no-cache-dir -e '.[test,db]'

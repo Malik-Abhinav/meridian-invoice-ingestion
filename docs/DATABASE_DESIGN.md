@@ -1,6 +1,6 @@
 # Database design: invoice identity, purchasing, inventory, and audit (Tasks 3–4)
 
-This document describes the proposed PostgreSQL schema. No migration or live database verification exists yet.
+This document describes the PostgreSQL schema and its initial Alembic migration (`0001_initial`).
 
 ## Identity and upload history
 
@@ -33,7 +33,9 @@ UPC and NDC are stored in separate nullable normalized columns. A product needs 
 
 ## Boundaries of verification
 
-Tests inspect ORM metadata, relationship configuration, and PostgreSQL DDL compilation. They do not execute constraints in PostgreSQL. Task 5 will add migrations and live database constraint tests. Application code must validate `Decimal` and UTC-aware timestamps before persistence; `NUMERIC` and `TIMESTAMP WITH TIME ZONE` alone do not reject Python floats or naive datetimes at the ORM boundary.
+Unit tests inspect ORM metadata, relationship configuration, and PostgreSQL DDL compilation. Live PostgreSQL 16 integration tests run the migration in uniquely named disposable databases and verify constraints with actual inserts and expected database errors. They also exercise upgrade, downgrade, and reupgrade. Application code must validate `Decimal` and UTC-aware timestamps before persistence; `NUMERIC` and `TIMESTAMP WITH TIME ZONE` alone do not reject Python floats or naive datetimes at the ORM boundary.
+
+The migration includes all 12 modeled tables, 15 foreign keys, unique constraints and partial indexes, named checks, `NUMERIC(18,4)` money columns, and `TIMESTAMP WITH TIME ZONE` event columns. Alembic's autogeneration was reviewed against the models and verified with `alembic check` after upgrade. The migration does not insert seed data. The development database is never dropped by integration tests.
 
 ## Partial receipts and posting design
 

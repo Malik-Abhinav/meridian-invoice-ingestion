@@ -7,7 +7,7 @@ name = "meridian-supplier-invoice-ingestion"
 version = "0.1.0"
 description = "Supplier invoice ingestion and inventory reconciliation assessment"
 requires-python = ">=3.12,<3.13"
-dependencies = ["SQLAlchemy>=2.0,<2.1"]
+dependencies = ["SQLAlchemy>=2.0,<2.1", "alembic>=1.20,<2"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
@@ -18,3 +18,4 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = ["postgres: requires a disposable PostgreSQL database"]
