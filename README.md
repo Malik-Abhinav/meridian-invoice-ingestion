@@ -1,6 +1,6 @@
 # Meridian Supplier Invoice Ingestion
 
-An incremental, synthetic-data-only implementation of the AYC IT Healthcare take-home assessment. This repository currently contains the Python package foundation and its import test.
+An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes domain contracts, database models, and PostgreSQL migrations with live constraint tests.
 
 ## Setup
 
@@ -27,6 +27,7 @@ Docker Compose provides PostgreSQL 16 and a Python 3.12 test container. The data
 
 ```sh
 cp .env.example .env
+# Set a local-only POSTGRES_PASSWORD in .env before continuing.
 docker compose build
 docker compose up -d db
 docker compose run --rm test
