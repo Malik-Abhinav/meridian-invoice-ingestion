@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: meridian_ci
+          POSTGRES_PASSWORD: meridian_ci_test_only
+          POSTGRES_DB: meridian_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U meridian_ci -d meridian_ci"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 30
+    env:
+      DATABASE_URL: postgresql+psycopg://meridian_ci:meridian_ci_test_only@127.0.0.1:5432/meridian_ci
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install project and test dependencies
+        run: python -m pip install -e '.[test,db]'
+      - name: Apply migrations
+        run: alembic upgrade head
+      - name: Run full test suite
+        run: python -m pytest -q --junitxml=/tmp/meridian-pytest.xml
+      - name: Require PostgreSQL tests to execute
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+
+          root = ET.parse('/tmp/meridian-pytest.xml').getroot()
+          cases = list(root.iter('testcase'))
+          expected = {
+              'test_initial_migration_upgrade_downgrade_reupgrade',
+              'test_invoice_identity_and_product_constraints',
+              'test_purchasing_inventory_and_audit_constraints',
+              'test_timestamp_round_trip_and_postgresql_types',
+          }
+          executed = {case.get('name') for case in cases if case.find('skipped') is None}
+          missing = expected - executed
+          if missing:
+              raise SystemExit(f'PostgreSQL integration tests missing or skipped: {sorted(missing)}')
+          if any(case.find('skipped') is not None for case in cases):
+              raise SystemExit('CI must not skip tests')
+          print(f'Validated {len(cases)} test cases; all PostgreSQL integration tests executed.')
+          PY
+      - name: Check migration drift
+        run: alembic check

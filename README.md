@@ -1,5 +1,7 @@
 # Meridian Supplier Invoice Ingestion
 
+[![CI](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml)
+
 An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes domain contracts, database models, and PostgreSQL migrations with live constraint tests.
 
 ## Setup
@@ -77,3 +79,7 @@ python -m pytest -m 'not postgres'
 ```
 
 Use `alembic downgrade base` only on a disposable database; it drops the application tables in that database. The migration cycle test exercises this safely in its own temporary database.
+
+## Continuous integration
+
+The [CI workflow](.github/workflows/ci.yml) runs on pushes to `main` and pull requests targeting `main`. It uses Python 3.12 and a temporary PostgreSQL 16 service, applies migrations, runs the full pytest suite, fails if the PostgreSQL integration tests are missing or skipped, and checks for migration drift. No production database credentials are used.
