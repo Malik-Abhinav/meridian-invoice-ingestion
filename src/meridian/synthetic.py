@@ -39,10 +39,17 @@ class CaseCategory(StrEnum):
     PRICE_ANOMALY = "price_anomaly"
 
 
+class SupplierLayout(StrEnum):
+    TRADITIONAL = "traditional"
+    COMPACT = "compact"
+    PURCHASE_ORDER = "purchase_order"
+
+
 class SyntheticSupplier(SyntheticModel):
     code: str = Field(min_length=1, max_length=40, pattern=r"^[A-Z][A-Z0-9_]*$")
     name: str = Field(min_length=1, max_length=200)
     fictional: bool = Field(default=True)
+    layout: SupplierLayout = SupplierLayout.TRADITIONAL
 
     @field_validator("fictional")
     @classmethod
@@ -117,6 +124,7 @@ class SyntheticInvoiceInput(SyntheticModel):
     supplier: SyntheticSupplier
     invoice_number: str = Field(min_length=1, max_length=120)
     invoice_date: date
+    purchase_order_reference: str | None = Field(default=None, min_length=1, max_length=80)
     products: tuple[SyntheticProduct, ...] = Field(min_length=1)
     lines: tuple[SyntheticLineItem, ...] = Field(min_length=1)
     displayed_totals: InvoiceTotals | None = None
@@ -144,6 +152,7 @@ class ExpectedGroundTruth(SyntheticModel):
     expected_supplier_code: str
     expected_invoice_number: str
     expected_invoice_date: date
+    expected_purchase_order_reference: str | None = None
     expected_products: tuple[SyntheticProduct, ...] = Field(min_length=1)
     expected_lines: tuple[SyntheticLineItem, ...] = Field(min_length=1)
     expected_totals: InvoiceTotals
@@ -176,6 +185,7 @@ class SyntheticCase(SyntheticModel):
             truth.expected_supplier_code,
             truth.expected_invoice_number,
             truth.expected_invoice_date,
+            truth.expected_purchase_order_reference,
             truth.expected_products,
             truth.expected_lines,
         )
@@ -183,6 +193,7 @@ class SyntheticCase(SyntheticModel):
             source.supplier.code,
             source.invoice_number,
             source.invoice_date,
+            source.purchase_order_reference,
             source.products,
             source.lines,
         )
