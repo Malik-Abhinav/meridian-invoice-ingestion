@@ -67,3 +67,12 @@
 - **Decision:** Run one read-only CI job for pushes to `main` and pull requests targeting `main`, with Python 3.12, a PostgreSQL 16 service, and dependencies installed from `pyproject.toml`.
 - **Decision:** Apply migrations before tests, verify the full pytest result has no skips and includes all four PostgreSQL integration tests, then run `alembic check`.
 - **Reason:** A missing database configuration must fail CI rather than quietly turn live constraint checks into skipped tests. The workflow uses temporary test-only credentials and pip caching; it has no deployment or write permission.
+
+## 11. Synthetic case and ground-truth contracts
+
+- **Decision:** Add Pydantic 2 as a runtime dependency for strict, frozen synthetic schemas. Keep `SyntheticInvoiceInput` and `ExpectedGroundTruth` as separate models inside a case. A renderer will receive only the input model. The schemas do not depend on database models, OCR, or PDF libraries.
+- **Reason:** Evaluation annotations such as unknown products, PO quantities, reference prices, and duplicate links must not leak into generated documents. Validation catches inconsistent case plans before a future corpus is rendered.
+- **Decision:** Require three distinct fictional suppliers and at least 60 planned cases spanning all seven primary categories. Use a versioned SHA-256-derived seed per case, avoiding process-randomized `hash()` and making case order irrelevant. This task does not generate those cases.
+- **Decision:** Accept canonical UPC-A (12 ASCII digits with check digit) and 11-digit 5-4-2 NDC strings. Require at least one identifier per synthetic product. Treat these as format checks, not claims of registry validity or database identity.
+- **Decision:** Require exact `Decimal` money with four or fewer fractional digits and 18 or fewer total digits; reject float and string inputs. Displayed totals may be absent only for missing-total cases; expected arithmetic totals remain in ground truth.
+- **Limitations:** A boolean fictional marker cannot prove invented names or identifiers. Future fixture review must exclude real pharmacy data and proprietary materials. No PDF renderer, image processing, OCR, complete corpus, or scoring logic is present.
