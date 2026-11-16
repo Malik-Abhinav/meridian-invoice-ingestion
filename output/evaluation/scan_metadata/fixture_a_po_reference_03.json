@@ -1,0 +1,29 @@
+{
+  "source_case_id": "fixture_a_po_reference_03",
+  "source_invoice_number": "FICT_A-INV-0003",
+  "source_pdf_sha256": "e828ea2acad4ff3bc5c0d74884d4cf6194f0c9531fd0ce39fe1171597d2e5115",
+  "supplier_code": "FICT_A",
+  "supplier_template": "traditional",
+  "degradation_type": "rotation",
+  "random_seed": 8504316464968148662,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "b5dc6121ed612e854b42bc0c7cb4fc13f91bffd5dedbf58c9f67fbefdf0fe594",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 7492563373913589224,
+      "source_width_px": 1241,
+      "source_height_px": 1754,
+      "width_px": 1275,
+      "height_px": 1778,
+      "resolution_dpi": 150,
+      "parameters": {
+        "blur_radius": 0.0,
+        "rotation_degrees": 1.082,
+        "contrast_factor": 1.0,
+        "jpeg_quality": null
+      }
+    }
+  ]
+}

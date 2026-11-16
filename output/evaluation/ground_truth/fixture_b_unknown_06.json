@@ -1,0 +1,95 @@
+{
+  "case_id": "fixture_b_unknown_06",
+  "scenario": "unknown_product",
+  "displayed_invoice": {
+    "case_id": "fixture_b_unknown_06",
+    "supplier": {
+      "code": "FICT_B",
+      "name": "Fable Ridge Distribution",
+      "fictional": true,
+      "layout": "compact"
+    },
+    "invoice_number": "FICT_B-INV-0006",
+    "invoice_date": "2026-02-14",
+    "purchase_order_reference": "FICT_B-PO-0006",
+    "products": [
+      {
+        "sku": "FICT_B06_P1",
+        "description": "Fictional cobalt unit pack",
+        "upc": "000000060127",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_B06_P2",
+        "description": "Imaginary violet display sleeve",
+        "upc": null,
+        "ndc": "00000060209"
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_B06_P1",
+        "quantity": 2,
+        "unit_cost": "18.1250",
+        "line_total": "36.2500"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_B06_P2",
+        "quantity": 5,
+        "unit_cost": "3.6250",
+        "line_total": "18.1250"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "54.3750",
+      "tax": "3",
+      "total": "57.3750"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "54.3750",
+    "tax": "3",
+    "total": "57.3750"
+  },
+  "expected_po_reference": "FICT_B-PO-0006",
+  "expected_po_supplier_code": "FICT_B",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B06_P1",
+      "product_identifier": "000000060127",
+      "quantity": 2,
+      "unit_cost": "18.1250"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B06_CATALOG_P2",
+      "product_identifier": "00000060288",
+      "quantity": 5,
+      "unit_cost": "3.6250"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_B06_P1",
+    "FICT_B06_CATALOG_P2"
+  ],
+  "known_product_identifiers": [
+    "000000060127",
+    "00000060288"
+  ],
+  "seeded_discrepancies": [
+    {
+      "finding": "unknown_product",
+      "field": "products[2].ndc",
+      "displayed_value": "00000060209",
+      "expected_value": "00000060288"
+    }
+  ],
+  "expected_validation_outcomes": [
+    "unknown_product"
+  ],
+  "expected_processing_decision": "review_required"
+}

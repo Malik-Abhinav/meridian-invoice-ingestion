@@ -1,0 +1,86 @@
+{
+  "case_id": "fixture_a_clean_01",
+  "scenario": "clean",
+  "displayed_invoice": {
+    "case_id": "fixture_a_clean_01",
+    "supplier": {
+      "code": "FICT_A",
+      "name": "Imaginary Harbor Wholesale",
+      "fictional": true,
+      "layout": "traditional"
+    },
+    "invoice_number": "FICT_A-INV-0001",
+    "invoice_date": "2026-01-08",
+    "purchase_order_reference": "FICT_A-PO-0001",
+    "products": [
+      {
+        "sku": "FICT_A01_P1",
+        "description": "Imaginary violet display sleeve",
+        "upc": "000000010115",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_A01_P2",
+        "description": "Fable teal mock supply bundle",
+        "upc": null,
+        "ndc": "00000010235"
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_A01_P1",
+        "quantity": 2,
+        "unit_cost": "4.1250",
+        "line_total": "8.2500"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_A01_P2",
+        "quantity": 3,
+        "unit_cost": "7.5000",
+        "line_total": "22.5000"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "30.7500",
+      "tax": "0.5",
+      "total": "31.2500"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "30.7500",
+    "tax": "0.5",
+    "total": "31.2500"
+  },
+  "expected_po_reference": "FICT_A-PO-0001",
+  "expected_po_supplier_code": "FICT_A",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A01_P1",
+      "product_identifier": "000000010115",
+      "quantity": 2,
+      "unit_cost": "4.1250"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A01_P2",
+      "product_identifier": "00000010235",
+      "quantity": 3,
+      "unit_cost": "7.5000"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_A01_P1",
+    "FICT_A01_P2"
+  ],
+  "known_product_identifiers": [
+    "000000010115",
+    "00000010235"
+  ],
+  "seeded_discrepancies": [],
+  "expected_validation_outcomes": [],
+  "expected_processing_decision": "auto_post_candidate"
+}

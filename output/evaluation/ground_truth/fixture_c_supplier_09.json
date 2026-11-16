@@ -1,0 +1,117 @@
+{
+  "case_id": "fixture_c_supplier_09",
+  "scenario": "po_supplier_mismatch",
+  "displayed_invoice": {
+    "case_id": "fixture_c_supplier_09",
+    "supplier": {
+      "code": "FICT_C",
+      "name": "Northstar Fictional Supply",
+      "fictional": true,
+      "layout": "purchase_order"
+    },
+    "invoice_number": "FICT_C-INV-0009",
+    "invoice_date": "2026-03-15",
+    "purchase_order_reference": "FICT_C-PO-0009",
+    "products": [
+      {
+        "sku": "FICT_C09_P1",
+        "description": "Fictional copper trial packet",
+        "upc": "000000090155",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_C09_P2",
+        "description": "Imaginary indigo sample case",
+        "upc": null,
+        "ndc": "00000090234"
+      },
+      {
+        "sku": "FICT_C09_P3",
+        "description": "Imaginary amber sample carton",
+        "upc": "000000090346",
+        "ndc": null
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_C09_P1",
+        "quantity": 1,
+        "unit_cost": "24.7500",
+        "line_total": "24.7500"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_C09_P2",
+        "quantity": 5,
+        "unit_cost": "4.8750",
+        "line_total": "24.3750"
+      },
+      {
+        "line_number": 3,
+        "product_sku": "FICT_C09_P3",
+        "quantity": 2,
+        "unit_cost": "12.2500",
+        "line_total": "24.5000"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "73.6250",
+      "tax": "4.5",
+      "total": "78.1250"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "73.6250",
+    "tax": "4.5",
+    "total": "78.1250"
+  },
+  "expected_po_reference": "FICT_C-PO-0009",
+  "expected_po_supplier_code": "FICT_B",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C09_P1",
+      "product_identifier": "000000090155",
+      "quantity": 1,
+      "unit_cost": "24.7500"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C09_P2",
+      "product_identifier": "00000090234",
+      "quantity": 5,
+      "unit_cost": "4.8750"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C09_P3",
+      "product_identifier": "000000090346",
+      "quantity": 2,
+      "unit_cost": "12.2500"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_C09_P1",
+    "FICT_C09_P2",
+    "FICT_C09_P3"
+  ],
+  "known_product_identifiers": [
+    "000000090155",
+    "00000090234",
+    "000000090346"
+  ],
+  "seeded_discrepancies": [
+    {
+      "finding": "po_supplier_mismatch",
+      "field": "supplier.code",
+      "displayed_value": "FICT_C",
+      "expected_value": "FICT_B"
+    }
+  ],
+  "expected_validation_outcomes": [
+    "po_supplier_mismatch"
+  ],
+  "expected_processing_decision": "review_required"
+}

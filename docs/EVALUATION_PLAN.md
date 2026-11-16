@@ -1,6 +1,6 @@
 # Synthetic invoice evaluation contract
 
-Task 6 defined schemas and a plan. Tasks 7 and 8 add three clean review PDFs and seven scanned review variants; the planned evaluation dataset has not been generated.
+Task 6 defined schemas and a plan. Tasks 7 and 8 added three clean review PDFs and seven scanned review variants. Task 9 adds nine evaluation fixtures; the planned 60-invoice corpus has not been generated.
 
 ## Planned corpus
 
@@ -12,7 +12,7 @@ Task 6 defined schemas and a plan. Tasks 7 and 8 add three clean review PDFs and
 
 `SyntheticCase.generation` contains only data a future renderer needs: supplier, invoice number/date, a product catalog, line items, optional displayed totals, and a blur request. `SyntheticCase.ground_truth` contains expected extracted fields and evaluation-only annotations. The renderer must accept `SyntheticInvoiceInput`, never the enclosing case or `ExpectedGroundTruth`. Unknown-product, duplicate, PO quantity, and reference-price labels must not appear on the rendered invoice merely because they are ground-truth annotations.
 
-Displayed totals are absent only for the missing-totals category, while ground truth still records the mathematically expected totals. Line extensions equal quantity times unit cost; subtotal equals the sum of line extensions; total equals subtotal plus tax. Money uses finite nonnegative `Decimal` values with at most four fractional digits and 18 total digits. Floats and implicit string conversion are rejected. Invoice dates are dates, not timestamps.
+Displayed totals are absent only for the missing-totals category, while ground truth still records the mathematically expected totals. Ordinary invoice line extensions equal quantity times unit cost; subtotal equals the sum of line extensions; total equals subtotal plus tax. Task 9 uses an explicit `PrintedTotals` type solely for deliberately wrong invoice-visible totals. Money uses finite nonnegative `Decimal` values with at most four fractional digits and 18 total digits. Python construction rejects floats and implicit string conversion. Serialized JSON accepts decimal strings for lossless round-tripping, but rejects JSON numbers for money. Invoice dates are dates, not timestamps.
 
 ## Identifiers and reproducibility
 
@@ -31,6 +31,26 @@ The three sample PDFs under `output/pdf/` are visual review fixtures, one per la
 `scan_invoice` accepts only `SyntheticInvoiceInput`, the matching deterministic clean PDF bytes, a master seed, and an explicit `ScanProfile`. It rejects a mismatched source. It does not access `ExpectedGroundTruth`. The clean PDF remains selectable and unchanged; the scan PDF has one raster image per page and no selectable page text. The JSON sidecar records source and output SHA-256 hashes so the paired artifacts can be checked without embedding evaluation labels in the scan.
 
 The seven review scans under `output/scans/` exercise all profiles at 150 DPI across all three suppliers. `derive_case_seed` supplies the case seed; a versioned SHA-256 derivation gives each page its own seed, which resolves the small rotation angle. Blur, contrast, and JPEG settings are fixed per profile and recorded for each page. Rotation expands the page image with white margins to avoid clipping. The same profile and seed produce identical PDF bytes and metadata. The `scan_blur` field remains a case-generation hint; a later corpus builder must map case category and hint to the explicit scan profile.
+
+## Nine evaluation fixtures (Task 9)
+
+Run `python scripts/generate_evaluation_fixtures.py` to recreate `output/evaluation/` with fixed master seed 2029 and 150 DPI. The nine case IDs are stable. Each fictional supplier has one clean case, one data or arithmetic discrepancy, and one matching or identity discrepancy. The scanner reuses the seven existing profiles; every case gets one selectable-text original and one image-only scanned PDF. PDF inputs contain only printed values. Evaluation-only JSON holds the expected PO reference, supplier, lines, known product SKUs, mathematically correct totals, seeded differences, expected findings, and a conservative processing decision. No discrepancy explanation is printed on a PDF.
+
+| Case | Scenario | Expected finding | Scan profile |
+| --- | --- | --- | --- |
+| `fixture_a_clean_01` | clean | none | clean raster |
+| `fixture_a_arithmetic_02` | printed subtotal and total exceed the line sum by 1.0000 | subtotal mismatch | mild blur |
+| `fixture_a_po_reference_03` | printed PO reference differs from expected PO | PO reference mismatch | rotation |
+| `fixture_b_clean_04` | clean | none | clean raster |
+| `fixture_b_quantity_05` | invoice quantity 7 versus PO quantity 5 | PO quantity mismatch | low contrast |
+| `fixture_b_unknown_06` | printed NDC absent from the expected catalog and PO line | unknown product | JPEG artifacts |
+| `fixture_c_clean_07` | clean | none | clean raster |
+| `fixture_c_price_08` | invoice unit cost 17.5000 versus PO cost 15.5000 | PO price mismatch | moderate blur |
+| `fixture_c_supplier_09` | invoice supplier C differs from expected PO supplier B | PO supplier mismatch | combined |
+
+The manifest at `output/evaluation/manifest.json` maps each case to its two PDFs, ground-truth JSON, scan-metadata JSON, profile, scenario, expected findings, and processing decision. Paths are relative to the manifest directory. `related_case_ids` is present as an empty list so later duplicate and idempotency cases can reference existing cases without changing the manifest shape. Clean cases are marked `auto_post_candidate` for evaluation routing only. All six discrepant cases require review. The fixture does not approve or post invoices; future validation must still prove an invoice eligible.
+
+Expected PO data are fixture evidence, not database purchase-order rows. The PO quantity example represents an ordered quantity and does not model cumulative partial receipts. The unknown-product mismatch is based on the printed NDC, not merely an internal SKU. The nine cases are separate from the three approved Task 7 PDFs and seven Task 8 scan samples. Synthetic identifiers are varied and syntactically valid; they are not claims that products exist in a real registry.
 
 ## Later full-dataset generation
 

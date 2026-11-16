@@ -1,0 +1,139 @@
+{
+  "case_id": "fixture_b_quantity_05",
+  "scenario": "po_quantity_mismatch",
+  "displayed_invoice": {
+    "case_id": "fixture_b_quantity_05",
+    "supplier": {
+      "code": "FICT_B",
+      "name": "Fable Ridge Distribution",
+      "fictional": true,
+      "layout": "compact"
+    },
+    "invoice_number": "FICT_B-INV-0005",
+    "invoice_date": "2026-02-09",
+    "purchase_order_reference": "FICT_B-PO-0005",
+    "products": [
+      {
+        "sku": "FICT_B05_P1",
+        "description": "Imaginary amber sample carton",
+        "upc": "000000050104",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_B05_P2",
+        "description": "Fictional cobalt unit pack",
+        "upc": null,
+        "ndc": "00000050269"
+      },
+      {
+        "sku": "FICT_B05_P3",
+        "description": "Imaginary violet display sleeve",
+        "upc": "000000050388",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_B05_P4",
+        "description": "Fable teal mock supply bundle",
+        "upc": null,
+        "ndc": "00000050478"
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_B05_P1",
+        "quantity": 3,
+        "unit_cost": "6.3750",
+        "line_total": "19.1250"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_B05_P2",
+        "quantity": 7,
+        "unit_cost": "2.8750",
+        "line_total": "20.1250"
+      },
+      {
+        "line_number": 3,
+        "product_sku": "FICT_B05_P3",
+        "quantity": 2,
+        "unit_cost": "14.5000",
+        "line_total": "29.0000"
+      },
+      {
+        "line_number": 4,
+        "product_sku": "FICT_B05_P4",
+        "quantity": 4,
+        "unit_cost": "5.2500",
+        "line_total": "21.0000"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "89.2500",
+      "tax": "2.5",
+      "total": "91.7500"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "89.2500",
+    "tax": "2.5",
+    "total": "91.7500"
+  },
+  "expected_po_reference": "FICT_B-PO-0005",
+  "expected_po_supplier_code": "FICT_B",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B05_P1",
+      "product_identifier": "000000050104",
+      "quantity": 3,
+      "unit_cost": "6.3750"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B05_P2",
+      "product_identifier": "00000050269",
+      "quantity": 5,
+      "unit_cost": "2.8750"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B05_P3",
+      "product_identifier": "000000050388",
+      "quantity": 2,
+      "unit_cost": "14.5000"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_B05_P4",
+      "product_identifier": "00000050478",
+      "quantity": 4,
+      "unit_cost": "5.2500"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_B05_P1",
+    "FICT_B05_P2",
+    "FICT_B05_P3",
+    "FICT_B05_P4"
+  ],
+  "known_product_identifiers": [
+    "000000050104",
+    "00000050269",
+    "000000050388",
+    "00000050478"
+  ],
+  "seeded_discrepancies": [
+    {
+      "finding": "po_quantity_mismatch",
+      "field": "lines[2].quantity",
+      "displayed_value": "7",
+      "expected_value": "5"
+    }
+  ],
+  "expected_validation_outcomes": [
+    "po_quantity_mismatch"
+  ],
+  "expected_processing_decision": "review_required"
+}
