@@ -33,8 +33,8 @@ def exact_money(value: object) -> Decimal:
         amount = Decimal(value)
     except InvalidOperation as exc:
         raise ValueError("invalid decimal amount") from exc
-    if not amount.is_finite() or amount < 0 or -amount.as_tuple().exponent > 4:
-        raise ValueError("money must be finite, nonnegative, and have at most four decimal places")
+    if not amount.is_finite() or -amount.as_tuple().exponent > 4:
+        raise ValueError("money must be finite and have at most four decimal places")
     if len(amount.as_tuple().digits) + max(amount.as_tuple().exponent, 0) > 18:
         raise ValueError("money exceeds 18 digits")
     return amount

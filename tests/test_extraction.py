@@ -48,7 +48,8 @@ def test_null_fields_and_duplicate_or_missing_lines_are_representable() -> None:
 
 
 @pytest.mark.parametrize("raw", [4.25, 1, float("nan"), float("inf"), "NaN", "Infinity",
-                                  "-1.00", "1.12345", "9999999999999999999", "oops"])
+                                  "1.12345", "-1.12345", "9999999999999999999",
+                                  "-9999999999999999999", "-Infinity", "oops"])
 def test_money_rejects_imprecise_or_invalid_values(raw) -> None:
     with pytest.raises((ValueError, ValidationError)):
         MoneyValue(value=raw)
@@ -57,6 +58,7 @@ def test_money_rejects_imprecise_or_invalid_values(raw) -> None:
 def test_money_keeps_decimal_exact_and_json_strings() -> None:
     assert MoneyValue.model_validate_json('{"value":"1.2300"}').value == Decimal("1.2300")
     assert MoneyValue.model_validate_json('{"value":"1.2300"}').value.as_tuple().exponent == -4
+    assert MoneyValue.model_validate_json('{"value":"-1.2300"}').value == Decimal("-1.2300")
     with pytest.raises(ValidationError):
         MoneyValue.model_validate_json('{"value":1.23}')
 

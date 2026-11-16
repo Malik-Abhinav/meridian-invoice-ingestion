@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml)
 
-An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes domain contracts, database models, PostgreSQL migrations with live constraint tests, and three selectable-text invoice PDF layouts.
+An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes invoice generation, OCR, structured extraction, and deterministic invoice-local validation. Purchase-order matching, approval, and inventory posting remain future work.
 
 ## Setup
 
@@ -155,3 +155,21 @@ Each value holds its observed value or null, model-reported uncertainty, and ref
 Each extracted line also has `source_row_order`, which records OCR reading order separately from any printed `line_number`. Missing printed line numbers stay null. Unreadable null values may cite OCR words; a valid reference identifies an OCR location but does not prove semantic correctness. The [extraction quality review](docs/EXTRACTION_QUALITY_REVIEW.md) explains the corrected printed-line-number denominator, mock assumptions, provider tests, and per-field results.
 
 The Docker Compose network is internal, so live OpenAI requests require a separate, network-enabled local environment. Do not put an API key in `.env` or commit one to the repository.
+
+## Invoice-local validation (Task 12)
+
+`meridian.validation.validate_invoice(extracted_invoice, ocr_document, policy)` returns frozen Pydantic findings, field assessments, and a provisional decision. It reads only extraction and cited OCR observations. It never changes either input or reads fixture truth, catalog records, purchase orders, database state, or API credentials. Run the stored nine-case evaluation with:
+
+```sh
+docker compose run --rm test python scripts/run_validation.py
+docker compose run --rm test python scripts/run_validation.py --ocr-floor 25
+docker compose run --rm test python -m pytest tests/test_validation.py -q
+```
+
+Required headers are supplier name, invoice number/date, and PO reference. Every line needs an identifier (UPC or NDC), positive quantity, unit cost, and printed line total; missing descriptions are warnings. Repeated exact identifiers, uncertain or unreadable values, low-confidence OCR words, absent or contradictory numeric evidence, and zero/negative values receive explicit findings. Arithmetic compares quantity × unit cost with printed extension, the sum of printed extensions with subtotal when every line total is present, and subtotal + tax with grand total. Comparisons use exact `Decimal` values at the extraction contract's maximum four fractional places. **Tolerance is zero**; no rounding or correction occurs. A check without all required observations is skipped and missing-value findings remain visible.
+
+Default policy requires review for every current error or warning. A future informational finding can be nonblocking. `ready_for_po_matching` means only that this invoice-local stage found no blocking issue; it does not approve the invoice or establish PO, catalog, supplier, duplicate, or stock eligibility. `rejected` is available only through the explicit `reject_empty_invoice` policy. Default minimum cited OCR word confidence is 50, and zero unit cost is prohibited unless policy permits it. Field assessments expose value presence, evidence availability, minimum cited OCR confidence, provider uncertainty, numeric evidence support, and review status separately. There is no composite score or calibrated accuracy probability. OCR confidence is a Tesseract signal; provider uncertainty is a different, uncalibrated signal. Text/date evidence locations are not semantically verified by this stage. Pass the full `ExtractionResult` to check its source hash against OCR; bare invoice input is intended for controlled validation.
+
+Extraction now retains signed printed monetary observations (still exact decimal strings or `Decimal` and at most four fractional places) so validation can flag negative amounts. Domain money and database posting constraints remain nonnegative. Stored Task 11 extraction files and the nine original fixtures are unchanged. The stored offline mock has known OCR errors; a clean fixture may require review, and a seeded PO/catalog discrepancy may pass invoice-local checks. See [evaluation plan](docs/EVALUATION_PLAN.md) and [decision log](docs/DECISIONS.md).
+
+The [validation quality review](docs/VALIDATION_QUALITY_REVIEW.md) traces the clean A fixture's OCR quantity error, records threshold sensitivity on all nine fixtures, and lists evidence limitations.
