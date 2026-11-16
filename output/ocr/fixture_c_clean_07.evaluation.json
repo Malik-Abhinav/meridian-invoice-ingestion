@@ -1,0 +1,59 @@
+{
+  "case_id": "fixture_c_clean_07",
+  "status": "ok",
+  "character_error_rate": 0.2845394736842105,
+  "word_error_rate": 0.30337078651685395,
+  "character_edits": 173,
+  "reference_characters": 608,
+  "word_edits": 27,
+  "reference_words": 89,
+  "token_multiset_error_rate": 0.011235955056179775,
+  "token_multiset_missing": 1,
+  "token_multiset_extra": 1,
+  "observed_tokens": 89,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "quantities": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "unit_prices": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.5875069169997005,
+  "error": null,
+  "ocr_excerpt": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0007 SUPPLIER INVOICE FICT_C-INV-0007 Issued March 02, 2026 NDC-coded products # Product / identifier Cost per unit Units Extended 2 Fable teal mock supply bundle 22.5000 1 22.5000 NDC 000"
+}

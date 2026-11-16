@@ -1,0 +1,18 @@
+Imaginary Harbor Wholesale
+INVOICE
+Invoice number FICT_A-INV-0003
+Invoice date 2026-01-18
+Purchase order FICT_A-PO-9999
+Product / identifier Qty Unit cost Line total
+Fictional copper trial packet 3 5.6250 16.8750
+UPC 000000030120
+Imaginary indigo sample case 2 9.2500 18.5000
+NDC 00000030291
+Imaginary amber sample carton 6 2.7500 16.5000
+UPC 000000030366
+Fictional cobalt unit pack 1 16.4000 16.4000
+NDC 00000030415
+Subtotal 68.2750
+Tax 1.5000
+Total 69.7750
+Fictional supplier invoice Page 1

@@ -1,0 +1,65 @@
+{
+  "case_id": "fixture_a_arithmetic_02",
+  "status": "ok",
+  "character_error_rate": 0.2638888888888889,
+  "word_error_rate": 0.2833333333333333,
+  "character_edits": 114,
+  "reference_characters": 432,
+  "word_edits": 17,
+  "reference_words": 60,
+  "token_multiset_error_rate": 0.18095238095238095,
+  "token_multiset_missing": 17,
+  "token_multiset_extra": 2,
+  "observed_tokens": 45,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 0,
+      "expected": 3,
+      "missed_values": [
+        "000000020121",
+        "00000020247",
+        "000000020367"
+      ]
+    },
+    "quantities": {
+      "recognized": 2,
+      "expected": 3,
+      "missed_values": [
+        "4"
+      ]
+    },
+    "unit_prices": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.41586741599894594,
+  "error": null,
+  "ocr_excerpt": "Imaginary Harbor Wholesale INVOICE FICT_A-INV-0002 2026-01-12 Purchase order FICT_A-PO-0002 Product / identifier Qty Unit cost ine total Fable teal mock supply bundle a 8.2500 33.0000 Fictional copper trial packet 1 12.3750 12.3750 Imaginar"
+}

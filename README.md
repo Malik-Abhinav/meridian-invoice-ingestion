@@ -120,3 +120,21 @@ python -m pytest tests/test_evaluation_fixtures.py -q
 ```
 
 The [manifest](output/evaluation/manifest.json) maps each case ID to its files in [output/evaluation](output/evaluation/), records the degradation profile, and lists expected findings and a processing decision. Run the command from any directory; it always writes to the repository's `output/evaluation/`. The fixed seed is 2029 and resolution is 150 DPI. Repeating generation in the same environment produces byte-identical files. Ground truth contains expected PO and catalog values but is never passed to the PDF or scan renderer. Clean cases are only `auto_post_candidate`; no approval or inventory posting is implemented. This is a small evaluation fixture set, not the planned 60-invoice corpus.
+
+## Tesseract OCR observations
+
+The Docker test image installs Tesseract and English language data. The OCR pipeline rasterizes each scanned PDF page, runs Tesseract with English and automatic page segmentation, and writes words with confidence, bounding boxes, Tesseract reading-order IDs, page dimensions, processing settings, and engine version. Only grayscale conversion is enabled by default. Contrast, denoising, thresholding, and small-angle deskewing are opt-in.
+
+Process one scan or all nine fixtures inside Docker:
+
+```sh
+docker compose build test
+docker compose run --rm test python scripts/run_ocr.py --input output/evaluation/scanned/fixture_a_clean_01.pdf --output-dir output/ocr/single
+docker compose run --rm test python scripts/run_ocr.py --fixtures output/evaluation/manifest.json --output-dir output/ocr
+```
+
+Options include `--dpi`, `--contrast`, `--denoise`, `--threshold`, `--deskew`, `--no-grayscale`, and `--psm`. Each case produces `.ocr.json`, `.txt`, and `.evaluation.json`; [report.json](output/ocr/report.json) contains aggregate metrics and recorded failures. OCR output is separate from ground truth. JSON includes a whitespace-normalized transcript; the readable `.txt` keeps Tesseract's line breaks. Neither repairs recognition errors. The fixture command exits nonzero if any case fails.
+
+CER and WER compare OCR text with the selectable text of the original PDF, including printed labels and footers. This measures transcript fidelity but is sensitive to reading order and does not use expected corrected PO or arithmetic values. Key-field recognition checks the *displayed* invoice values from fixture ground truth: invoice number, supplier, date, PO reference, product identifiers, quantities, unit prices, and printed totals. It measures whether each exact value occurs in OCR text, not whether a future extractor assigns it to the correct field or line. Reported processing time includes OCR and evaluation file I/O. Run focused tests with `docker compose run --rm test python -m pytest tests/test_ocr.py tests/test_ocr_evaluation.py tests/test_ocr_cli.py -q`.
+
+The report also includes token multiset dissimilarity, an order-insensitive companion to CER/WER. It counts duplicate tokens, missing tokens, and extra tokens; it is **not WER**. Reproduce the five-configuration comparison with `docker compose run --rm test python scripts/benchmark_ocr.py`. Results are in [benchmark.json](output/ocr/benchmark.json), with method and failure analysis in [OCR evaluation review](docs/OCR_EVALUATION_REVIEW.md). The original grayscale/PSM 3 default remains the baseline; contrast 1.5 is an opt-in setting to try on difficult scans.

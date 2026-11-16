@@ -1,0 +1,12 @@
+Fable Ridge Distribution INVOICE FICT_B-INV-0006
+14 Feb 2026
+PO FICT_B-PO-0006
+Subtotal 54.3750
+Tax 3.0000
+Total 57.3750
+Qty Description / code Extended Unit
+2 Fictional cobalt unit pack 36.2500 18.1250
+UPC 000000060127
+5 Imaginary violet display sleeve 18.1250 3.6250
+NDC 00000060209
+Fictional supplier invoice Page 1

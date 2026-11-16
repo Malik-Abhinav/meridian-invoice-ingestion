@@ -1,0 +1,15 @@
+Imaginary Harbor Wholesale
+INVOICE
+Invoice number FICT_A-INV-0001
+Invoice date 2026-01-08
+Purchase order FICT_A-PO-0001
+Product / identifier Qty Unit cost Line total
+Imaginary violet display sleeve 2 4.1250 8.2500
+UPC 000000010115
+Fable teal mock supply bundle 53 7.5000 22.5000
+NDC 00000010235
+Subtotal 30.7500
+Tax 0.5000
+Total 31.2500
+Fictional supplier invoice
+Page 1

@@ -1,0 +1,59 @@
+{
+  "case_id": "fixture_a_po_reference_03",
+  "status": "ok",
+  "character_error_rate": 0.35772357723577236,
+  "word_error_rate": 0.38235294117647056,
+  "character_edits": 176,
+  "reference_characters": 492,
+  "word_edits": 26,
+  "reference_words": 68,
+  "token_multiset_error_rate": 0.0,
+  "token_multiset_missing": 0,
+  "token_multiset_extra": 0,
+  "observed_tokens": 68,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "quantities": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "unit_prices": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.49465370799589437,
+  "error": null,
+  "ocr_excerpt": "Imaginary Harbor Wholesale INVOICE Invoice number FICT_A-INV-0003 Invoice date 2026-01-18 Purchase order FICT_A-PO-9999 Product / identifier Qty Unit cost Line total Fictional copper trial packet 3 5.6250 16.8750 UPC 000000030120 Imaginary "
+}

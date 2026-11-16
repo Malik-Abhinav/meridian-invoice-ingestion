@@ -1,0 +1,61 @@
+{
+  "case_id": "fixture_a_clean_01",
+  "status": "ok",
+  "character_error_rate": 0.32791327913279134,
+  "word_error_rate": 0.37254901960784315,
+  "character_edits": 121,
+  "reference_characters": 369,
+  "word_edits": 19,
+  "reference_words": 51,
+  "token_multiset_error_rate": 0.0196078431372549,
+  "token_multiset_missing": 1,
+  "token_multiset_extra": 1,
+  "observed_tokens": 51,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 2,
+      "expected": 2,
+      "missed_values": []
+    },
+    "quantities": {
+      "recognized": 1,
+      "expected": 2,
+      "missed_values": [
+        "3"
+      ]
+    },
+    "unit_prices": {
+      "recognized": 2,
+      "expected": 2,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.44123812500038184,
+  "error": null,
+  "ocr_excerpt": "Imaginary Harbor Wholesale INVOICE Invoice number FICT_A-INV-0001 Invoice date 2026-01-08 Purchase order FICT_A-PO-0001 Product / identifier Qty Unit cost Line total Imaginary violet display sleeve 2 4.1250 8.2500 UPC 000000010115 Fable tea"
+}

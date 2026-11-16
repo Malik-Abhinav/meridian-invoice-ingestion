@@ -1,0 +1,75 @@
+{
+  "case_id": "fixture_c_price_08",
+  "status": "ok",
+  "character_error_rate": 0.7127882599580713,
+  "word_error_rate": 0.7971014492753623,
+  "character_edits": 340,
+  "reference_characters": 477,
+  "word_edits": 55,
+  "reference_words": 69,
+  "token_multiset_error_rate": 0.6666666666666666,
+  "token_multiset_missing": 55,
+  "token_multiset_extra": 1,
+  "observed_tokens": 15,
+  "fields": {
+    "invoice_number": {
+      "recognized": 0,
+      "expected": 1,
+      "missed_values": [
+        "FICT_C-INV-0008"
+      ]
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 0,
+      "expected": 1,
+      "missed_values": [
+        "2026-03-07"
+      ]
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 0,
+      "expected": 2,
+      "missed_values": [
+        "000000080156",
+        "00000080255"
+      ]
+    },
+    "quantities": {
+      "recognized": 0,
+      "expected": 2,
+      "missed_values": [
+        "3",
+        "2"
+      ]
+    },
+    "unit_prices": {
+      "recognized": 0,
+      "expected": 2,
+      "missed_values": [
+        "17.5000",
+        "9.3750"
+      ]
+    },
+    "totals": {
+      "recognized": 1,
+      "expected": 3,
+      "missed_values": [
+        "71.2500",
+        "4.0000"
+      ]
+    }
+  },
+  "processing_seconds": 0.34873025100387167,
+  "error": null,
+  "ocr_excerpt": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0008 SUPPLIER INVOICE FICT_C-4NV-0008 NDC-coded products Invoice summary Total 75.2500"
+}

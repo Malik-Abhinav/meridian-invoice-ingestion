@@ -1,0 +1,59 @@
+{
+  "case_id": "fixture_b_quantity_05",
+  "status": "ok",
+  "character_error_rate": 0.802247191011236,
+  "word_error_rate": 0.8125,
+  "character_edits": 357,
+  "reference_characters": 445,
+  "word_edits": 52,
+  "reference_words": 64,
+  "token_multiset_error_rate": 0.0,
+  "token_multiset_missing": 0,
+  "token_multiset_extra": 0,
+  "observed_tokens": 64,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "quantities": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "unit_prices": {
+      "recognized": 4,
+      "expected": 4,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.47607070799858775,
+  "error": null,
+  "ocr_excerpt": "Fable Ridge Distribution Qty Description / code 3 Imaginary amber sample carton UPC 000000050104 7 Fictional cobalt unit pack NDC 00000050269 2 Imaginary violet display sleeve UPC 000000050388 4 Fable teal mock supply bundle NDC 00000050478"
+}

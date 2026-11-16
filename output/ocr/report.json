@@ -1,0 +1,582 @@
+{
+  "reference": "selectable source PDF printed text; fields from fixture displayed_invoice",
+  "transcript_normalization": "collapse whitespace, trim; preserve case, punctuation, and OCR characters",
+  "token_multiset_definition": "Whitespace tokens with exact case and punctuation; duplicate counts retained. For token counts R and O, missing=sum(max(R-O,0)), extra=sum(max(O-R,0)); rate=(missing+extra)/(reference_tokens+observed_tokens). Not conventional WER.",
+  "invoices": [
+    {
+      "case_id": "fixture_a_clean_01",
+      "status": "ok",
+      "character_error_rate": 0.32791327913279134,
+      "word_error_rate": 0.37254901960784315,
+      "character_edits": 121,
+      "reference_characters": 369,
+      "word_edits": 19,
+      "reference_words": 51,
+      "token_multiset_error_rate": 0.0196078431372549,
+      "token_multiset_missing": 1,
+      "token_multiset_extra": 1,
+      "observed_tokens": 51,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 2,
+          "expected": 2,
+          "missed_values": []
+        },
+        "quantities": {
+          "recognized": 1,
+          "expected": 2,
+          "missed_values": [
+            "3"
+          ]
+        },
+        "unit_prices": {
+          "recognized": 2,
+          "expected": 2,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.44123812500038184,
+      "error": null,
+      "ocr_excerpt": "Imaginary Harbor Wholesale INVOICE Invoice number FICT_A-INV-0001 Invoice date 2026-01-08 Purchase order FICT_A-PO-0001 Product / identifier Qty Unit cost Line total Imaginary violet display sleeve 2 4.1250 8.2500 UPC 000000010115 Fable tea"
+    },
+    {
+      "case_id": "fixture_a_arithmetic_02",
+      "status": "ok",
+      "character_error_rate": 0.2638888888888889,
+      "word_error_rate": 0.2833333333333333,
+      "character_edits": 114,
+      "reference_characters": 432,
+      "word_edits": 17,
+      "reference_words": 60,
+      "token_multiset_error_rate": 0.18095238095238095,
+      "token_multiset_missing": 17,
+      "token_multiset_extra": 2,
+      "observed_tokens": 45,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 0,
+          "expected": 3,
+          "missed_values": [
+            "000000020121",
+            "00000020247",
+            "000000020367"
+          ]
+        },
+        "quantities": {
+          "recognized": 2,
+          "expected": 3,
+          "missed_values": [
+            "4"
+          ]
+        },
+        "unit_prices": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.41586741599894594,
+      "error": null,
+      "ocr_excerpt": "Imaginary Harbor Wholesale INVOICE FICT_A-INV-0002 2026-01-12 Purchase order FICT_A-PO-0002 Product / identifier Qty Unit cost ine total Fable teal mock supply bundle a 8.2500 33.0000 Fictional copper trial packet 1 12.3750 12.3750 Imaginar"
+    },
+    {
+      "case_id": "fixture_a_po_reference_03",
+      "status": "ok",
+      "character_error_rate": 0.35772357723577236,
+      "word_error_rate": 0.38235294117647056,
+      "character_edits": 176,
+      "reference_characters": 492,
+      "word_edits": 26,
+      "reference_words": 68,
+      "token_multiset_error_rate": 0.0,
+      "token_multiset_missing": 0,
+      "token_multiset_extra": 0,
+      "observed_tokens": 68,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "quantities": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "unit_prices": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.49465370799589437,
+      "error": null,
+      "ocr_excerpt": "Imaginary Harbor Wholesale INVOICE Invoice number FICT_A-INV-0003 Invoice date 2026-01-18 Purchase order FICT_A-PO-9999 Product / identifier Qty Unit cost Line total Fictional copper trial packet 3 5.6250 16.8750 UPC 000000030120 Imaginary "
+    },
+    {
+      "case_id": "fixture_b_clean_04",
+      "status": "ok",
+      "character_error_rate": 0.34210526315789475,
+      "word_error_rate": 0.37037037037037035,
+      "character_edits": 130,
+      "reference_characters": 380,
+      "word_edits": 20,
+      "reference_words": 54,
+      "token_multiset_error_rate": 0.0,
+      "token_multiset_missing": 0,
+      "token_multiset_extra": 0,
+      "observed_tokens": 54,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        },
+        "quantities": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        },
+        "unit_prices": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.4539718339947285,
+      "error": null,
+      "ocr_excerpt": "Fable Ridge Distribution INVOICE FICT_B-INV-0004 03 Feb 2026 PO FICT_B-PO-0004 Subtotal 56.0000 Tax 2.0000 Total 58.0000 Qty Description / code Extended Unit 1 Imaginary indigo sample case 11.7500 11.7500 UPC 000000040181 4 Imaginary amber "
+    },
+    {
+      "case_id": "fixture_b_quantity_05",
+      "status": "ok",
+      "character_error_rate": 0.802247191011236,
+      "word_error_rate": 0.8125,
+      "character_edits": 357,
+      "reference_characters": 445,
+      "word_edits": 52,
+      "reference_words": 64,
+      "token_multiset_error_rate": 0.0,
+      "token_multiset_missing": 0,
+      "token_multiset_extra": 0,
+      "observed_tokens": 64,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "quantities": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "unit_prices": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.47607070799858775,
+      "error": null,
+      "ocr_excerpt": "Fable Ridge Distribution Qty Description / code 3 Imaginary amber sample carton UPC 000000050104 7 Fictional cobalt unit pack NDC 00000050269 2 Imaginary violet display sleeve UPC 000000050388 4 Fable teal mock supply bundle NDC 00000050478"
+    },
+    {
+      "case_id": "fixture_b_unknown_06",
+      "status": "ok",
+      "character_error_rate": 0.33647798742138363,
+      "word_error_rate": 0.35555555555555557,
+      "character_edits": 107,
+      "reference_characters": 318,
+      "word_edits": 16,
+      "reference_words": 45,
+      "token_multiset_error_rate": 0.0,
+      "token_multiset_missing": 0,
+      "token_multiset_extra": 0,
+      "observed_tokens": 45,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 2,
+          "expected": 2,
+          "missed_values": []
+        },
+        "quantities": {
+          "recognized": 2,
+          "expected": 2,
+          "missed_values": []
+        },
+        "unit_prices": {
+          "recognized": 2,
+          "expected": 2,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.43650749999505933,
+      "error": null,
+      "ocr_excerpt": "Fable Ridge Distribution INVOICE FICT_B-INV-0006 14 Feb 2026 PO FICT_B-PO-0006 Subtotal 54.3750 Tax 3.0000 Total 57.3750 Qty Description / code Extended Unit 2 Fictional cobalt unit pack 36.2500 18.1250 UPC 000000060127 5 Imaginary violet d"
+    },
+    {
+      "case_id": "fixture_c_clean_07",
+      "status": "ok",
+      "character_error_rate": 0.2845394736842105,
+      "word_error_rate": 0.30337078651685395,
+      "character_edits": 173,
+      "reference_characters": 608,
+      "word_edits": 27,
+      "reference_words": 89,
+      "token_multiset_error_rate": 0.011235955056179775,
+      "token_multiset_missing": 1,
+      "token_multiset_extra": 1,
+      "observed_tokens": 89,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "quantities": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "unit_prices": {
+          "recognized": 4,
+          "expected": 4,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.5875069169997005,
+      "error": null,
+      "ocr_excerpt": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0007 SUPPLIER INVOICE FICT_C-INV-0007 Issued March 02, 2026 NDC-coded products # Product / identifier Cost per unit Units Extended 2 Fable teal mock supply bundle 22.5000 1 22.5000 NDC 000"
+    },
+    {
+      "case_id": "fixture_c_price_08",
+      "status": "ok",
+      "character_error_rate": 0.7127882599580713,
+      "word_error_rate": 0.7971014492753623,
+      "character_edits": 340,
+      "reference_characters": 477,
+      "word_edits": 55,
+      "reference_words": 69,
+      "token_multiset_error_rate": 0.6666666666666666,
+      "token_multiset_missing": 55,
+      "token_multiset_extra": 1,
+      "observed_tokens": 15,
+      "fields": {
+        "invoice_number": {
+          "recognized": 0,
+          "expected": 1,
+          "missed_values": [
+            "FICT_C-INV-0008"
+          ]
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 0,
+          "expected": 1,
+          "missed_values": [
+            "2026-03-07"
+          ]
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 0,
+          "expected": 2,
+          "missed_values": [
+            "000000080156",
+            "00000080255"
+          ]
+        },
+        "quantities": {
+          "recognized": 0,
+          "expected": 2,
+          "missed_values": [
+            "3",
+            "2"
+          ]
+        },
+        "unit_prices": {
+          "recognized": 0,
+          "expected": 2,
+          "missed_values": [
+            "17.5000",
+            "9.3750"
+          ]
+        },
+        "totals": {
+          "recognized": 1,
+          "expected": 3,
+          "missed_values": [
+            "71.2500",
+            "4.0000"
+          ]
+        }
+      },
+      "processing_seconds": 0.34873025100387167,
+      "error": null,
+      "ocr_excerpt": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0008 SUPPLIER INVOICE FICT_C-4NV-0008 NDC-coded products Invoice summary Total 75.2500"
+    },
+    {
+      "case_id": "fixture_c_supplier_09",
+      "status": "ok",
+      "character_error_rate": 0.21178637200736647,
+      "word_error_rate": 0.2564102564102564,
+      "character_edits": 115,
+      "reference_characters": 543,
+      "word_edits": 20,
+      "reference_words": 78,
+      "token_multiset_error_rate": 0.15942028985507245,
+      "token_multiset_missing": 20,
+      "token_multiset_extra": 2,
+      "observed_tokens": 60,
+      "fields": {
+        "invoice_number": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "supplier": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "invoice_date": {
+          "recognized": 0,
+          "expected": 1,
+          "missed_values": [
+            "2026-03-15"
+          ]
+        },
+        "po_reference": {
+          "recognized": 1,
+          "expected": 1,
+          "missed_values": []
+        },
+        "product_identifiers": {
+          "recognized": 0,
+          "expected": 3,
+          "missed_values": [
+            "000000090155",
+            "00000090234",
+            "000000090346"
+          ]
+        },
+        "quantities": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        },
+        "unit_prices": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        },
+        "totals": {
+          "recognized": 3,
+          "expected": 3,
+          "missed_values": []
+        }
+      },
+      "processing_seconds": 0.5433304589969339,
+      "error": null,
+      "ocr_excerpt": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0009 SUPPLIER INVOICE FICT_C-INV-0009 NDC-coded products eS Product / identifier Cost per unit Units Extended Imaginary indigo sample case 4.8750 5 24.3750 UPC-coded products * Product / i"
+    }
+  ],
+  "character_error_rate": 0.4018208661417323,
+  "word_error_rate": 0.4359861591695502,
+  "token_multiset_error_rate": 0.09448082319925163,
+  "field_accuracy": {
+    "invoice_number": 0.8888888888888888,
+    "supplier": 1.0,
+    "invoice_date": 0.7777777777777778,
+    "po_reference": 1.0,
+    "product_identifiers": 0.7037037037037037,
+    "quantities": 0.8518518518518519,
+    "unit_prices": 0.9259259259259259,
+    "totals": 0.9259259259259259
+  },
+  "failures": 0
+}
