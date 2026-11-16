@@ -1,0 +1,885 @@
+{
+  "evaluation": {
+    "invoices": [
+      {
+        "case_id": "fixture_a_clean_01",
+        "fields": {
+          "supplier_name": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 0,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 1,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 1
+          },
+          "unit_cost": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 2,
+        "expected_lines": 2,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_a_arithmetic_02",
+        "fields": {
+          "supplier_name": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 0,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 0,
+            "expected": 3,
+            "missing": 3,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 2,
+            "expected": 3,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 3,
+        "expected_lines": 3,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_a_po_reference_03",
+        "fields": {
+          "supplier_name": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 0,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 4,
+        "expected_lines": 4,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_b_clean_04",
+        "fields": {
+          "supplier_name": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 0,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 3,
+        "expected_lines": 3,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_b_quantity_05",
+        "fields": {
+          "supplier_name": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 0,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 0,
+            "expected": 4,
+            "missing": 4,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 0,
+            "expected": 4,
+            "missing": 4,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 4,
+        "expected_lines": 4,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_b_unknown_06",
+        "fields": {
+          "supplier_name": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 0,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 2,
+            "expected": 2,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 2,
+        "expected_lines": 2,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_c_clean_07",
+        "fields": {
+          "supplier_name": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 1
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 3,
+            "expected": 4,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 3,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 1
+          },
+          "product_identifier": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 4,
+            "expected": 4,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 4,
+        "expected_lines": 4,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_c_price_08",
+        "fields": {
+          "supplier_name": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 1
+          },
+          "invoice_number": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 2,
+            "missing": 2,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 0,
+            "expected": 2,
+            "missing": 2,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 0,
+            "expected": 2,
+            "missing": 2,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 0,
+            "expected": 2,
+            "missing": 2,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 0,
+            "expected": 2,
+            "missing": 2,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 0,
+            "expected": 2,
+            "missing": 2,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 0,
+        "expected_lines": 2,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [
+          1,
+          2
+        ],
+        "extra_source_row_orders": []
+      },
+      {
+        "case_id": "fixture_c_supplier_09",
+        "fields": {
+          "supplier_name": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 1
+          },
+          "invoice_number": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "invoice_date": {
+            "correct": 0,
+            "expected": 1,
+            "missing": 1,
+            "unsupported": 0
+          },
+          "purchase_order_reference": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_subtotal": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_tax": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_total": {
+            "correct": 1,
+            "expected": 1,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "line_number": {
+            "correct": 0,
+            "expected": 3,
+            "missing": 3,
+            "unsupported": 0
+          },
+          "description": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "product_identifier": {
+            "correct": 0,
+            "expected": 3,
+            "missing": 3,
+            "unsupported": 0
+          },
+          "quantity": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "unit_cost": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          },
+          "printed_line_total": {
+            "correct": 3,
+            "expected": 3,
+            "missing": 0,
+            "unsupported": 0
+          }
+        },
+        "matched_lines": 3,
+        "expected_lines": 3,
+        "extra_lines": 0,
+        "unmatched_line_numbers": [],
+        "extra_source_row_orders": []
+      }
+    ],
+    "fields": {
+      "supplier_name": {
+        "correct": 6,
+        "expected": 9,
+        "missing": 0,
+        "unsupported": 3
+      },
+      "invoice_number": {
+        "correct": 8,
+        "expected": 9,
+        "missing": 1,
+        "unsupported": 0
+      },
+      "invoice_date": {
+        "correct": 7,
+        "expected": 9,
+        "missing": 2,
+        "unsupported": 0
+      },
+      "purchase_order_reference": {
+        "correct": 9,
+        "expected": 9,
+        "missing": 0,
+        "unsupported": 0
+      },
+      "printed_subtotal": {
+        "correct": 8,
+        "expected": 9,
+        "missing": 1,
+        "unsupported": 0
+      },
+      "printed_tax": {
+        "correct": 8,
+        "expected": 9,
+        "missing": 1,
+        "unsupported": 0
+      },
+      "printed_total": {
+        "correct": 9,
+        "expected": 9,
+        "missing": 0,
+        "unsupported": 0
+      },
+      "line_number": {
+        "correct": 3,
+        "expected": 9,
+        "missing": 6,
+        "unsupported": 0
+      },
+      "description": {
+        "correct": 24,
+        "expected": 27,
+        "missing": 2,
+        "unsupported": 1
+      },
+      "product_identifier": {
+        "correct": 19,
+        "expected": 27,
+        "missing": 8,
+        "unsupported": 0
+      },
+      "quantity": {
+        "correct": 23,
+        "expected": 27,
+        "missing": 3,
+        "unsupported": 1
+      },
+      "unit_cost": {
+        "correct": 21,
+        "expected": 27,
+        "missing": 6,
+        "unsupported": 0
+      },
+      "printed_line_total": {
+        "correct": 21,
+        "expected": 27,
+        "missing": 6,
+        "unsupported": 0
+      }
+    },
+    "matched_lines": 25,
+    "expected_lines": 27,
+    "extra_lines": 0
+  },
+  "failures": {}
+}

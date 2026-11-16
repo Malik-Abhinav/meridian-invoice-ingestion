@@ -1,0 +1,481 @@
+{
+  "source_sha256": "bcf03624b5692d477b5cef72a0835975a60c3b1bfca0c46bfa9f3fb91ff0acf7",
+  "provider": "mock",
+  "model_name": "ocr-only-v1",
+  "repair_attempted": false,
+  "invoice": {
+    "supplier_name": {
+      "value": "Imaginary Harbor Wholesale",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            0,
+            1,
+            2
+          ],
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_number": {
+      "value": "FICT_A-INV-0002",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            4
+          ],
+          "block_number": 4,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-01-12",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            5
+          ],
+          "block_number": 6,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "purchase_order_reference": {
+      "value": "FICT_A-PO-0002",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            6,
+            7,
+            8
+          ],
+          "block_number": 7,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "lines": [
+      {
+        "source_row_order": 1,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "block_number": 10,
+              "paragraph_number": 2,
+              "line_number": 1
+            }
+          ]
+        },
+        "description": {
+          "value": "Fable teal mock supply bundle",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "block_number": 10,
+              "paragraph_number": 2,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": null,
+          "uncertainty": "high",
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "block_number": 10,
+              "paragraph_number": 2,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": "8.2500",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "block_number": 10,
+              "paragraph_number": 2,
+              "line_number": 1
+            }
+          ]
+        },
+        "printed_line_total": {
+          "value": "33.0000",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "block_number": 10,
+              "paragraph_number": 2,
+              "line_number": 1
+            }
+          ]
+        }
+      },
+      {
+        "source_row_order": 2,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "block_number": 10,
+              "paragraph_number": 3,
+              "line_number": 1
+            }
+          ]
+        },
+        "description": {
+          "value": "Fictional copper trial packet",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "block_number": 10,
+              "paragraph_number": 3,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": 1,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "block_number": 10,
+              "paragraph_number": 3,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": "12.3750",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "block_number": 10,
+              "paragraph_number": 3,
+              "line_number": 1
+            }
+          ]
+        },
+        "printed_line_total": {
+          "value": "12.3750",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "block_number": 10,
+              "paragraph_number": 3,
+              "line_number": 1
+            }
+          ]
+        }
+      },
+      {
+        "source_row_order": 3,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "block_number": 10,
+              "paragraph_number": 4,
+              "line_number": 1
+            }
+          ]
+        },
+        "description": {
+          "value": "Imaginary indigo sample case",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "block_number": 10,
+              "paragraph_number": 4,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": 5,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "block_number": 10,
+              "paragraph_number": 4,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": "3.1000",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "block_number": 10,
+              "paragraph_number": 4,
+              "line_number": 1
+            }
+          ]
+        },
+        "printed_line_total": {
+          "value": "15.5000",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "block_number": 10,
+              "paragraph_number": 4,
+              "line_number": 1
+            }
+          ]
+        }
+      }
+    ],
+    "printed_subtotal": {
+      "value": "61.8750",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            39,
+            40
+          ],
+          "block_number": 10,
+          "paragraph_number": 4,
+          "line_number": 2
+        }
+      ]
+    },
+    "printed_tax": {
+      "value": "1.0000",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            41,
+            42
+          ],
+          "block_number": 10,
+          "paragraph_number": 4,
+          "line_number": 3
+        }
+      ]
+    },
+    "printed_total": {
+      "value": "62.8750",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            43,
+            44
+          ],
+          "block_number": 10,
+          "paragraph_number": 4,
+          "line_number": 4
+        }
+      ]
+    }
+  }
+}

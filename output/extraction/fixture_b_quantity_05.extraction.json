@@ -1,0 +1,434 @@
+{
+  "source_sha256": "40bd2a93cf9baed1cd3c9bb39fb66182519df73987cc6237c74ab9ff79b73945",
+  "provider": "mock",
+  "model_name": "ocr-only-v1",
+  "repair_attempted": false,
+  "invoice": {
+    "supplier_name": {
+      "value": "Fable Ridge Distribution",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            0,
+            1,
+            2
+          ],
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_number": {
+      "value": "FICT_B-INV-0005",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            39,
+            40
+          ],
+          "block_number": 8,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-02-09",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            41,
+            42,
+            43
+          ],
+          "block_number": 9,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "purchase_order_reference": {
+      "value": "FICT_B-PO-0005",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            44,
+            45
+          ],
+          "block_number": 9,
+          "paragraph_number": 1,
+          "line_number": 2
+        }
+      ]
+    },
+    "lines": [
+      {
+        "source_row_order": 1,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "description": {
+          "value": "Imaginary amber sample carton",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "block_number": 3,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": "000000050104",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                12,
+                13
+              ],
+              "block_number": 3,
+              "paragraph_number": 1,
+              "line_number": 2
+            }
+          ]
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": 3,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "block_number": 3,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "printed_line_total": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        }
+      },
+      {
+        "source_row_order": 2,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "description": {
+          "value": "Fictional cobalt unit pack",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                14,
+                15,
+                16,
+                17,
+                18
+              ],
+              "block_number": 4,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "ndc": {
+          "value": "00000050269",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                19,
+                20
+              ],
+              "block_number": 4,
+              "paragraph_number": 1,
+              "line_number": 2
+            }
+          ]
+        },
+        "quantity": {
+          "value": 7,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                14,
+                15,
+                16,
+                17,
+                18
+              ],
+              "block_number": 4,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "printed_line_total": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        }
+      },
+      {
+        "source_row_order": 3,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "description": {
+          "value": "Imaginary violet display sleeve",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": "000000050388",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                26,
+                27
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 2
+            }
+          ]
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": 2,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "printed_line_total": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        }
+      },
+      {
+        "source_row_order": 4,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "description": {
+          "value": "Fable teal mock supply bundle",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              "block_number": 6,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "upc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "ndc": {
+          "value": "00000050478",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                34,
+                35
+              ],
+              "block_number": 6,
+              "paragraph_number": 1,
+              "line_number": 2
+            }
+          ]
+        },
+        "quantity": {
+          "value": 4,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              "block_number": 6,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "printed_line_total": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        }
+      }
+    ],
+    "printed_subtotal": {
+      "value": "89.2500",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            46,
+            47
+          ],
+          "block_number": 12,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "printed_tax": {
+      "value": "2.5000",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            48,
+            49
+          ],
+          "block_number": 12,
+          "paragraph_number": 1,
+          "line_number": 2
+        }
+      ]
+    },
+    "printed_total": {
+      "value": "91.7500",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            50,
+            51
+          ],
+          "block_number": 12,
+          "paragraph_number": 1,
+          "line_number": 3
+        }
+      ]
+    }
+  }
+}

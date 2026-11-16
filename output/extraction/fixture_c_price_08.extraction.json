@@ -1,0 +1,79 @@
+{
+  "source_sha256": "f4f50629f7e09248d3fe461885c20fdc58b076074ac874e30344b6ac5b7d6021",
+  "provider": "mock",
+  "model_name": "ocr-only-v1",
+  "repair_attempted": false,
+  "invoice": {
+    "supplier_name": {
+      "value": "NORTHSTAR FICTIONAL SUPPLY",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            0,
+            1,
+            2
+          ],
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_number": {
+      "value": null,
+      "uncertainty": null,
+      "evidence": []
+    },
+    "invoice_date": {
+      "value": null,
+      "uncertainty": null,
+      "evidence": []
+    },
+    "purchase_order_reference": {
+      "value": "FICT_C-PO-0008",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            3,
+            4,
+            5
+          ],
+          "block_number": 2,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "lines": [],
+    "printed_subtotal": {
+      "value": null,
+      "uncertainty": null,
+      "evidence": []
+    },
+    "printed_tax": {
+      "value": null,
+      "uncertainty": null,
+      "evidence": []
+    },
+    "printed_total": {
+      "value": "75.2500",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            13,
+            14
+          ],
+          "block_number": 7,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    }
+  }
+}
