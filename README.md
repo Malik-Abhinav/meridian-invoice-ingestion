@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml)
 
-An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes domain contracts, database models, and PostgreSQL migrations with live constraint tests.
+An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes domain contracts, database models, PostgreSQL migrations with live constraint tests, and three selectable-text invoice PDF layouts.
 
 ## Setup
 
@@ -83,3 +83,17 @@ Use `alembic downgrade base` only on a disposable database; it drops the applica
 ## Continuous integration
 
 The [CI workflow](.github/workflows/ci.yml) runs on pushes to `main` and pull requests targeting `main`. It uses Python 3.12 and a temporary PostgreSQL 16 service, applies migrations, runs the full pytest suite, fails if the PostgreSQL integration tests are missing or skipped, and checks for migration drift. No production database credentials are used.
+
+## Synthetic invoice PDF layouts
+
+Task 7 adds selectable-text A4 invoices for three fictional supplier styles. ReportLab is the only PDF runtime dependency; pypdf is installed with the `test` extra to inspect structure and extracted text in tests. The renderer accepts `SyntheticInvoiceInput` only, so evaluation annotations remain outside the PDF input.
+
+Generate the three representative review samples from the project root:
+
+```sh
+python scripts/generate_pdf_samples.py
+```
+
+The outputs are [traditional](output/pdf/supplier_a_traditional.pdf), [compact](output/pdf/supplier_b_compact.pdf), and [purchase-order-oriented](output/pdf/supplier_c_purchase_order.pdf). They are fictional examples, not the planned 60-invoice dataset. Re-running the command produces identical PDF bytes for the same inputs. The `scan_blur` input flag is intentionally unused by this text renderer; scanned-image variants belong to a later task.
+
+Run the focused PDF tests with `python -m pytest tests/test_pdf_invoices.py -q`, or the complete suite with `docker compose run --rm test` after rebuilding the image for the new dependencies.
