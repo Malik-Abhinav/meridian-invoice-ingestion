@@ -80,6 +80,28 @@ Confidence assessment reports per-field presence, OCR evidence availability, min
 
 Arithmetic uses exact `Decimal` comparisons with **zero tolerance** and no rounding. Comparisons requiring absent values are skipped while missing findings force review. Validation does not mutate printed values. Negative printed monetary values are now representable at extraction and flagged here; posting-domain values remain nonnegative. Neither this nine-case set nor its mock extractor establishes real-world rates.
 
+## Task 13 reconciliation evaluation
+
+`scripts/run_reconciliation.py` prints both modes for all nine cases. Controlled mode transcribes *invoice-visible* fields into synthetic high-confidence evidence and runs Task 12 plus Task 13 against an evaluation-only trusted snapshot. It is a rule check, not an OCR or LLM score. Stored mode reads existing Task 11 extraction and OCR JSON, runs Task 12 unchanged, and applies the same trusted snapshot. Neither mode writes output files or changes database state. Production reconciliation cannot import fixture ground truth through its repository protocol.
+
+| Fixture | Controlled Task 13 findings; decision | Stored Task 13 findings; decision |
+| --- | --- | --- |
+| A clean 01 | none; ready | PO quantity mismatch from OCR `53`; review |
+| A arithmetic 02 | none; review from Task 12 subtotal | 3 missing identifiers; review from Task 12 and Task 13 |
+| A PO reference 03 | unknown PO reference; review | unknown PO reference; review |
+| B clean 04 | none; ready | none; review from Task 12 low OCR confidence |
+| B quantity 05 | PO quantity mismatch; review | PO quantity mismatch and 4 missing unit costs; review |
+| B unknown 06 | unknown product; review | unknown product; review |
+| C clean 07 | none; ready | none; review from Task 12 low OCR confidence |
+| C price 08 | PO price mismatch; review | none evaluable because no lines; review from Task 12 |
+| C supplier 09 | PO supplier mismatch; review | PO supplier mismatch and 3 missing identifiers; review |
+
+Stored B quantity also has one low-confidence OCR field and four missing printed line totals in Task 12. Stored A arithmetic has a subtotal mismatch in Task 12, with missing quantity and unreadable/low-confidence fields. Stored A clean retains the Task 12 line-extension mismatch; Task 13's quantity finding is a consequence of that same OCR error. Controlled A arithmetic remains Task 12's responsibility. No case is approved or posted.
+
+Fixture snapshots contain one PO per case, no prior receipts, and no persisted invoices. They cannot measure duplicate-detection rates or real partial-receipt behavior; focused tests cover those rules. A missing or ambiguous identifier prevents product/PO comparison. Missing quantities and prices yield `missing_match_input`, never fabricated numeric mismatches. This separation is essential when reading the stored results.
+
+The quality review adds `unperformed_checks` to each result and evaluation row. Controlled clean cases have an empty list; controlled A PO-reference has skipped PO/line checks, while controlled A arithmetic has none in Task 13 and remains under Task 12 review. Stored C price has `invoice_lines` and `duplicate_identity` skipped because its extraction has no lines or invoice number. Stored missing identifiers and costs expose skipped line checks instead of appearing to pass. The nine-fixture findings and decisions remain unchanged.
+
 ## Later full-dataset generation
 
 - Use varied, synthetic UPC and NDC identifiers that satisfy the contract rules; avoid repeating the all-zero review identifiers across the corpus.
