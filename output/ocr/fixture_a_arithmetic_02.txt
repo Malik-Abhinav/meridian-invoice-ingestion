@@ -1,0 +1,12 @@
+Imaginary Harbor Wholesale
+INVOICE
+FICT_A-INV-0002
+2026-01-12
+Purchase order FICT_A-PO-0002
+Product / identifier Qty Unit cost ine total
+Fable teal mock supply bundle a 8.2500 33.0000
+Fictional copper trial packet 1 12.3750 12.3750
+Imaginary indigo sample case 5 3.1000 15.5000
+Subtotal 61.8750
+Tax 1.0000
+Total 62.8750

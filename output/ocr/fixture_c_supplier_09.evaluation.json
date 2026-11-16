@@ -1,0 +1,65 @@
+{
+  "case_id": "fixture_c_supplier_09",
+  "status": "ok",
+  "character_error_rate": 0.21178637200736647,
+  "word_error_rate": 0.2564102564102564,
+  "character_edits": 115,
+  "reference_characters": 543,
+  "word_edits": 20,
+  "reference_words": 78,
+  "token_multiset_error_rate": 0.15942028985507245,
+  "token_multiset_missing": 20,
+  "token_multiset_extra": 2,
+  "observed_tokens": 60,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 0,
+      "expected": 1,
+      "missed_values": [
+        "2026-03-15"
+      ]
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 0,
+      "expected": 3,
+      "missed_values": [
+        "000000090155",
+        "00000090234",
+        "000000090346"
+      ]
+    },
+    "quantities": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    },
+    "unit_prices": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.5433304589969339,
+  "error": null,
+  "ocr_excerpt": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0009 SUPPLIER INVOICE FICT_C-INV-0009 NDC-coded products eS Product / identifier Cost per unit Units Extended Imaginary indigo sample case 4.8750 5 24.3750 UPC-coded products * Product / i"
+}

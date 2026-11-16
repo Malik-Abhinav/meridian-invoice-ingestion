@@ -39,6 +39,8 @@ jobs:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: pyproject.toml
+      - name: Install English Tesseract OCR
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng
       - name: Install project and test dependencies
         run: python -m pip install -e '.[test,db]'
       - name: Apply migrations
@@ -57,6 +59,7 @@ jobs:
               'test_invoice_identity_and_product_constraints',
               'test_purchasing_inventory_and_audit_constraints',
               'test_timestamp_round_trip_and_postgresql_types',
+              'test_real_tesseract_fixture',
           }
           executed = {case.get('name') for case in cases if case.find('skipped') is None}
           missing = expected - executed

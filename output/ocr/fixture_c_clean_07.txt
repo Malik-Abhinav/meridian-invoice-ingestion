@@ -1,0 +1,21 @@
+NORTHSTAR FICTIONAL SUPPLY
+PURCHASE ORDER FICT_C-PO-0007
+SUPPLIER INVOICE FICT_C-INV-0007
+Issued March 02, 2026
+NDC-coded products
+# Product / identifier Cost per unit Units Extended
+2 Fable teal mock supply bundle 22.5000 1 22.5000
+NDC 00000070213
+a Imaginary indigo sample case 2.2500 4 9.0000
+NDC 00000070422
+UPC-coded products
+# Product / identifier Cost per unit Units Extended
+1 Imaginary violet display sleeve 7.8750 2 15.7500
+UPC 000000070102
+3 Fictional copper trial packet 5.1250 3 15.3750
+UPC 000000070324
+Invoice summary
+Subtotal 62.6250
+Tax 3.5000
+Total 66.1250
+Fictional supplier invoice Page 1

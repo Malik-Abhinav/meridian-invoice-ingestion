@@ -1,0 +1,208 @@
+{
+  "source_sha256": "f4f50629f7e09248d3fe461885c20fdc58b076074ac874e30344b6ac5b7d6021",
+  "engine": "tesseract",
+  "engine_version": "5.5.0",
+  "language": "eng",
+  "configuration": {
+    "dpi": 200,
+    "grayscale": true,
+    "contrast_factor": 1.0,
+    "denoise": false,
+    "threshold": false,
+    "deskew": false,
+    "page_segmentation_mode": 3,
+    "timeout_seconds": 30
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "NORTHSTAR FICTIONAL SUPPLY\nPURCHASE ORDER FICT_C-PO-0008\nSUPPLIER INVOICE FICT_C-4NV-0008\nNDC-coded products\nInvoice summary\nTotal 75.2500",
+      "words": [
+        {
+          "text": "NORTHSTAR",
+          "confidence": 95.0,
+          "left": 136,
+          "top": 150,
+          "width": 187,
+          "height": 22,
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 1
+        },
+        {
+          "text": "FICTIONAL",
+          "confidence": 95.0,
+          "left": 336,
+          "top": 150,
+          "width": 157,
+          "height": 22,
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 2
+        },
+        {
+          "text": "SUPPLY",
+          "confidence": 96.0,
+          "left": 508,
+          "top": 150,
+          "width": 117,
+          "height": 22,
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 3
+        },
+        {
+          "text": "PURCHASE",
+          "confidence": 96.0,
+          "left": 137,
+          "top": 220,
+          "width": 274,
+          "height": 38,
+          "block_number": 2,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 1
+        },
+        {
+          "text": "ORDER",
+          "confidence": 93.0,
+          "left": 430,
+          "top": 220,
+          "width": 177,
+          "height": 38,
+          "block_number": 2,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 2
+        },
+        {
+          "text": "FICT_C-PO-0008",
+          "confidence": 87.0,
+          "left": 626,
+          "top": 220,
+          "width": 387,
+          "height": 48,
+          "block_number": 2,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 3
+        },
+        {
+          "text": "SUPPLIER",
+          "confidence": 96.0,
+          "left": 136,
+          "top": 306,
+          "width": 133,
+          "height": 19,
+          "block_number": 3,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 1
+        },
+        {
+          "text": "INVOICE",
+          "confidence": 93.0,
+          "left": 283,
+          "top": 306,
+          "width": 107,
+          "height": 19,
+          "block_number": 3,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 2
+        },
+        {
+          "text": "FICT_C-4NV-0008",
+          "confidence": 30.0,
+          "left": 404,
+          "top": 306,
+          "width": 220,
+          "height": 19,
+          "block_number": 3,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 3
+        },
+        {
+          "text": "NDC-coded",
+          "confidence": 79.0,
+          "left": 136,
+          "top": 419,
+          "width": 146,
+          "height": 19,
+          "block_number": 4,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 1
+        },
+        {
+          "text": "products",
+          "confidence": 96.0,
+          "left": 295,
+          "top": 421,
+          "width": 114,
+          "height": 21,
+          "block_number": 4,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 2
+        },
+        {
+          "text": "Invoice",
+          "confidence": 87.0,
+          "left": 136,
+          "top": 953,
+          "width": 90,
+          "height": 17,
+          "block_number": 6,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 1
+        },
+        {
+          "text": "summary",
+          "confidence": 95.0,
+          "left": 239,
+          "top": 957,
+          "width": 118,
+          "height": 18,
+          "block_number": 6,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 2
+        },
+        {
+          "text": "Total",
+          "confidence": 95.0,
+          "left": 1017,
+          "top": 1136,
+          "width": 63,
+          "height": 36,
+          "block_number": 7,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 1
+        },
+        {
+          "text": "75.2500",
+          "confidence": 81.0,
+          "left": 1401,
+          "top": 1140,
+          "width": 97,
+          "height": 21,
+          "block_number": 7,
+          "paragraph_number": 1,
+          "line_number": 1,
+          "word_number": 2
+        }
+      ],
+      "image_width": 1655,
+      "image_height": 2339,
+      "deskew_angle_degrees": 0.0
+    }
+  ],
+  "normalized_text": "NORTHSTAR FICTIONAL SUPPLY PURCHASE ORDER FICT_C-PO-0008 SUPPLIER INVOICE FICT_C-4NV-0008 NDC-coded products Invoice summary Total 75.2500"
+}

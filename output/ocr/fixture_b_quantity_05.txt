@@ -1,0 +1,23 @@
+Fable Ridge Distribution
+Qty Description / code
+3 Imaginary amber sample carton
+UPC 000000050104
+7 Fictional cobalt unit pack
+NDC 00000050269
+2 Imaginary violet display sleeve
+UPC 000000050388
+4 Fable teal mock supply bundle
+NDC 00000050478
+Fictional supplier invoice
+INVOICE FICT_B-INV-0005
+09 Feb 2026
+PO FICT_B-PO-0005
+Subtotal 89.2500
+Tax 2.5000
+Total 91.7500
+Extended Unit
+19.1250 6.3750
+20.1250 2.8750
+29.0000 14.5000
+21.0000 5.2500
+Page 1

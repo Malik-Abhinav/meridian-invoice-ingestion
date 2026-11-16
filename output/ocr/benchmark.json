@@ -1,0 +1,434 @@
+{
+  "method": "same manifest, English Tesseract, 200 DPI; one setting applied to every case",
+  "results": {
+    "baseline": {
+      "configuration": {},
+      "character_error_rate": 0.4018208661417323,
+      "word_error_rate": 0.4359861591695502,
+      "token_multiset_error_rate": 0.09448082319925163,
+      "field_hits": 125,
+      "field_expected": 144,
+      "clean_field_hits": 47,
+      "clean_field_expected": 48,
+      "per_case": {
+        "fixture_a_clean_01": {
+          "cer": 0.32791327913279134,
+          "wer": 0.37254901960784315,
+          "token_multiset_error_rate": 0.0196078431372549,
+          "field_hits": 12,
+          "field_expected": 13,
+          "seconds": 0.45440895900537726
+        },
+        "fixture_a_arithmetic_02": {
+          "cer": 0.2638888888888889,
+          "wer": 0.2833333333333333,
+          "token_multiset_error_rate": 0.18095238095238095,
+          "field_hits": 12,
+          "field_expected": 16,
+          "seconds": 0.415624041997944
+        },
+        "fixture_a_po_reference_03": {
+          "cer": 0.35772357723577236,
+          "wer": 0.38235294117647056,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.5138072919944534
+        },
+        "fixture_b_clean_04": {
+          "cer": 0.34210526315789475,
+          "wer": 0.37037037037037035,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 16,
+          "field_expected": 16,
+          "seconds": 0.43465737500810064
+        },
+        "fixture_b_quantity_05": {
+          "cer": 0.802247191011236,
+          "wer": 0.8125,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.4533360000059474
+        },
+        "fixture_b_unknown_06": {
+          "cer": 0.33647798742138363,
+          "wer": 0.35555555555555557,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 13,
+          "field_expected": 13,
+          "seconds": 0.4209193749993574
+        },
+        "fixture_c_clean_07": {
+          "cer": 0.2845394736842105,
+          "wer": 0.30337078651685395,
+          "token_multiset_error_rate": 0.011235955056179775,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.5787056670087622
+        },
+        "fixture_c_price_08": {
+          "cer": 0.7127882599580713,
+          "wer": 0.7971014492753623,
+          "token_multiset_error_rate": 0.6666666666666666,
+          "field_hits": 3,
+          "field_expected": 13,
+          "seconds": 0.331022040991229
+        },
+        "fixture_c_supplier_09": {
+          "cer": 0.21178637200736647,
+          "wer": 0.2564102564102564,
+          "token_multiset_error_rate": 0.15942028985507245,
+          "field_hits": 12,
+          "field_expected": 16,
+          "seconds": 0.5338420830084942
+        }
+      }
+    },
+    "contrast_1_5": {
+      "configuration": {
+        "contrast_factor": 1.5
+      },
+      "character_error_rate": 0.3779527559055118,
+      "word_error_rate": 0.4204152249134948,
+      "token_multiset_error_rate": 0.07078039927404718,
+      "field_hits": 131,
+      "field_expected": 144,
+      "clean_field_hits": 47,
+      "clean_field_expected": 48,
+      "per_case": {
+        "fixture_a_clean_01": {
+          "cer": 0.32791327913279134,
+          "wer": 0.37254901960784315,
+          "token_multiset_error_rate": 0.0196078431372549,
+          "field_hits": 12,
+          "field_expected": 13,
+          "seconds": 0.4438173749949783
+        },
+        "fixture_a_arithmetic_02": {
+          "cer": 0.32407407407407407,
+          "wer": 0.35,
+          "token_multiset_error_rate": 0.03389830508474576,
+          "field_hits": 14,
+          "field_expected": 16,
+          "seconds": 0.44844733299396466
+        },
+        "fixture_a_po_reference_03": {
+          "cer": 0.35772357723577236,
+          "wer": 0.38235294117647056,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.5003422919980949
+        },
+        "fixture_b_clean_04": {
+          "cer": 0.34210526315789475,
+          "wer": 0.37037037037037035,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 16,
+          "field_expected": 16,
+          "seconds": 0.44697766698664054
+        },
+        "fixture_b_quantity_05": {
+          "cer": 0.802247191011236,
+          "wer": 0.8125,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.46948474999226164
+        },
+        "fixture_b_unknown_06": {
+          "cer": 0.3522012578616352,
+          "wer": 0.37777777777777777,
+          "token_multiset_error_rate": 0.022222222222222223,
+          "field_hits": 12,
+          "field_expected": 13,
+          "seconds": 0.41170866700122133
+        },
+        "fixture_c_clean_07": {
+          "cer": 0.28289473684210525,
+          "wer": 0.29213483146067415,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.5811271670099813
+        },
+        "fixture_c_price_08": {
+          "cer": 0.44654088050314467,
+          "wer": 0.5942028985507246,
+          "token_multiset_error_rate": 0.4423076923076923,
+          "field_hits": 8,
+          "field_expected": 13,
+          "seconds": 0.3917892089957604
+        },
+        "fixture_c_supplier_09": {
+          "cer": 0.21178637200736647,
+          "wer": 0.2692307692307692,
+          "token_multiset_error_rate": 0.17391304347826086,
+          "field_hits": 12,
+          "field_expected": 16,
+          "seconds": 0.5259015829942655
+        }
+      }
+    },
+    "psm_6": {
+      "configuration": {
+        "page_segmentation_mode": 6
+      },
+      "character_error_rate": 0.44266732283464566,
+      "word_error_rate": 0.5017301038062284,
+      "token_multiset_error_rate": 0.1727541954590326,
+      "field_hits": 124,
+      "field_expected": 144,
+      "clean_field_hits": 46,
+      "clean_field_expected": 48,
+      "per_case": {
+        "fixture_a_clean_01": {
+          "cer": 0.45257452574525747,
+          "wer": 0.5294117647058824,
+          "token_multiset_error_rate": 0.10638297872340426,
+          "field_hits": 12,
+          "field_expected": 13,
+          "seconds": 0.3735570419958094
+        },
+        "fixture_a_arithmetic_02": {
+          "cer": 0.30324074074074076,
+          "wer": 0.3333333333333333,
+          "token_multiset_error_rate": 0.2079207920792079,
+          "field_hits": 12,
+          "field_expected": 16,
+          "seconds": 0.33671983299427666
+        },
+        "fixture_a_po_reference_03": {
+          "cer": 0.45121951219512196,
+          "wer": 0.5,
+          "token_multiset_error_rate": 0.0625,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.44669429199711885
+        },
+        "fixture_b_clean_04": {
+          "cer": 0.4394736842105263,
+          "wer": 0.48148148148148145,
+          "token_multiset_error_rate": 0.058823529411764705,
+          "field_hits": 16,
+          "field_expected": 16,
+          "seconds": 0.3660799159988528
+        },
+        "fixture_b_quantity_05": {
+          "cer": 0.43595505617977526,
+          "wer": 0.46875,
+          "token_multiset_error_rate": 0.04918032786885246,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.39511304200277664
+        },
+        "fixture_b_unknown_06": {
+          "cer": 0.4528301886792453,
+          "wer": 0.4888888888888889,
+          "token_multiset_error_rate": 0.07142857142857142,
+          "field_hits": 13,
+          "field_expected": 13,
+          "seconds": 0.34984875000372995
+        },
+        "fixture_c_clean_07": {
+          "cer": 0.5032894736842105,
+          "wer": 0.5393258426966292,
+          "token_multiset_error_rate": 0.1464968152866242,
+          "field_hits": 18,
+          "field_expected": 19,
+          "seconds": 0.428110499997274
+        },
+        "fixture_c_price_08": {
+          "cer": 0.46540880503144655,
+          "wer": 0.6376811594202898,
+          "token_multiset_error_rate": 0.5185185185185185,
+          "field_hits": 4,
+          "field_expected": 13,
+          "seconds": 0.3700936250097584
+        },
+        "fixture_c_supplier_09": {
+          "cer": 0.4530386740331492,
+          "wer": 0.5,
+          "token_multiset_error_rate": 0.3333333333333333,
+          "field_hits": 11,
+          "field_expected": 16,
+          "seconds": 0.40548904200841207
+        }
+      }
+    },
+    "psm_11": {
+      "configuration": {
+        "page_segmentation_mode": 11
+      },
+      "character_error_rate": 0.390501968503937,
+      "word_error_rate": 0.4671280276816609,
+      "token_multiset_error_rate": 0.1256931608133087,
+      "field_hits": 120,
+      "field_expected": 144,
+      "clean_field_hits": 46,
+      "clean_field_expected": 48,
+      "per_case": {
+        "fixture_a_clean_01": {
+          "cer": 0.3252032520325203,
+          "wer": 0.39215686274509803,
+          "token_multiset_error_rate": 0.02,
+          "field_hits": 11,
+          "field_expected": 13,
+          "seconds": 0.4032681670068996
+        },
+        "fixture_a_arithmetic_02": {
+          "cer": 0.42592592592592593,
+          "wer": 0.5166666666666667,
+          "token_multiset_error_rate": 0.2621359223300971,
+          "field_hits": 11,
+          "field_expected": 16,
+          "seconds": 0.3959865419892594
+        },
+        "fixture_a_po_reference_03": {
+          "cer": 0.3638211382113821,
+          "wer": 0.4852941176470588,
+          "token_multiset_error_rate": 0.030303030303030304,
+          "field_hits": 16,
+          "field_expected": 19,
+          "seconds": 0.4914412500074832
+        },
+        "fixture_b_clean_04": {
+          "cer": 0.41578947368421054,
+          "wer": 0.4444444444444444,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 16,
+          "field_expected": 16,
+          "seconds": 0.4910426669957815
+        },
+        "fixture_b_quantity_05": {
+          "cer": 0.4157303370786517,
+          "wer": 0.4375,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.48582591699960176
+        },
+        "fixture_b_unknown_06": {
+          "cer": 0.42452830188679247,
+          "wer": 0.4444444444444444,
+          "token_multiset_error_rate": 0.0,
+          "field_hits": 13,
+          "field_expected": 13,
+          "seconds": 0.43196383300528396
+        },
+        "fixture_c_clean_07": {
+          "cer": 0.2779605263157895,
+          "wer": 0.3146067415730337,
+          "token_multiset_error_rate": 0.017142857142857144,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.652618583990261
+        },
+        "fixture_c_price_08": {
+          "cer": 0.5639412997903563,
+          "wer": 0.7391304347826086,
+          "token_multiset_error_rate": 0.660377358490566,
+          "field_hits": 3,
+          "field_expected": 13,
+          "seconds": 0.43851291699684225
+        },
+        "fixture_c_supplier_09": {
+          "cer": 0.3462246777163904,
+          "wer": 0.44871794871794873,
+          "token_multiset_error_rate": 0.21428571428571427,
+          "field_hits": 12,
+          "field_expected": 16,
+          "seconds": 0.5533671669982141
+        }
+      }
+    },
+    "contrast_1_5_psm_6": {
+      "configuration": {
+        "contrast_factor": 1.5,
+        "page_segmentation_mode": 6
+      },
+      "character_error_rate": 0.453248031496063,
+      "word_error_rate": 0.513840830449827,
+      "token_multiset_error_rate": 0.1506849315068493,
+      "field_hits": 131,
+      "field_expected": 144,
+      "clean_field_hits": 46,
+      "clean_field_expected": 48,
+      "per_case": {
+        "fixture_a_clean_01": {
+          "cer": 0.45257452574525747,
+          "wer": 0.5294117647058824,
+          "token_multiset_error_rate": 0.10638297872340426,
+          "field_hits": 12,
+          "field_expected": 13,
+          "seconds": 0.38120125100249425
+        },
+        "fixture_a_arithmetic_02": {
+          "cer": 0.44907407407407407,
+          "wer": 0.5166666666666667,
+          "token_multiset_error_rate": 0.08928571428571429,
+          "field_hits": 15,
+          "field_expected": 16,
+          "seconds": 0.39549325000552926
+        },
+        "fixture_a_po_reference_03": {
+          "cer": 0.45121951219512196,
+          "wer": 0.5,
+          "token_multiset_error_rate": 0.0625,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.43637187501008157
+        },
+        "fixture_b_clean_04": {
+          "cer": 0.4394736842105263,
+          "wer": 0.48148148148148145,
+          "token_multiset_error_rate": 0.058823529411764705,
+          "field_hits": 16,
+          "field_expected": 16,
+          "seconds": 0.4241215010115411
+        },
+        "fixture_b_quantity_05": {
+          "cer": 0.43595505617977526,
+          "wer": 0.46875,
+          "token_multiset_error_rate": 0.04918032786885246,
+          "field_hits": 19,
+          "field_expected": 19,
+          "seconds": 0.40104320899990853
+        },
+        "fixture_b_unknown_06": {
+          "cer": 0.4528301886792453,
+          "wer": 0.4888888888888889,
+          "token_multiset_error_rate": 0.07142857142857142,
+          "field_hits": 13,
+          "field_expected": 13,
+          "seconds": 0.36389266699552536
+        },
+        "fixture_c_clean_07": {
+          "cer": 0.5016447368421053,
+          "wer": 0.5280898876404494,
+          "token_multiset_error_rate": 0.1337579617834395,
+          "field_hits": 18,
+          "field_expected": 19,
+          "seconds": 0.4420103749871487
+        },
+        "fixture_c_price_08": {
+          "cer": 0.42557651991614254,
+          "wer": 0.5797101449275363,
+          "token_multiset_error_rate": 0.4339622641509434,
+          "field_hits": 8,
+          "field_expected": 13,
+          "seconds": 0.36940537599730305
+        },
+        "fixture_c_supplier_09": {
+          "cer": 0.4530386740331492,
+          "wer": 0.5128205128205128,
+          "token_multiset_error_rate": 0.3504273504273504,
+          "field_hits": 11,
+          "field_expected": 16,
+          "seconds": 0.3916502920037601
+        }
+      }
+    }
+  }
+}

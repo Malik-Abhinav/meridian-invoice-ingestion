@@ -1,0 +1,59 @@
+{
+  "case_id": "fixture_b_unknown_06",
+  "status": "ok",
+  "character_error_rate": 0.33647798742138363,
+  "word_error_rate": 0.35555555555555557,
+  "character_edits": 107,
+  "reference_characters": 318,
+  "word_edits": 16,
+  "reference_words": 45,
+  "token_multiset_error_rate": 0.0,
+  "token_multiset_missing": 0,
+  "token_multiset_extra": 0,
+  "observed_tokens": 45,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 2,
+      "expected": 2,
+      "missed_values": []
+    },
+    "quantities": {
+      "recognized": 2,
+      "expected": 2,
+      "missed_values": []
+    },
+    "unit_prices": {
+      "recognized": 2,
+      "expected": 2,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.43650749999505933,
+  "error": null,
+  "ocr_excerpt": "Fable Ridge Distribution INVOICE FICT_B-INV-0006 14 Feb 2026 PO FICT_B-PO-0006 Subtotal 54.3750 Tax 3.0000 Total 57.3750 Qty Description / code Extended Unit 2 Fictional cobalt unit pack 36.2500 18.1250 UPC 000000060127 5 Imaginary violet d"
+}

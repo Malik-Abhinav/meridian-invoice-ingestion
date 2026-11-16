@@ -1,0 +1,59 @@
+{
+  "case_id": "fixture_b_clean_04",
+  "status": "ok",
+  "character_error_rate": 0.34210526315789475,
+  "word_error_rate": 0.37037037037037035,
+  "character_edits": 130,
+  "reference_characters": 380,
+  "word_edits": 20,
+  "reference_words": 54,
+  "token_multiset_error_rate": 0.0,
+  "token_multiset_missing": 0,
+  "token_multiset_extra": 0,
+  "observed_tokens": 54,
+  "fields": {
+    "invoice_number": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "supplier": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "invoice_date": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "po_reference": {
+      "recognized": 1,
+      "expected": 1,
+      "missed_values": []
+    },
+    "product_identifiers": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    },
+    "quantities": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    },
+    "unit_prices": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    },
+    "totals": {
+      "recognized": 3,
+      "expected": 3,
+      "missed_values": []
+    }
+  },
+  "processing_seconds": 0.4539718339947285,
+  "error": null,
+  "ocr_excerpt": "Fable Ridge Distribution INVOICE FICT_B-INV-0004 03 Feb 2026 PO FICT_B-PO-0004 Subtotal 56.0000 Tax 2.0000 Total 58.0000 Qty Description / code Extended Unit 1 Imaginary indigo sample case 11.7500 11.7500 UPC 000000040181 4 Imaginary amber "
+}
