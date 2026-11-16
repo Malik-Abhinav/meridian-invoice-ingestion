@@ -94,6 +94,18 @@ Generate the three representative review samples from the project root:
 python scripts/generate_pdf_samples.py
 ```
 
-The outputs are [traditional](output/pdf/supplier_a_traditional.pdf), [compact](output/pdf/supplier_b_compact.pdf), and [purchase-order-oriented](output/pdf/supplier_c_purchase_order.pdf). They are fictional examples, not the planned 60-invoice dataset. Re-running the command produces identical PDF bytes for the same inputs. The `scan_blur` input flag is intentionally unused by this text renderer; scanned-image variants belong to a later task.
+The outputs are [traditional](output/pdf/supplier_a_traditional.pdf), [compact](output/pdf/supplier_b_compact.pdf), and [purchase-order-oriented](output/pdf/supplier_c_purchase_order.pdf). They are fictional examples, not the planned 60-invoice dataset. Re-running the command produces identical PDF bytes for the same inputs. The `scan_blur` input flag is intentionally unused by this text renderer; the scan generator below selects an explicit degradation profile.
 
 Run the focused PDF tests with `python -m pytest tests/test_pdf_invoices.py -q`, or the complete suite with `docker compose run --rm test` after rebuilding the image for the new dependencies.
+
+## Scanned-image invoice variants
+
+Task 8 uses pypdfium2 to rasterize the approved text PDFs and Pillow to apply seven controlled profiles: clean raster, mild blur, moderate blur, small rotation, lower contrast, JPEG artifacts, and a combined profile. ReportLab assembles the resulting images into image-only PDFs. Each scan has a JSON sidecar recording the source case and invoice, supplier layout, profile, resolved page parameters, seed, DPI, dimensions, and source/output hashes. The original text PDFs are read but never modified; evaluation ground truth is not passed to the scan generator.
+
+Generate the seven review scans and sidecars from the three existing supplier PDFs:
+
+```sh
+python scripts/generate_scan_samples.py
+```
+
+The review files are under [output/scans](output/scans/). The script uses a fixed master seed and 150 DPI. It verifies that each source PDF matches the invoice input before rasterizing. These are samples, not the planned 60-invoice corpus. Run focused checks with `python -m pytest tests/test_scanned_invoices.py -q`, or the complete Docker suite with `docker compose run --rm test` after rebuilding the image for the new dependencies.

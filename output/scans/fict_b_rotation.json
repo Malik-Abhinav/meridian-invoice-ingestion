@@ -1,0 +1,29 @@
+{
+  "source_case_id": "review_fict_b",
+  "source_invoice_number": "FICT_B-INV-0001",
+  "source_pdf_sha256": "db41fa029f1536812d7a084327d5426837c9f0c6ff9b8424272d9af0757d429d",
+  "supplier_code": "FICT_B",
+  "supplier_template": "compact",
+  "degradation_type": "rotation",
+  "random_seed": 9802437025711042774,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "aa3fd61c9a689f031eff2d00f2d665020759dac22edc6a37ed0554324d1fc2e8",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 14938959288912538860,
+      "source_width_px": 1241,
+      "source_height_px": 1754,
+      "width_px": 1259,
+      "height_px": 1768,
+      "resolution_dpi": 150,
+      "parameters": {
+        "blur_radius": 0.0,
+        "rotation_degrees": 0.562,
+        "contrast_factor": 1.0,
+        "jpeg_quality": null
+      }
+    }
+  ]
+}
