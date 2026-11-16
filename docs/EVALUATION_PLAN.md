@@ -1,6 +1,6 @@
 # Synthetic invoice evaluation contract
 
-Task 6 defined schemas and a plan. Task 7 adds three review PDFs; the planned evaluation dataset has not been generated.
+Task 6 defined schemas and a plan. Tasks 7 and 8 add three clean review PDFs and seven scanned review variants; the planned evaluation dataset has not been generated.
 
 ## Planned corpus
 
@@ -24,7 +24,13 @@ Displayed totals are absent only for the missing-totals category, while ground t
 
 `SyntheticSupplier.layout` selects one of three text-based layouts. `SyntheticInvoiceInput.purchase_order_reference` is optional and has an evaluation counterpart in `ExpectedGroundTruth`; when absent, the PDF omits the PO section. Displayed totals are omitted when absent. The renderer receives only the generation input and does not read case category, duplicate links, unknown-product labels, PO quantity expectations, or reference costs.
 
-The three sample PDFs under `output/pdf/` are visual review fixtures, one per layout. They do not count toward the future 60-case corpus. Long rows and page overflow use flowing tables with repeated headers. The `scan_blur` flag remains a future rendering concern; this task produces selectable text only.
+The three sample PDFs under `output/pdf/` are visual review fixtures, one per layout. They do not count toward the future 60-case corpus. Long rows and page overflow use flowing tables with repeated headers. This text renderer does not apply `scan_blur`; a separate scan profile controls Task 8 rasterization.
+
+## Scanned-image boundary (Task 8)
+
+`scan_invoice` accepts only `SyntheticInvoiceInput`, the matching deterministic clean PDF bytes, a master seed, and an explicit `ScanProfile`. It rejects a mismatched source. It does not access `ExpectedGroundTruth`. The clean PDF remains selectable and unchanged; the scan PDF has one raster image per page and no selectable page text. The JSON sidecar records source and output SHA-256 hashes so the paired artifacts can be checked without embedding evaluation labels in the scan.
+
+The seven review scans under `output/scans/` exercise all profiles at 150 DPI across all three suppliers. `derive_case_seed` supplies the case seed; a versioned SHA-256 derivation gives each page its own seed, which resolves the small rotation angle. Blur, contrast, and JPEG settings are fixed per profile and recorded for each page. Rotation expands the page image with white margins to avoid clipping. The same profile and seed produce identical PDF bytes and metadata. The `scan_blur` field remains a case-generation hint; a later corpus builder must map case category and hint to the explicit scan profile.
 
 ## Later full-dataset generation
 

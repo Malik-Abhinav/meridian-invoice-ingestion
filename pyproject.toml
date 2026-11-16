@@ -7,7 +7,7 @@ name = "meridian-supplier-invoice-ingestion"
 version = "0.1.0"
 description = "Supplier invoice ingestion and inventory reconciliation assessment"
 requires-python = ">=3.12,<3.13"
-dependencies = ["SQLAlchemy>=2.0,<2.1", "alembic>=1.20,<2", "pydantic>=2.10,<3", "reportlab>=4.2,<5"]
+dependencies = ["SQLAlchemy>=2.0,<2.1", "alembic>=1.20,<2", "pydantic>=2.10,<3", "reportlab>=4.2,<5", "pypdfium2>=4.30,<6", "Pillow>=11,<14"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10", "pypdf>=5,<8"]

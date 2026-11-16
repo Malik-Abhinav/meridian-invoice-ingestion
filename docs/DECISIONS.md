@@ -85,3 +85,12 @@
 - **Decision:** Set ReportLab's document invariant mode for reproducible PDF bytes. Render from `SyntheticInvoiceInput` only; evaluation annotations cannot be passed as renderer data. The `scan_blur` flag is ignored until scanned-image variants are implemented.
 - **Verification:** Focused PDF tests check extracted text, optional fields, multi-page tables, and byte equality. Three one-page samples and multi-page stress documents were rendered and visually inspected for overlap and clipping.
 - **Limitations:** Built-in Helvetica is suitable for the current ASCII synthetic fixtures; broader Unicode font coverage would require embedding an appropriate font. Layout samples are not a complete synthetic corpus.
+
+## 13. Deterministic scanned-image variants
+
+- **Decision:** Use pypdfium2 for PDF rasterization and Pillow for blur, contrast, rotation, and JPEG recompression. Reuse ReportLab to place processed images into image-only PDFs. Avoid OpenCV and external rasterizer executables for this task.
+- **Decision:** Keep `rasterize_pdf`, `degrade_image`, and `scan_invoice` separate. Require the source PDF bytes to match the deterministic text renderer for the supplied `SyntheticInvoiceInput`, preserving source identity and keeping evaluation ground truth outside the scan boundary.
+- **Decision:** Derive a case seed with Task 6's `derive_case_seed`, then derive each page seed using a versioned SHA-256 payload. Use the page seed for bounded rotation angles; record resolved blur, rotation, contrast, JPEG quality, pixel dimensions, DPI, and source/output hashes in separate JSON metadata.
+- **Decision:** Rasterize review scans at 150 DPI. Rotate with canvas expansion and white fill so no invoice content is cropped. The output PDF contains only image draw operations and no selectable page text; the original PDF stays unchanged.
+- **Verification:** Tests cover seven profiles, deterministic PDF and pixel output, metadata, page count, source matching, and ground-truth isolation. Seven actual samples across all three suppliers were visually reviewed for readability and clipping.
+- **Limitations:** Settings are controlled examples rather than a calibrated real scanner model. PDFium and Pillow version changes may affect pixels despite stable seeds; pin versions for any future byte-for-byte archival corpus. The full 60-case dataset and OCR remain separate tasks.
