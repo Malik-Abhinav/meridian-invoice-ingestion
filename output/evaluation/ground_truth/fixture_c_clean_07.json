@@ -1,0 +1,130 @@
+{
+  "case_id": "fixture_c_clean_07",
+  "scenario": "clean",
+  "displayed_invoice": {
+    "case_id": "fixture_c_clean_07",
+    "supplier": {
+      "code": "FICT_C",
+      "name": "Northstar Fictional Supply",
+      "fictional": true,
+      "layout": "purchase_order"
+    },
+    "invoice_number": "FICT_C-INV-0007",
+    "invoice_date": "2026-03-02",
+    "purchase_order_reference": "FICT_C-PO-0007",
+    "products": [
+      {
+        "sku": "FICT_C07_P1",
+        "description": "Imaginary violet display sleeve",
+        "upc": "000000070102",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_C07_P2",
+        "description": "Fable teal mock supply bundle",
+        "upc": null,
+        "ndc": "00000070213"
+      },
+      {
+        "sku": "FICT_C07_P3",
+        "description": "Fictional copper trial packet",
+        "upc": "000000070324",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_C07_P4",
+        "description": "Imaginary indigo sample case",
+        "upc": null,
+        "ndc": "00000070422"
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_C07_P1",
+        "quantity": 2,
+        "unit_cost": "7.8750",
+        "line_total": "15.7500"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_C07_P2",
+        "quantity": 1,
+        "unit_cost": "22.5000",
+        "line_total": "22.5000"
+      },
+      {
+        "line_number": 3,
+        "product_sku": "FICT_C07_P3",
+        "quantity": 3,
+        "unit_cost": "5.1250",
+        "line_total": "15.3750"
+      },
+      {
+        "line_number": 4,
+        "product_sku": "FICT_C07_P4",
+        "quantity": 4,
+        "unit_cost": "2.2500",
+        "line_total": "9.0000"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "62.6250",
+      "tax": "3.5",
+      "total": "66.1250"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "62.6250",
+    "tax": "3.5",
+    "total": "66.1250"
+  },
+  "expected_po_reference": "FICT_C-PO-0007",
+  "expected_po_supplier_code": "FICT_C",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C07_P1",
+      "product_identifier": "000000070102",
+      "quantity": 2,
+      "unit_cost": "7.8750"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C07_P2",
+      "product_identifier": "00000070213",
+      "quantity": 1,
+      "unit_cost": "22.5000"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C07_P3",
+      "product_identifier": "000000070324",
+      "quantity": 3,
+      "unit_cost": "5.1250"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C07_P4",
+      "product_identifier": "00000070422",
+      "quantity": 4,
+      "unit_cost": "2.2500"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_C07_P1",
+    "FICT_C07_P2",
+    "FICT_C07_P3",
+    "FICT_C07_P4"
+  ],
+  "known_product_identifiers": [
+    "000000070102",
+    "00000070213",
+    "000000070324",
+    "00000070422"
+  ],
+  "seeded_discrepancies": [],
+  "expected_validation_outcomes": [],
+  "expected_processing_decision": "auto_post_candidate"
+}

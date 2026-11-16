@@ -1,0 +1,139 @@
+{
+  "case_id": "fixture_a_po_reference_03",
+  "scenario": "po_reference_mismatch",
+  "displayed_invoice": {
+    "case_id": "fixture_a_po_reference_03",
+    "supplier": {
+      "code": "FICT_A",
+      "name": "Imaginary Harbor Wholesale",
+      "fictional": true,
+      "layout": "traditional"
+    },
+    "invoice_number": "FICT_A-INV-0003",
+    "invoice_date": "2026-01-18",
+    "purchase_order_reference": "FICT_A-PO-9999",
+    "products": [
+      {
+        "sku": "FICT_A03_P1",
+        "description": "Fictional copper trial packet",
+        "upc": "000000030120",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_A03_P2",
+        "description": "Imaginary indigo sample case",
+        "upc": null,
+        "ndc": "00000030291"
+      },
+      {
+        "sku": "FICT_A03_P3",
+        "description": "Imaginary amber sample carton",
+        "upc": "000000030366",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_A03_P4",
+        "description": "Fictional cobalt unit pack",
+        "upc": null,
+        "ndc": "00000030415"
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_A03_P1",
+        "quantity": 3,
+        "unit_cost": "5.6250",
+        "line_total": "16.8750"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_A03_P2",
+        "quantity": 2,
+        "unit_cost": "9.2500",
+        "line_total": "18.5000"
+      },
+      {
+        "line_number": 3,
+        "product_sku": "FICT_A03_P3",
+        "quantity": 6,
+        "unit_cost": "2.7500",
+        "line_total": "16.5000"
+      },
+      {
+        "line_number": 4,
+        "product_sku": "FICT_A03_P4",
+        "quantity": 1,
+        "unit_cost": "16.4000",
+        "line_total": "16.4000"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "68.2750",
+      "tax": "1.5",
+      "total": "69.7750"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "68.2750",
+    "tax": "1.5",
+    "total": "69.7750"
+  },
+  "expected_po_reference": "FICT_A-PO-0003",
+  "expected_po_supplier_code": "FICT_A",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A03_P1",
+      "product_identifier": "000000030120",
+      "quantity": 3,
+      "unit_cost": "5.6250"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A03_P2",
+      "product_identifier": "00000030291",
+      "quantity": 2,
+      "unit_cost": "9.2500"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A03_P3",
+      "product_identifier": "000000030366",
+      "quantity": 6,
+      "unit_cost": "2.7500"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A03_P4",
+      "product_identifier": "00000030415",
+      "quantity": 1,
+      "unit_cost": "16.4000"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_A03_P1",
+    "FICT_A03_P2",
+    "FICT_A03_P3",
+    "FICT_A03_P4"
+  ],
+  "known_product_identifiers": [
+    "000000030120",
+    "00000030291",
+    "000000030366",
+    "00000030415"
+  ],
+  "seeded_discrepancies": [
+    {
+      "finding": "po_reference_mismatch",
+      "field": "purchase_order_reference",
+      "displayed_value": "FICT_A-PO-9999",
+      "expected_value": "FICT_A-PO-0003"
+    }
+  ],
+  "expected_validation_outcomes": [
+    "po_reference_mismatch"
+  ],
+  "expected_processing_decision": "review_required"
+}

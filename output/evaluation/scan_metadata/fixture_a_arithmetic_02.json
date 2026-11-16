@@ -1,0 +1,29 @@
+{
+  "source_case_id": "fixture_a_arithmetic_02",
+  "source_invoice_number": "FICT_A-INV-0002",
+  "source_pdf_sha256": "59e99099c3847929a767b58ba2b14f4ad811ab5abf143691610f11bcb0fa6acd",
+  "supplier_code": "FICT_A",
+  "supplier_template": "traditional",
+  "degradation_type": "mild_blur",
+  "random_seed": 8807852492757950871,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "bcf03624b5692d477b5cef72a0835975a60c3b1bfca0c46bfa9f3fb91ff0acf7",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 129417391226283184,
+      "source_width_px": 1241,
+      "source_height_px": 1754,
+      "width_px": 1241,
+      "height_px": 1754,
+      "resolution_dpi": 150,
+      "parameters": {
+        "blur_radius": 0.8,
+        "rotation_degrees": 0.0,
+        "contrast_factor": 1.0,
+        "jpeg_quality": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "case_id": "fixture_b_clean_04",
+  "scenario": "clean",
+  "displayed_invoice": {
+    "case_id": "fixture_b_clean_04",
+    "supplier": {
+      "code": "FICT_B",
+      "name": "Fable Ridge Distribution",
+      "fictional": true,
+      "layout": "compact"
+    },
+    "invoice_number": "FICT_B-INV-0004",
+    "invoice_date": "2026-02-03",
+    "purchase_order_reference": "FICT_B-PO-0004",
+    "products": [
+      {
+        "sku": "FICT_B04_P1",
+        "description": "Imaginary indigo sample case",
+        "upc": "000000040181",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_B04_P2",
+        "description": "Imaginary amber sample carton",
+        "upc": null,
+        "ndc": "00000040260"
+      },
+      {
+        "sku": "FICT_B04_P3",
+        "description": "Fictional cobalt unit pack",
+        "upc": "000000040341",
+        "ndc": null
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_B04_P1",
+        "quantity": 1,
+        "unit_cost": "11.7500",
+        "line_total": "11.7500"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_B04_P2",
+        "quantity": 4,
+        "unit_cost": "4.5000",
+        "line_total": "18.0000"
+      },
+      {
+        "line_number": 3,
+        "product_sku": "FICT_B04_P3",
+        "quantity": 2,
+        "unit_cost": "13.1250",
+        "line_total": "26.2500"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "56.0000",
+      "tax": "2",
+      "total": "58.0000"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "56.0000",
+    "tax": "2",
+    "total": "58.0000"
+  },
+  "expected_po_reference": "FICT_B-PO-0004",
+  "expected_po_supplier_code": "FICT_B",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B04_P1",
+      "product_identifier": "000000040181",
+      "quantity": 1,
+      "unit_cost": "11.7500"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B04_P2",
+      "product_identifier": "00000040260",
+      "quantity": 4,
+      "unit_cost": "4.5000"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B04_P3",
+      "product_identifier": "000000040341",
+      "quantity": 2,
+      "unit_cost": "13.1250"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_B04_P1",
+    "FICT_B04_P2",
+    "FICT_B04_P3"
+  ],
+  "known_product_identifiers": [
+    "000000040181",
+    "00000040260",
+    "000000040341"
+  ],
+  "seeded_discrepancies": [],
+  "expected_validation_outcomes": [],
+  "expected_processing_decision": "auto_post_candidate"
+}

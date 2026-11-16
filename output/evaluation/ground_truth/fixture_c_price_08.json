@@ -1,0 +1,95 @@
+{
+  "case_id": "fixture_c_price_08",
+  "scenario": "po_price_mismatch",
+  "displayed_invoice": {
+    "case_id": "fixture_c_price_08",
+    "supplier": {
+      "code": "FICT_C",
+      "name": "Northstar Fictional Supply",
+      "fictional": true,
+      "layout": "purchase_order"
+    },
+    "invoice_number": "FICT_C-INV-0008",
+    "invoice_date": "2026-03-07",
+    "purchase_order_reference": "FICT_C-PO-0008",
+    "products": [
+      {
+        "sku": "FICT_C08_P1",
+        "description": "Fable teal mock supply bundle",
+        "upc": "000000080156",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_C08_P2",
+        "description": "Fictional copper trial packet",
+        "upc": null,
+        "ndc": "00000080255"
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_C08_P1",
+        "quantity": 3,
+        "unit_cost": "17.5000",
+        "line_total": "52.5000"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_C08_P2",
+        "quantity": 2,
+        "unit_cost": "9.3750",
+        "line_total": "18.7500"
+      }
+    ],
+    "displayed_totals": {
+      "subtotal": "71.2500",
+      "tax": "4",
+      "total": "75.2500"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "71.2500",
+    "tax": "4",
+    "total": "75.2500"
+  },
+  "expected_po_reference": "FICT_C-PO-0008",
+  "expected_po_supplier_code": "FICT_C",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C08_P1",
+      "product_identifier": "000000080156",
+      "quantity": 3,
+      "unit_cost": "15.5000"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C08_P2",
+      "product_identifier": "00000080255",
+      "quantity": 2,
+      "unit_cost": "9.3750"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_C08_P1",
+    "FICT_C08_P2"
+  ],
+  "known_product_identifiers": [
+    "000000080156",
+    "00000080255"
+  ],
+  "seeded_discrepancies": [
+    {
+      "finding": "po_price_mismatch",
+      "field": "lines[1].unit_cost",
+      "displayed_value": "17.5000",
+      "expected_value": "15.5000"
+    }
+  ],
+  "expected_validation_outcomes": [
+    "po_price_mismatch"
+  ],
+  "expected_processing_decision": "review_required"
+}

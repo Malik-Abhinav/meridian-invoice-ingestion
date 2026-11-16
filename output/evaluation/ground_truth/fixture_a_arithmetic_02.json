@@ -1,0 +1,124 @@
+{
+  "case_id": "fixture_a_arithmetic_02",
+  "scenario": "arithmetic_subtotal",
+  "displayed_invoice": {
+    "case_id": "fixture_a_arithmetic_02",
+    "supplier": {
+      "code": "FICT_A",
+      "name": "Imaginary Harbor Wholesale",
+      "fictional": true,
+      "layout": "traditional"
+    },
+    "invoice_number": "FICT_A-INV-0002",
+    "invoice_date": "2026-01-12",
+    "purchase_order_reference": "FICT_A-PO-0002",
+    "products": [
+      {
+        "sku": "FICT_A02_P1",
+        "description": "Fable teal mock supply bundle",
+        "upc": "000000020121",
+        "ndc": null
+      },
+      {
+        "sku": "FICT_A02_P2",
+        "description": "Fictional copper trial packet",
+        "upc": null,
+        "ndc": "00000020247"
+      },
+      {
+        "sku": "FICT_A02_P3",
+        "description": "Imaginary indigo sample case",
+        "upc": "000000020367",
+        "ndc": null
+      }
+    ],
+    "lines": [
+      {
+        "line_number": 1,
+        "product_sku": "FICT_A02_P1",
+        "quantity": 4,
+        "unit_cost": "8.2500",
+        "line_total": "33.0000"
+      },
+      {
+        "line_number": 2,
+        "product_sku": "FICT_A02_P2",
+        "quantity": 1,
+        "unit_cost": "12.3750",
+        "line_total": "12.3750"
+      },
+      {
+        "line_number": 3,
+        "product_sku": "FICT_A02_P3",
+        "quantity": 5,
+        "unit_cost": "3.1000",
+        "line_total": "15.5000"
+      }
+    ],
+    "displayed_totals": {
+      "kind": "printed",
+      "subtotal": "61.8750",
+      "tax": "1",
+      "total": "62.8750"
+    },
+    "scan_blur": false
+  },
+  "expected_correct_totals": {
+    "subtotal": "60.8750",
+    "tax": "1",
+    "total": "61.8750"
+  },
+  "expected_po_reference": "FICT_A-PO-0002",
+  "expected_po_supplier_code": "FICT_A",
+  "expected_po_lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A02_P1",
+      "product_identifier": "000000020121",
+      "quantity": 4,
+      "unit_cost": "8.2500"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A02_P2",
+      "product_identifier": "00000020247",
+      "quantity": 1,
+      "unit_cost": "12.3750"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A02_P3",
+      "product_identifier": "000000020367",
+      "quantity": 5,
+      "unit_cost": "3.1000"
+    }
+  ],
+  "known_product_skus": [
+    "FICT_A02_P1",
+    "FICT_A02_P2",
+    "FICT_A02_P3"
+  ],
+  "known_product_identifiers": [
+    "000000020121",
+    "00000020247",
+    "000000020367"
+  ],
+  "seeded_discrepancies": [
+    {
+      "finding": "subtotal_mismatch",
+      "field": "totals.subtotal",
+      "displayed_value": "61.8750",
+      "expected_value": "60.8750"
+    },
+    {
+      "finding": "subtotal_mismatch",
+      "field": "totals.total",
+      "displayed_value": "62.8750",
+      "expected_value": "61.8750"
+    }
+  ],
+  "expected_validation_outcomes": [
+    "subtotal_mismatch"
+  ],
+  "expected_processing_decision": "review_required"
+}

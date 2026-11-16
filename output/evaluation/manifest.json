@@ -1,0 +1,153 @@
+{
+  "version": "1",
+  "master_seed": 2029,
+  "entries": [
+    {
+      "case_id": "fixture_a_clean_01",
+      "supplier_code": "FICT_A",
+      "invoice_number": "FICT_A-INV-0001",
+      "purchase_order_reference": "FICT_A-PO-0001",
+      "scenario": "clean",
+      "original_pdf_path": "original/fixture_a_clean_01.pdf",
+      "scanned_pdf_path": "scanned/fixture_a_clean_01.pdf",
+      "ground_truth_path": "ground_truth/fixture_a_clean_01.json",
+      "scan_metadata_path": "scan_metadata/fixture_a_clean_01.json",
+      "degradation_profile": "clean_raster",
+      "expected_validation_outcomes": [],
+      "expected_processing_decision": "auto_post_candidate",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_a_arithmetic_02",
+      "supplier_code": "FICT_A",
+      "invoice_number": "FICT_A-INV-0002",
+      "purchase_order_reference": "FICT_A-PO-0002",
+      "scenario": "arithmetic_subtotal",
+      "original_pdf_path": "original/fixture_a_arithmetic_02.pdf",
+      "scanned_pdf_path": "scanned/fixture_a_arithmetic_02.pdf",
+      "ground_truth_path": "ground_truth/fixture_a_arithmetic_02.json",
+      "scan_metadata_path": "scan_metadata/fixture_a_arithmetic_02.json",
+      "degradation_profile": "mild_blur",
+      "expected_validation_outcomes": [
+        "subtotal_mismatch"
+      ],
+      "expected_processing_decision": "review_required",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_a_po_reference_03",
+      "supplier_code": "FICT_A",
+      "invoice_number": "FICT_A-INV-0003",
+      "purchase_order_reference": "FICT_A-PO-9999",
+      "scenario": "po_reference_mismatch",
+      "original_pdf_path": "original/fixture_a_po_reference_03.pdf",
+      "scanned_pdf_path": "scanned/fixture_a_po_reference_03.pdf",
+      "ground_truth_path": "ground_truth/fixture_a_po_reference_03.json",
+      "scan_metadata_path": "scan_metadata/fixture_a_po_reference_03.json",
+      "degradation_profile": "rotation",
+      "expected_validation_outcomes": [
+        "po_reference_mismatch"
+      ],
+      "expected_processing_decision": "review_required",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_b_clean_04",
+      "supplier_code": "FICT_B",
+      "invoice_number": "FICT_B-INV-0004",
+      "purchase_order_reference": "FICT_B-PO-0004",
+      "scenario": "clean",
+      "original_pdf_path": "original/fixture_b_clean_04.pdf",
+      "scanned_pdf_path": "scanned/fixture_b_clean_04.pdf",
+      "ground_truth_path": "ground_truth/fixture_b_clean_04.json",
+      "scan_metadata_path": "scan_metadata/fixture_b_clean_04.json",
+      "degradation_profile": "clean_raster",
+      "expected_validation_outcomes": [],
+      "expected_processing_decision": "auto_post_candidate",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_b_quantity_05",
+      "supplier_code": "FICT_B",
+      "invoice_number": "FICT_B-INV-0005",
+      "purchase_order_reference": "FICT_B-PO-0005",
+      "scenario": "po_quantity_mismatch",
+      "original_pdf_path": "original/fixture_b_quantity_05.pdf",
+      "scanned_pdf_path": "scanned/fixture_b_quantity_05.pdf",
+      "ground_truth_path": "ground_truth/fixture_b_quantity_05.json",
+      "scan_metadata_path": "scan_metadata/fixture_b_quantity_05.json",
+      "degradation_profile": "low_contrast",
+      "expected_validation_outcomes": [
+        "po_quantity_mismatch"
+      ],
+      "expected_processing_decision": "review_required",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_b_unknown_06",
+      "supplier_code": "FICT_B",
+      "invoice_number": "FICT_B-INV-0006",
+      "purchase_order_reference": "FICT_B-PO-0006",
+      "scenario": "unknown_product",
+      "original_pdf_path": "original/fixture_b_unknown_06.pdf",
+      "scanned_pdf_path": "scanned/fixture_b_unknown_06.pdf",
+      "ground_truth_path": "ground_truth/fixture_b_unknown_06.json",
+      "scan_metadata_path": "scan_metadata/fixture_b_unknown_06.json",
+      "degradation_profile": "jpeg_artifacts",
+      "expected_validation_outcomes": [
+        "unknown_product"
+      ],
+      "expected_processing_decision": "review_required",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_c_clean_07",
+      "supplier_code": "FICT_C",
+      "invoice_number": "FICT_C-INV-0007",
+      "purchase_order_reference": "FICT_C-PO-0007",
+      "scenario": "clean",
+      "original_pdf_path": "original/fixture_c_clean_07.pdf",
+      "scanned_pdf_path": "scanned/fixture_c_clean_07.pdf",
+      "ground_truth_path": "ground_truth/fixture_c_clean_07.json",
+      "scan_metadata_path": "scan_metadata/fixture_c_clean_07.json",
+      "degradation_profile": "clean_raster",
+      "expected_validation_outcomes": [],
+      "expected_processing_decision": "auto_post_candidate",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_c_price_08",
+      "supplier_code": "FICT_C",
+      "invoice_number": "FICT_C-INV-0008",
+      "purchase_order_reference": "FICT_C-PO-0008",
+      "scenario": "po_price_mismatch",
+      "original_pdf_path": "original/fixture_c_price_08.pdf",
+      "scanned_pdf_path": "scanned/fixture_c_price_08.pdf",
+      "ground_truth_path": "ground_truth/fixture_c_price_08.json",
+      "scan_metadata_path": "scan_metadata/fixture_c_price_08.json",
+      "degradation_profile": "moderate_blur",
+      "expected_validation_outcomes": [
+        "po_price_mismatch"
+      ],
+      "expected_processing_decision": "review_required",
+      "related_case_ids": []
+    },
+    {
+      "case_id": "fixture_c_supplier_09",
+      "supplier_code": "FICT_C",
+      "invoice_number": "FICT_C-INV-0009",
+      "purchase_order_reference": "FICT_C-PO-0009",
+      "scenario": "po_supplier_mismatch",
+      "original_pdf_path": "original/fixture_c_supplier_09.pdf",
+      "scanned_pdf_path": "scanned/fixture_c_supplier_09.pdf",
+      "ground_truth_path": "ground_truth/fixture_c_supplier_09.json",
+      "scan_metadata_path": "scan_metadata/fixture_c_supplier_09.json",
+      "degradation_profile": "combined",
+      "expected_validation_outcomes": [
+        "po_supplier_mismatch"
+      ],
+      "expected_processing_decision": "review_required",
+      "related_case_ids": []
+    }
+  ]
+}

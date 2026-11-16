@@ -4,14 +4,19 @@ from datetime import date
 from decimal import Decimal
 from enum import StrEnum
 from hashlib import sha256
-from typing import Annotated, Self
+from typing import Annotated, Literal, Self
 
-from pydantic import BaseModel, BeforeValidator, ConfigDict, Field, StrictInt, field_validator, model_validator
+from pydantic import BaseModel, BeforeValidator, ConfigDict, Field, StrictInt, ValidationInfo, field_validator, model_validator
 
 from meridian.domain import require_money
 
 
-def _exact_money(value: object) -> Decimal:
+def _exact_money(value: object, info: ValidationInfo) -> Decimal:
+    if info.mode == "json" and isinstance(value, str):
+        try:
+            value = Decimal(value)
+        except Exception as exc:
+            raise ValueError("money must be a decimal string in JSON") from exc
     if not isinstance(value, Decimal):
         raise ValueError("money must be supplied as Decimal")
     return require_money(value)
@@ -117,6 +122,15 @@ class InvoiceTotals(SyntheticModel):
         return self
 
 
+class PrintedTotals(SyntheticModel):
+    """Invoice-visible amounts for a deliberately inconsistent evaluation fixture."""
+
+    kind: Literal["printed"]
+    subtotal: Money
+    tax: Money
+    total: Money
+
+
 class SyntheticInvoiceInput(SyntheticModel):
     """Only this model is passed to a future invoice renderer."""
 
@@ -127,7 +141,7 @@ class SyntheticInvoiceInput(SyntheticModel):
     purchase_order_reference: str | None = Field(default=None, min_length=1, max_length=80)
     products: tuple[SyntheticProduct, ...] = Field(min_length=1)
     lines: tuple[SyntheticLineItem, ...] = Field(min_length=1)
-    displayed_totals: InvoiceTotals | None = None
+    displayed_totals: InvoiceTotals | PrintedTotals | None = None
     scan_blur: bool = False
 
     @model_validator(mode="after")
@@ -138,7 +152,7 @@ class SyntheticInvoiceInput(SyntheticModel):
             raise ValueError("product SKUs and line numbers must be unique")
         if any(line.product_sku not in skus for line in self.lines):
             raise ValueError("each line must reference a supplied product")
-        if self.displayed_totals and self.displayed_totals.subtotal != sum(
+        if isinstance(self.displayed_totals, InvoiceTotals) and self.displayed_totals.subtotal != sum(
             (line.line_total for line in self.lines), Decimal("0")
         ):
             raise ValueError("displayed subtotal must equal the sum of line totals")

@@ -1,0 +1,29 @@
+{
+  "source_case_id": "fixture_c_supplier_09",
+  "source_invoice_number": "FICT_C-INV-0009",
+  "source_pdf_sha256": "291b0fa9f9ae7cfb8af58b6b0c434f7e32bc2213db1ae785088566b8daff0086",
+  "supplier_code": "FICT_C",
+  "supplier_template": "purchase_order",
+  "degradation_type": "combined",
+  "random_seed": 1181201339860229245,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "c75a6506819d622bdc6e672668c0ec1699d6a7c631964312a7bd9d4d84f15c2b",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 13081714941062046276,
+      "source_width_px": 1241,
+      "source_height_px": 1754,
+      "width_px": 1253,
+      "height_px": 1762,
+      "resolution_dpi": 150,
+      "parameters": {
+        "blur_radius": 1.0,
+        "rotation_degrees": 0.363,
+        "contrast_factor": 0.78,
+        "jpeg_quality": 55
+      }
+    }
+  ]
+}

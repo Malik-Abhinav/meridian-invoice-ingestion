@@ -109,3 +109,14 @@ python scripts/generate_scan_samples.py
 ```
 
 The review files are under [output/scans](output/scans/). The script uses a fixed master seed and 150 DPI. It verifies that each source PDF matches the invoice input before rasterizing. These are samples, not the planned 60-invoice corpus. Run focused checks with `python -m pytest tests/test_scanned_invoices.py -q`, or the complete Docker suite with `docker compose run --rm test` after rebuilding the image for the new dependencies.
+
+## Nine evaluation fixtures
+
+Task 9 adds exactly nine fictional cases, three per supplier: one clean, one data or arithmetic discrepancy, and one identity or matching discrepancy. Generate the originals, image-only scans, ground truth, scan metadata, and manifest with:
+
+```sh
+python scripts/generate_evaluation_fixtures.py
+python -m pytest tests/test_evaluation_fixtures.py -q
+```
+
+The [manifest](output/evaluation/manifest.json) maps each case ID to its files in [output/evaluation](output/evaluation/), records the degradation profile, and lists expected findings and a processing decision. Run the command from any directory; it always writes to the repository's `output/evaluation/`. The fixed seed is 2029 and resolution is 150 DPI. Repeating generation in the same environment produces byte-identical files. Ground truth contains expected PO and catalog values but is never passed to the PDF or scan renderer. Clean cases are only `auto_post_candidate`; no approval or inventory posting is implemented. This is a small evaluation fixture set, not the planned 60-invoice corpus.
