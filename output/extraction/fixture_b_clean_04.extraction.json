@@ -1,0 +1,516 @@
+{
+  "source_sha256": "f37dead2b2f8e4d5d0e9211eff2da09c3718e471def6a2cf205e87276c33e272",
+  "provider": "mock",
+  "model_name": "ocr-only-v1",
+  "repair_attempted": false,
+  "invoice": {
+    "supplier_name": {
+      "value": "Fable Ridge Distribution",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_number": {
+      "value": "FICT_B-INV-0004",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-02-03",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            5,
+            6,
+            7
+          ],
+          "block_number": 1,
+          "paragraph_number": 1,
+          "line_number": 2
+        }
+      ]
+    },
+    "purchase_order_reference": {
+      "value": "FICT_B-PO-0004",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            8,
+            9
+          ],
+          "block_number": 2,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "lines": [
+      {
+        "source_row_order": 1,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 5
+            }
+          ]
+        },
+        "description": {
+          "value": "Imaginary indigo sample case",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 5
+            }
+          ]
+        },
+        "upc": {
+          "value": "000000040181",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                29,
+                30
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 6
+            }
+          ]
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": 1,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 5
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": "11.7500",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 5
+            }
+          ]
+        },
+        "printed_line_total": {
+          "value": "11.7500",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 5
+            }
+          ]
+        }
+      },
+      {
+        "source_row_order": 2,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 7
+            }
+          ]
+        },
+        "description": {
+          "value": "Imaginary amber sample carton",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 7
+            }
+          ]
+        },
+        "upc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "ndc": {
+          "value": "00000040260",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                38,
+                39
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 8
+            }
+          ]
+        },
+        "quantity": {
+          "value": 4,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 7
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": "4.5000",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 7
+            }
+          ]
+        },
+        "printed_line_total": {
+          "value": "18.0000",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 7
+            }
+          ]
+        }
+      },
+      {
+        "source_row_order": 3,
+        "line_number": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 9
+            }
+          ]
+        },
+        "description": {
+          "value": "Fictional cobalt unit pack",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 9
+            }
+          ]
+        },
+        "upc": {
+          "value": "000000040341",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                47,
+                48
+              ],
+              "block_number": 6,
+              "paragraph_number": 1,
+              "line_number": 1
+            }
+          ]
+        },
+        "ndc": {
+          "value": null,
+          "uncertainty": null,
+          "evidence": []
+        },
+        "quantity": {
+          "value": 2,
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 9
+            }
+          ]
+        },
+        "unit_cost": {
+          "value": "13.1250",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 9
+            }
+          ]
+        },
+        "printed_line_total": {
+          "value": "26.2500",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "word_indexes": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46
+              ],
+              "block_number": 5,
+              "paragraph_number": 1,
+              "line_number": 9
+            }
+          ]
+        }
+      }
+    ],
+    "printed_subtotal": {
+      "value": "56.0000",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            10,
+            11
+          ],
+          "block_number": 5,
+          "paragraph_number": 1,
+          "line_number": 1
+        }
+      ]
+    },
+    "printed_tax": {
+      "value": "2.0000",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            12,
+            13
+          ],
+          "block_number": 5,
+          "paragraph_number": 1,
+          "line_number": 2
+        }
+      ]
+    },
+    "printed_total": {
+      "value": "58.0000",
+      "uncertainty": null,
+      "evidence": [
+        {
+          "page_number": 1,
+          "word_indexes": [
+            14,
+            15
+          ],
+          "block_number": 5,
+          "paragraph_number": 1,
+          "line_number": 3
+        }
+      ]
+    }
+  }
+}
