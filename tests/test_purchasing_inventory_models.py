@@ -23,7 +23,8 @@ def sample_db() -> tuple[object, UUID, UUID, UUID, UUID]:
         engine,
         tables=[table for table in Base.metadata.sorted_tables if table.name not in {
             "audit_events", "invoice_documents", "invoice_upload_attempts",
-            "invoice_posting_authorizations"}],
+            "invoice_posting_authorizations", "invoice_processing_attempts",
+            "invoice_review_states"}],
     )
     with Session(engine) as session:
         supplier = Supplier(code="WHOLESALE", name="Wholesaler")

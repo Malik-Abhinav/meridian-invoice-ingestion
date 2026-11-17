@@ -74,6 +74,7 @@ class AuthorizationRequest(SyntheticModel):
     approval_event_id: UUID
     location_id: UUID
     allocations: tuple[LineAllocation, ...] = Field(min_length=1)
+    reviewed_fields: tuple[str, ...] = ()
 
 
 class PostingRequest(SyntheticModel):
@@ -96,6 +97,7 @@ class PostingApprovalEvidence(SyntheticModel):
     reconciliation_decision: ReconciliationDecision
     resolved_po_line_rows: tuple[int, ...] = ()
     resolved_validation_codes: tuple[FindingCode, ...] = ()
+    reviewed_staff_fields: tuple[str, ...] = ()
 
 
 class PostingResult(SyntheticModel):
@@ -224,7 +226,8 @@ def _source_document_is_current(session: Session, invoice_id: UUID, source_hash:
 def prepare_posting_approval(session: Session, invoice_id: UUID, location_id: UUID,
                              extraction: ExtractionResult, ocr: OcrDocument,
                              allocations: tuple[LineAllocation, ...], *,
-                             supplier_aliases: dict[str, tuple[str, ...]] | None = None
+                             supplier_aliases: dict[str, tuple[str, ...]] | None = None,
+                             reviewed_fields: tuple[str, ...] = ()
                              ) -> PostingApprovalEvidence:
     """Read-only re-establishment of Task 12 and 13 for a human approval event."""
     with session.no_autoflush:
@@ -239,11 +242,19 @@ def prepare_posting_approval(session: Session, invoice_id: UUID, location_id: UU
             raise PostingConflict(PostingErrorCode.MISSING_APPROVAL_EVIDENCE,
                                   "Invoice must link exactly the source document used by extraction.")
         validation = validate_invoice(extraction, ocr)
-        reviewed_repeated_products = (validation.decision == ReviewDecision.NEEDS_REVIEW
-            and bool(validation.findings)
-            and all(finding.code == FindingCode.DUPLICATE_PRODUCT_IDENTIFIER
-                    for finding in validation.findings))
-        if validation.decision != ReviewDecision.READY_FOR_PO_MATCHING and not reviewed_repeated_products:
+        reviewable = {FindingCode.MISSING_EVIDENCE, FindingCode.CONFLICTING_EVIDENCE,
+                      FindingCode.LOW_OCR_CONFIDENCE, FindingCode.UNCERTAIN_FIELD}
+        reviewed_set = set(reviewed_fields)
+        def reviewed(finding) -> bool:
+            field = (f"line[{finding.field.source_row_order}].{finding.field.field}"
+                     if finding.field.source_row_order is not None else finding.field.field)
+            return (finding.code == FindingCode.DUPLICATE_PRODUCT_IDENTIFIER
+                    or finding.code in reviewable and field in reviewed_set)
+        reviewed_local = (validation.decision == ReviewDecision.NEEDS_REVIEW
+                          and bool(validation.findings)
+                          and all(reviewed(finding) for finding in validation.findings
+                                  if finding.manual_review_required))
+        if validation.decision != ReviewDecision.READY_FOR_PO_MATCHING and not reviewed_local:
             raise PostingConflict(PostingErrorCode.MISSING_APPROVAL_EVIDENCE,
                                   "Invoice-local validation is not ready for PO matching.")
         reconciliation = reconcile_invoice(extraction, validation,
@@ -260,7 +271,7 @@ def prepare_posting_approval(session: Session, invoice_id: UUID, location_id: UU
                     for finding in reconciliation.findings)
             and set(reconciliation.unperformed_checks) == resolved_checks)
         reconciled_except_reviewed_warning = (
-            reviewed_repeated_products and not reconciliation.findings
+            reviewed_local and not reconciliation.findings
             and not reconciliation.unperformed_checks)
         if (reconciliation.decision != ReconciliationDecision.READY_FOR_POSTING_REVIEW
                 and not explicit_ambiguity_only
@@ -283,8 +294,9 @@ def prepare_posting_approval(session: Session, invoice_id: UUID, location_id: UU
             validation_decision=validation.decision,
             reconciliation_decision=reconciliation.decision,
             resolved_po_line_rows=ambiguous_rows if explicit_ambiguity_only else (),
-            resolved_validation_codes=(FindingCode.DUPLICATE_PRODUCT_IDENTIFIER,)
-                if reviewed_repeated_products else ())
+            resolved_validation_codes=tuple(sorted({finding.code for finding in validation.findings
+                if finding.manual_review_required and reviewed(finding)}, key=str)),
+            reviewed_staff_fields=tuple(sorted(reviewed_set)))
 
 
 def _check_invoice_and_allocations(invoice: Invoice, invoice_lines: list[InvoiceLine],
@@ -356,7 +368,8 @@ def record_posting_authorization(session: Session, request: AuthorizationRequest
                               "Invoice must be approved before posting authorization is recorded.")
     evidence = prepare_posting_approval(session, request.invoice_id, request.location_id, extraction,
                                         ocr, request.allocations,
-                                        supplier_aliases=supplier_aliases)
+                                        supplier_aliases=supplier_aliases,
+                                        reviewed_fields=request.reviewed_fields)
     event = session.get(AuditEvent, request.approval_event_id)
     if (event is None or event.actor_type != "staff" or not event.actor_id
             or event.action != "approve" or event.entity_type != "invoice"
@@ -516,7 +529,8 @@ def _authorized_result(session: Session, request: PostingRequest,
                          movement_ids=tuple(item.id for item in movements))
 
 
-def _post_in_transaction(session: Session, request: PostingRequest) -> PostingResult:
+def _post_in_transaction(session: Session, request: PostingRequest, *,
+                         actor_id: str | None = None) -> PostingResult:
     if session.get_bind().dialect.name != "postgresql":
         raise PostingConflict(PostingErrorCode.TRANSACTION_CONFLICT,
                               "Posting requires PostgreSQL row and advisory locks.")
@@ -642,6 +656,14 @@ def _post_in_transaction(session: Session, request: PostingRequest) -> PostingRe
     authorization.idempotency_key = request.idempotency_key
     authorization.request_fingerprint = request_fingerprint
     authorization.posted_at = datetime.now(timezone.utc)
+    if actor_id is not None:
+        if not actor_id.strip():
+            raise PostingConflict(PostingErrorCode.MISSING_APPROVAL_EVIDENCE,
+                                  "Posting staff identity must be nonempty.")
+        session.add(AuditEvent(actor_type="staff", actor_id=actor_id,
+            action="post", entity_type="invoice", entity_id=invoice.id,
+            after_data={"status": "posted", "authorization_id": str(authorization.id),
+                        "movement_ids": [str(item) for item in movement_ids]}))
     session.flush()
     return PostingResult(status=PostingStatus.POSTED, invoice_id=invoice.id,
                          authorization_id=authorization.id,
@@ -649,11 +671,12 @@ def _post_in_transaction(session: Session, request: PostingRequest) -> PostingRe
                          movement_ids=tuple(movement_ids))
 
 
-def post_invoice(factory: sessionmaker[Session], request: PostingRequest) -> PostingResult:
+def post_invoice(factory: sessionmaker[Session], request: PostingRequest, *,
+                 actor_id: str | None = None) -> PostingResult:
     """Own exactly one transaction; never commits a partial receipt or state change."""
     try:
         with factory.begin() as session:
-            return _post_in_transaction(session, request)
+            return _post_in_transaction(session, request, actor_id=actor_id)
     except PostingConflict:
         raise
     except IntegrityError as exc:
