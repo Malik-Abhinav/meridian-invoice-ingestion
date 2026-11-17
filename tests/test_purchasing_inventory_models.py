@@ -21,7 +21,9 @@ def sample_db() -> tuple[object, UUID, UUID, UUID, UUID]:
     engine = create_engine("sqlite+pysqlite:///:memory:")
     Base.metadata.create_all(
         engine,
-        tables=[table for table in Base.metadata.sorted_tables if table.name not in {"audit_events", "invoice_documents", "invoice_upload_attempts"}],
+        tables=[table for table in Base.metadata.sorted_tables if table.name not in {
+            "audit_events", "invoice_documents", "invoice_upload_attempts",
+            "invoice_posting_authorizations"}],
     )
     with Session(engine) as session:
         supplier = Supplier(code="WHOLESALE", name="Wholesaler")

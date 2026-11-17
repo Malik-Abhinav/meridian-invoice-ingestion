@@ -21,7 +21,7 @@ from meridian.db import Base
 from meridian.models import (
     AuditEvent, InventoryBalance, InventoryMovement, Invoice, InvoiceDocument,
     InvoiceLine, InvoiceUploadAttempt, Location, Product, PurchaseOrder,
-    PurchaseOrderLine, Supplier,
+    PurchaseOrderLine, Supplier, InvoicePostingAuthorization,
 )
 from meridian.reconciliation_repository import SqlAlchemyTrustedRepository
 
@@ -248,7 +248,7 @@ def test_initial_migration_upgrade_downgrade_reupgrade(disposable_database: Call
         with patch.dict(os.environ, {"DATABASE_URL": url}):
             command.check(Config(str(ALEMBIC_INI)))
         with engine.connect() as connection:
-            assert connection.execute(text("SELECT version_num FROM alembic_version")).scalar_one() == "0001_initial"
+            assert connection.execute(text("SELECT version_num FROM alembic_version")).scalar_one() == "0002_posting_authorization"
         migrate(url, "base")
         assert not (set(Base.metadata.tables) & set(inspect(engine).get_table_names()))
         migrate(url, "head")
@@ -263,6 +263,78 @@ def test_initial_migration_upgrade_downgrade_reupgrade(disposable_database: Call
             assert int(version) // 10000 == 16
     finally:
         engine.dispose()
+
+
+def test_posting_migration_upgrades_existing_main_and_downgrades(disposable_database: Callable[[], str]) -> None:
+    url = disposable_database()
+    migrate(url, "0001_initial")
+    invoice_id = uuid4()
+    with database_connection(url) as connection:
+        supplier_id = supplier(connection, "BEFORE")
+        connection.execute(insert(Invoice).values(id=invoice_id, supplier_id=supplier_id,
+                                                  status="approved"))
+    migrate(url, "head")
+    engine = create_engine(url)
+    try:
+        assert "invoice_posting_authorizations" in inspect(engine).get_table_names()
+        with engine.connect() as connection:
+            assert connection.execute(select(Invoice.status).where(Invoice.id == invoice_id)).scalar_one() == "approved"
+        with patch.dict(os.environ, {"DATABASE_URL": url}):
+            command.downgrade(Config(str(ALEMBIC_INI)), "0001_initial")
+        assert "invoice_posting_authorizations" not in inspect(engine).get_table_names()
+        with engine.connect() as connection:
+            assert connection.execute(select(Invoice.status).where(Invoice.id == invoice_id)).scalar_one() == "approved"
+    finally:
+        engine.dispose()
+
+
+def test_posting_authorization_uniqueness_and_completion_constraints(
+        disposable_database: Callable[[], str]) -> None:
+    url = disposable_database()
+    migrate(url, "head")
+    with database_connection(url) as connection:
+        supplier_id = supplier(connection, "POST")
+        first_invoice, second_invoice = uuid4(), uuid4()
+        first_event, second_event = uuid4(), uuid4()
+        location_id = uuid4()
+        connection.execute(insert(Location).values(id=location_id, code="POST", name="Posting location"))
+        for invoice_id, event_id in ((first_invoice, first_event),
+                                     (second_invoice, second_event)):
+            connection.execute(insert(Invoice).values(id=invoice_id, supplier_id=supplier_id,
+                                                      status="approved"))
+            connection.execute(insert(AuditEvent).values(id=event_id, actor_type="staff",
+                actor_id="reviewer", action="approve", entity_type="invoice",
+                entity_id=invoice_id, after_data={"status": "approved"}))
+        base = dict(location_id=location_id, source_sha256="a" * 64, invoice_fingerprint="b" * 64,
+                    reference_fingerprint="c" * 64, allocation_fingerprint="d" * 64,
+                    evidence_fingerprint="e" * 64, approval_payload_sha256="f" * 64)
+        connection.execute(insert(InvoicePostingAuthorization).values(
+            invoice_id=first_invoice, approval_event_id=first_event, **base))
+        expect_constraint(connection, insert(InvoicePostingAuthorization).values(
+            invoice_id=second_invoice, approval_event_id=second_event,
+            **(base | {"location_id": uuid4()})),
+            "invoice_posting_authorizations_location_id_fkey")
+        expect_constraint(connection, insert(InvoicePostingAuthorization).values(
+            invoice_id=first_invoice, approval_event_id=second_event, **base),
+            "invoice_posting_authorizations_invoice_id_key")
+        expect_constraint(connection, insert(InvoicePostingAuthorization).values(
+            invoice_id=second_invoice, approval_event_id=second_event,
+            idempotency_key="key", **base), "ck_posting_authorizations_completion")
+        connection.execute(insert(InvoicePostingAuthorization).values(
+            invoice_id=second_invoice, approval_event_id=second_event,
+            idempotency_key="key", request_fingerprint="0" * 64,
+            posted_at=datetime.now(timezone.utc), **base))
+        third_invoice, third_event = uuid4(), uuid4()
+        connection.execute(insert(Invoice).values(id=third_invoice, supplier_id=supplier_id,
+                                                  status="approved"))
+        connection.execute(insert(AuditEvent).values(id=third_event, actor_type="staff",
+            actor_id="reviewer", action="approve", entity_type="invoice",
+            entity_id=third_invoice, after_data={"status": "approved"}))
+        expect_constraint(connection, insert(InvoicePostingAuthorization).values(
+            invoice_id=third_invoice, approval_event_id=third_event,
+            idempotency_key="key", request_fingerprint="0" * 64,
+            posted_at=datetime.now(timezone.utc), **base),
+            "invoice_posting_authorizations_idempotency_key_key")
 
 
 def test_invoice_identity_and_product_constraints(disposable_database: Callable[[], str]) -> None:

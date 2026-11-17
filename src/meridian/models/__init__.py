@@ -11,6 +11,7 @@ from meridian.models.invoices import (
 from meridian.models.purchasing import PurchaseOrder, PurchaseOrderLine
 from meridian.models.inventory import InventoryBalance, InventoryMovement, Location
 from meridian.models.audit import AuditEvent
+from meridian.models.posting import InvoicePostingAuthorization
 
 __all__ = [
     "Supplier",
@@ -25,4 +26,5 @@ __all__ = [
     "InventoryBalance",
     "InventoryMovement",
     "AuditEvent",
+    "InvoicePostingAuthorization",
 ]

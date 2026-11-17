@@ -102,6 +102,19 @@ Fixture snapshots contain one PO per case, no prior receipts, and no persisted i
 
 The quality review adds `unperformed_checks` to each result and evaluation row. Controlled clean cases have an empty list; controlled A PO-reference has skipped PO/line checks, while controlled A arithmetic has none in Task 13 and remains under Task 12 review. Stored C price has `invoice_lines` and `duplicate_identity` skipped because its extraction has no lines or invoice number. Stored missing identifiers and costs expose skipped line checks instead of appearing to pass. The nine-fixture findings and decisions remain unchanged.
 
+## Task 14 controlled posting evaluation
+
+`scripts/run_posting_evaluation.py` creates a temporary PostgreSQL database, upgrades Alembic, seeds controlled invoice-visible values and trusted purchasing rows, records explicit staff approval evidence, runs posting scenarios including competing invoices on one PO, then drops the database. It reuses test seeding code only inside the evaluation harness; the production posting module never imports fixture truth or test code. No original fixture, OCR, extraction, validation, or reconciliation output is modified.
+
+| Scenario | Expected result |
+| --- | --- |
+| Clean invoice | First request posts two receipts; exact retry returns `already_posted` with no extra stock |
+| Concurrent duplicate requests | One posts and one returns `already_posted`; two total receipt rows |
+| Competing invoice beyond PO capacity | `insufficient_po_quantity`; invoice state, receipts, and balances unchanged |
+| PO closed after approval | `po_ineligible`; invoice state, receipts, and balances unchanged |
+
+This checks transaction behavior with controlled accurately transcribed values, not live OCR or LLM accuracy. The disposable database is the only state changed during evaluation. Stored OCR-imperfect fixtures are never automatically posted.
+
 ## Later full-dataset generation
 
 - Use varied, synthetic UPC and NDC identifiers that satisfy the contract rules; avoid repeating the all-zero review identifiers across the corpus.
