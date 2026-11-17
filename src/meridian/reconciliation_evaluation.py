@@ -42,9 +42,10 @@ def fixture_repository(truth: FixtureGroundTruth,
                                      products=tuple(products), purchase_orders=(po,))
 
 
-def controlled_extraction(truth: FixtureGroundTruth) -> tuple[ExtractionResult, OcrDocument]:
+def controlled_extraction(truth: FixtureGroundTruth, *,
+                          source_sha256: str = "f" * 64) -> tuple[ExtractionResult, OcrDocument]:
     """Accurate invoice-visible values with synthetic high-quality evidence, never OCR output."""
-    source_hash = "f" * 64
+    source_hash = source_sha256
     words: list[OcrWord] = []
 
     def evidence(value: object) -> tuple[EvidenceRef, ...]:
