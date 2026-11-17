@@ -34,9 +34,42 @@ services:
     networks:
       - internal
 
+  api:
+    profiles: ["api"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      MERIDIAN_STORAGE_ROOT: /data
+      MERIDIAN_DEV_AUTH: ${MERIDIAN_DEV_AUTH:-0}
+      MERIDIAN_DEV_STAFF_TOKEN: ${MERIDIAN_DEV_STAFF_TOKEN:-}
+      MERIDIAN_DEV_TOKEN_EXPIRES_AT: ${MERIDIAN_DEV_TOKEN_EXPIRES_AT:-}
+      MERIDIAN_MAX_UPLOAD_BYTES: ${MERIDIAN_MAX_UPLOAD_BYTES:-12582912}
+      MERIDIAN_MAX_PDF_PAGES: ${MERIDIAN_MAX_PDF_PAGES:-30}
+      MERIDIAN_EXTRACTION_PROVIDER: ${MERIDIAN_EXTRACTION_PROVIDER:-mock}
+      MERIDIAN_OPENAI_MODEL: ${MERIDIAN_OPENAI_MODEL:-}
+      MERIDIAN_PROCESSING_LEASE_SECONDS: ${MERIDIAN_PROCESSING_LEASE_SECONDS:-300}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    volumes:
+      - .:/workspace
+      - api_storage:/data
+    depends_on:
+      db:
+        condition: service_healthy
+    working_dir: /workspace
+    command: ["uvicorn", "meridian.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "127.0.0.1:8000:8000"
+    networks:
+      - internal
+      - outbound
+
 volumes:
   postgres_data:
+  api_storage:
 
 networks:
   internal:
     internal: true
+  outbound:

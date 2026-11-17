@@ -12,6 +12,7 @@ from meridian.models.purchasing import PurchaseOrder, PurchaseOrderLine
 from meridian.models.inventory import InventoryBalance, InventoryMovement, Location
 from meridian.models.audit import AuditEvent
 from meridian.models.posting import InvoicePostingAuthorization
+from meridian.models.api import InvoiceProcessingAttempt, InvoiceReviewState
 
 __all__ = [
     "Supplier",
@@ -27,4 +28,6 @@ __all__ = [
     "InventoryMovement",
     "AuditEvent",
     "InvoicePostingAuthorization",
+    "InvoiceProcessingAttempt",
+    "InvoiceReviewState",
 ]

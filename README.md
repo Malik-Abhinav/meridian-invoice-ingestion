@@ -211,3 +211,9 @@ docker compose run --rm test python scripts/run_posting_evaluation.py
 ```
 
 The evaluation uses controlled invoice-visible values and staff-event test data. It never posts the stored OCR-imperfect fixtures and is not a measure of OCR or model accuracy.
+
+## Staff review HTTP API (Task 15)
+
+The FastAPI application in `meridian.api.app` connects upload, OCR, structured extraction, validation, trusted reconciliation, audited staff correction, explicit approval, and Task 14 posting. Uploads start as document/upload-attempt records; processing creates a canonical invoice only when supplier identity is unique. Original OCR and extraction stay immutable, while a revisioned review snapshot tracks corrections and fresh findings. Processing never approves or posts inventory. Staff approval binds a destination location and explicit PO-line allocations; the posting route delegates to Task 14's atomic service.
+
+The default provider is the deterministic offline mock. All `/api/v1` routes, including read-only routes, fail closed without staff authentication; local bearer-token mode is opt-in and disabled by default. Multipart request bytes are bounded before parsing. The API imports without a database connection or OpenAI key. See the [API guide](docs/API.md) for migration, server startup, endpoints, storage, retry policy, security boundaries, and the disposable HTTP demo.

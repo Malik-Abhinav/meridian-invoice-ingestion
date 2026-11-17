@@ -22,6 +22,7 @@ from meridian.models import (
     AuditEvent, InventoryBalance, InventoryMovement, Invoice, InvoiceDocument,
     InvoiceLine, InvoiceUploadAttempt, Location, Product, PurchaseOrder,
     PurchaseOrderLine, Supplier, InvoicePostingAuthorization,
+    InvoiceProcessingAttempt,
 )
 from meridian.reconciliation_repository import SqlAlchemyTrustedRepository
 
@@ -248,7 +249,7 @@ def test_initial_migration_upgrade_downgrade_reupgrade(disposable_database: Call
         with patch.dict(os.environ, {"DATABASE_URL": url}):
             command.check(Config(str(ALEMBIC_INI)))
         with engine.connect() as connection:
-            assert connection.execute(text("SELECT version_num FROM alembic_version")).scalar_one() == "0002_posting_authorization"
+            assert connection.execute(text("SELECT version_num FROM alembic_version")).scalar_one() == "0003_api_processing"
         migrate(url, "base")
         assert not (set(Base.metadata.tables) & set(inspect(engine).get_table_names()))
         migrate(url, "head")
@@ -335,6 +336,56 @@ def test_posting_authorization_uniqueness_and_completion_constraints(
             idempotency_key="key", request_fingerprint="0" * 64,
             posted_at=datetime.now(timezone.utc), **base),
             "invoice_posting_authorizations_idempotency_key_key")
+
+
+def test_api_migration_upgrades_posting_schema_and_preserves_invoice(
+        disposable_database: Callable[[], str]) -> None:
+    url = disposable_database()
+    migrate(url, "0002_posting_authorization")
+    invoice_id = uuid4()
+    with database_connection(url) as connection:
+        supplier_id = supplier(connection, "API")
+        connection.execute(insert(Invoice).values(id=invoice_id, supplier_id=supplier_id,
+                                                  status="review_required"))
+    migrate(url, "head")
+    engine = create_engine(url)
+    try:
+        assert {"invoice_processing_attempts", "invoice_review_states"} <= set(inspect(engine).get_table_names())
+        with engine.connect() as connection:
+            assert connection.execute(select(Invoice.status).where(Invoice.id == invoice_id)).scalar_one() == "review_required"
+        with patch.dict(os.environ, {"DATABASE_URL": url}):
+            command.downgrade(Config(str(ALEMBIC_INI)), "0002_posting_authorization")
+        assert "invoice_processing_attempts" not in inspect(engine).get_table_names()
+        with engine.connect() as connection:
+            assert connection.execute(select(Invoice.status).where(Invoice.id == invoice_id)).scalar_one() == "review_required"
+    finally:
+        engine.dispose()
+
+
+def test_api_processing_document_config_uniqueness_and_review_fk(
+        disposable_database: Callable[[], str]) -> None:
+    url = disposable_database()
+    migrate(url, "head")
+    with database_connection(url) as connection:
+        document_id = uuid4()
+        connection.execute(insert(InvoiceDocument).values(id=document_id, sha256="a" * 64,
+            storage_uri="sha256:" + "a" * 64, content_type="application/pdf"))
+        first_upload, second_upload = uuid4(), uuid4()
+        for upload_id in (first_upload, second_upload):
+            connection.execute(insert(InvoiceUploadAttempt).values(id=upload_id,
+                document_id=document_id, original_filename="invoice.pdf", identity_status="pending"))
+        base = dict(document_id=document_id, config_fingerprint="b" * 64,
+                    source_sha256="a" * 64, status="failed", lease_token=None,
+                    attempt_count=1, provider="mock", model_name="ocr-only-v1")
+        connection.execute(insert(InvoiceProcessingAttempt).values(
+            id=uuid4(), upload_attempt_id=first_upload, **base))
+        expect_constraint(connection, insert(InvoiceProcessingAttempt).values(
+            id=uuid4(), upload_attempt_id=second_upload, **base),
+            "uq_processing_document_config")
+        expect_constraint(connection, insert(InvoiceProcessingAttempt).values(
+            id=uuid4(), upload_attempt_id=second_upload,
+            **(base | {"config_fingerprint": "c" * 64, "status": "running"})),
+            "ck_processing_attempts_lease")
 
 
 def test_invoice_identity_and_product_constraints(disposable_database: Callable[[], str]) -> None:

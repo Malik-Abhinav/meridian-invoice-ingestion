@@ -23,6 +23,7 @@ from meridian.domain import (
         (InvoiceState.EXTRACTED, InvoiceOperation.VALIDATION_REQUIRES_REVIEW, InvoiceState.REVIEW_REQUIRED),
         (InvoiceState.REVIEW_REQUIRED, InvoiceOperation.CORRECT, InvoiceState.EXTRACTED),
         (InvoiceState.VALIDATED, InvoiceOperation.CORRECT, InvoiceState.EXTRACTED),
+        (InvoiceState.REVIEW_REQUIRED, InvoiceOperation.HUMAN_VALIDATE, InvoiceState.VALIDATED),
         (InvoiceState.VALIDATED, InvoiceOperation.HUMAN_APPROVE, InvoiceState.APPROVED),
         (InvoiceState.REVIEW_REQUIRED, InvoiceOperation.HUMAN_REJECT, InvoiceState.REJECTED),
         (InvoiceState.VALIDATED, InvoiceOperation.HUMAN_REJECT, InvoiceState.REJECTED),
@@ -61,7 +62,7 @@ def test_every_unspecified_transition_is_rejected() -> None:
             except InvalidTransition:
                 continue
             allowed += 1
-    assert allowed == 10
+    assert allowed == 11
 
 
 @pytest.mark.parametrize("state", [InvoiceState.POSTED, InvoiceState.REJECTED, InvoiceState.FAILED])

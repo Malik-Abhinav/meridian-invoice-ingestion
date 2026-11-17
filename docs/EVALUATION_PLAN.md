@@ -115,6 +115,10 @@ The quality review adds `unperformed_checks` to each result and evaluation row. 
 
 This checks transaction behavior with controlled accurately transcribed values, not live OCR or LLM accuracy. The disposable database is the only state changed during evaluation. Stored OCR-imperfect fixtures are never automatically posted.
 
+## Task 15 disposable HTTP demo
+
+`docker compose run --rm test python scripts/run_api_demo.py` creates and drops a temporary PostgreSQL database and PDF storage directory. It uploads the existing fictional scanned A fixture through FastAPI, runs real OCR and the deterministic mock, retrieves the Task 12 line-extension finding, records a staff correction of the second quantity from OCR `53` to invoice-visible `3`, re-runs local and trusted checks, approves an explicit location and PO-line allocation, posts one receipt set, and verifies that the same-key retry returns `already_posted`. It checks two receipt movements, inventory balances of 2 and 3, and audit actions. The original PDF, OCR words, and extraction record remain unchanged; the corrected value is separate staff evidence. This demonstrates workflow wiring, not live model accuracy. No stored evaluation outputs or persistent application inventory are changed.
+
 ## Later full-dataset generation
 
 - Use varied, synthetic UPC and NDC identifiers that satisfy the contract rules; avoid repeating the all-zero review identifiers across the corpus.

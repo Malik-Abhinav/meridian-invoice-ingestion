@@ -34,6 +34,7 @@ class InvoiceOperation(StrEnum):
     VALIDATION_PASSED = "validation_passed"
     VALIDATION_REQUIRES_REVIEW = "validation_requires_review"
     CORRECT = "correct"
+    HUMAN_VALIDATE = "human_validate"
     HUMAN_APPROVE = "human_approve"
     HUMAN_REJECT = "human_reject"
     MARK_POSTED = "mark_posted"
@@ -46,6 +47,7 @@ _TRANSITIONS: dict[tuple[InvoiceState, InvoiceOperation], InvoiceState] = {
     (InvoiceState.EXTRACTED, InvoiceOperation.VALIDATION_REQUIRES_REVIEW): InvoiceState.REVIEW_REQUIRED,
     (InvoiceState.REVIEW_REQUIRED, InvoiceOperation.CORRECT): InvoiceState.EXTRACTED,
     (InvoiceState.VALIDATED, InvoiceOperation.CORRECT): InvoiceState.EXTRACTED,
+    (InvoiceState.REVIEW_REQUIRED, InvoiceOperation.HUMAN_VALIDATE): InvoiceState.VALIDATED,
     (InvoiceState.VALIDATED, InvoiceOperation.HUMAN_APPROVE): InvoiceState.APPROVED,
     (InvoiceState.REVIEW_REQUIRED, InvoiceOperation.HUMAN_REJECT): InvoiceState.REJECTED,
     (InvoiceState.VALIDATED, InvoiceOperation.HUMAN_REJECT): InvoiceState.REJECTED,
