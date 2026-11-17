@@ -15,6 +15,7 @@ from alembic.config import Config
 from sqlalchemy import CheckConstraint, Connection, ForeignKeyConstraint, Index, UniqueConstraint, create_engine, inspect, insert, select, text
 from sqlalchemy.engine import Engine, make_url
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import Session
 
 from meridian.db import Base
 from meridian.models import (
@@ -22,6 +23,7 @@ from meridian.models import (
     InvoiceLine, InvoiceUploadAttempt, Location, Product, PurchaseOrder,
     PurchaseOrderLine, Supplier,
 )
+from meridian.reconciliation_repository import SqlAlchemyTrustedRepository
 
 
 pytestmark = pytest.mark.postgres
@@ -79,6 +81,121 @@ def expect_constraint(connection: Connection, statement: object, name: str) -> N
     with pytest.raises(IntegrityError) as error, connection.begin_nested():
         connection.execute(statement)
     assert name in str(error.value.orig)
+
+
+def test_reconciliation_repository_reads_existing_tables(disposable_database: Callable[[], str]) -> None:
+    url = disposable_database()
+    migrate(url, "head")
+    engine = create_engine(url)
+    try:
+        supplier_id, product_id, po_id, po_line_id = (uuid4() for _ in range(4))
+        invoice_id, document_id, pending_document_id, changed_document_id = (uuid4() for _ in range(4))
+        with engine.begin() as connection:
+            connection.execute(insert(Supplier).values(id=supplier_id, code="FICT_R", name="Reference supplier"))
+            connection.execute(insert(Product).values(id=product_id, name="Reference product", upc_normalized="012345678905"))
+            connection.execute(insert(PurchaseOrder).values(id=po_id, supplier_id=supplier_id,
+                                                            order_number="PO-R", status="open"))
+            connection.execute(insert(PurchaseOrderLine).values(id=po_line_id, purchase_order_id=po_id,
+                                                                line_number=1, product_id=product_id,
+                                                                ordered_quantity=5,
+                                                                expected_unit_cost=Decimal("1.2500")))
+            connection.execute(insert(Invoice).values(id=invoice_id, supplier_id=supplier_id,
+                                                      invoice_number_raw=" inv-1 ",
+                                                      invoice_number_normalized="INV-1", status="uploaded"))
+            connection.execute(insert(InvoiceDocument).values(id=document_id, sha256="a" * 64,
+                                                               storage_uri="memory://test", content_type="application/pdf"))
+            connection.execute(insert(InvoiceUploadAttempt).values(document_id=document_id,
+                                                                   invoice_id=invoice_id,
+                                                                   original_filename="test.pdf",
+                                                                   identity_status="linked"))
+            connection.execute(insert(InvoiceDocument).values(id=changed_document_id, sha256="c" * 64,
+                                                               storage_uri="memory://changed", content_type="application/pdf"))
+            connection.execute(insert(InvoiceUploadAttempt).values(document_id=changed_document_id,
+                                                                   invoice_id=invoice_id,
+                                                                   original_filename="changed.pdf",
+                                                                   identity_status="conflict"))
+            connection.execute(insert(InvoiceDocument).values(id=pending_document_id, sha256="b" * 64,
+                                                               storage_uri="memory://pending", content_type="application/pdf"))
+            connection.execute(insert(InvoiceUploadAttempt).values(document_id=pending_document_id,
+                                                                   original_filename="pending.pdf",
+                                                                   identity_status="pending"))
+        with Session(engine) as session:
+            trusted = SqlAlchemyTrustedRepository(session, supplier_aliases={"FICT_R": ("Alias R",)})
+            assert trusted.suppliers()[0].aliases == ("Alias R",)
+            assert trusted.products()[0].upc == "012345678905"
+            assert trusted.purchase_orders()[0].lines[0].received_quantity == 0
+            assert any(item.source_sha256 == "a" * 64 and item.invoice_number_normalized == "INV-1"
+                       for item in trusted.prior_invoices())
+            assert any(item.source_sha256 == "b" * 64 and item.supplier_id is None
+                       for item in trusted.prior_invoices())
+            assert {item.source_sha256 for item in trusted.prior_invoices() if item.id == str(invoice_id)} == {
+                "a" * 64, "c" * 64}
+            assert trusted.prior_invoices() == trusted.prior_invoices()
+            assert not session.dirty and not session.new
+    finally:
+        engine.dispose()
+
+
+def test_reconciliation_repository_counts_only_posted_receipts_and_reversals(
+        disposable_database: Callable[[], str]) -> None:
+    url = disposable_database()
+    migrate(url, "head")
+    engine = create_engine(url)
+    supplier_id, product_id, location_id, po_id, po_line_id = (uuid4() for _ in range(5))
+    posted_id, failed_id, posted_line_id, failed_line_id = (uuid4() for _ in range(4))
+    receipt_id = uuid4()
+    try:
+        with engine.begin() as connection:
+            connection.execute(insert(Supplier).values(id=supplier_id, code="FICT_REC", name="Receipt supplier"))
+            connection.execute(insert(Product).values(id=product_id, name="Receipt product", ndc_normalized="00000123456"))
+            connection.execute(insert(Location).values(id=location_id, code="REC", name="Receipt location"))
+            connection.execute(insert(PurchaseOrder).values(id=po_id, supplier_id=supplier_id,
+                                                            order_number="PO-REC", status="open"))
+            connection.execute(insert(PurchaseOrderLine).values(id=po_line_id, purchase_order_id=po_id,
+                                                                line_number=1, product_id=product_id,
+                                                                ordered_quantity=5,
+                                                                expected_unit_cost=Decimal("1.2500")))
+            for invoice_id, status, invoice_line_id, number in (
+                    (posted_id, "posted", posted_line_id, "REC-POSTED"),
+                    (failed_id, "failed", failed_line_id, "REC-FAILED")):
+                connection.execute(insert(Invoice).values(id=invoice_id, supplier_id=supplier_id,
+                                                          invoice_number_normalized=number, status=status))
+                connection.execute(insert(InvoiceLine).values(id=invoice_line_id, invoice_id=invoice_id,
+                                                              line_number=1, description="Receipt product",
+                                                              product_id=product_id, quantity=3,
+                                                              unit_cost=Decimal("1.2500"),
+                                                              line_total=Decimal("3.7500")))
+            connection.execute(insert(InventoryMovement).values(id=receipt_id, product_id=product_id,
+                location_id=location_id, movement_type="receipt", quantity_delta=3,
+                posting_key="receipt:posted", invoice_line_id=posted_line_id,
+                purchase_order_line_id=po_line_id))
+        with Session(engine) as session:
+            line = SqlAlchemyTrustedRepository(session).purchase_orders()[0].lines[0]
+            assert line.received_quantity == 3 and line.receipt_history_complete
+        with engine.begin() as connection:
+            connection.execute(insert(InventoryMovement).values(product_id=product_id,
+                location_id=location_id, movement_type="adjustment", quantity_delta=-1,
+                posting_key="adjustment:unrelated"))
+        with Session(engine) as session:
+            line = SqlAlchemyTrustedRepository(session).purchase_orders()[0].lines[0]
+            assert line.received_quantity == 3 and line.receipt_history_complete
+        with engine.begin() as connection:
+            connection.execute(insert(InventoryMovement).values(product_id=product_id,
+                location_id=location_id, movement_type="reversal", quantity_delta=-3,
+                posting_key="reversal:posted", reverses_movement_id=receipt_id))
+        with Session(engine) as session:
+            line = SqlAlchemyTrustedRepository(session).purchase_orders()[0].lines[0]
+            assert line.received_quantity == 0 and line.receipt_history_complete
+        with engine.begin() as connection:
+            connection.execute(insert(InventoryMovement).values(product_id=product_id,
+                location_id=location_id, movement_type="receipt", quantity_delta=2,
+                posting_key="receipt:failed", invoice_line_id=failed_line_id,
+                purchase_order_line_id=po_line_id))
+        with Session(engine) as session:
+            line = SqlAlchemyTrustedRepository(session).purchase_orders()[0].lines[0]
+            assert line.received_quantity == 0 and not line.receipt_history_complete
+    finally:
+        engine.dispose()
 
 
 def supplier(connection: Connection, code: str) -> UUID:
