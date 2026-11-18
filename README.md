@@ -2,7 +2,11 @@
 
 [![CI](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Malik-Abhinav/meridian-invoice-ingestion/actions/workflows/ci.yml)
 
-An incremental, synthetic-data-only supplier invoice ingestion project. The current implementation includes invoice generation, OCR, structured extraction, and deterministic invoice-local validation. Purchase-order matching, approval, and inventory posting remain future work.
+An incremental, synthetic-data-only supplier invoice ingestion project. The implementation includes OCR, structured extraction, invoice-local validation, trusted purchasing reconciliation, atomic inventory posting, a FastAPI staff workflow, and a React staff review dashboard. All posting requires explicit staff approval.
+
+## Staff review dashboard (Task 16)
+
+The [frontend](frontend/README.md) is a separate React/TypeScript Vite application. With the [FastAPI service](docs/API.md) running locally, use Node.js 20.19 or later and run `cd frontend && npm ci && npm run dev`. Enter the configured development staff bearer token on the sign-in screen. The dashboard covers upload, processing, evidence inspection, correction, reconciliation review, explicit approval, separate posting, audit, and receipt movements. Its token is held in memory only. Frontend setup, browser verification, and known limitations are in the [frontend guide](frontend/README.md).
 
 ## Setup
 
@@ -119,7 +123,7 @@ python scripts/generate_evaluation_fixtures.py
 python -m pytest tests/test_evaluation_fixtures.py -q
 ```
 
-The [manifest](output/evaluation/manifest.json) maps each case ID to its files in [output/evaluation](output/evaluation/), records the degradation profile, and lists expected findings and a processing decision. Run the command from any directory; it always writes to the repository's `output/evaluation/`. The fixed seed is 2029 and resolution is 150 DPI. Repeating generation in the same environment produces byte-identical files. Ground truth contains expected PO and catalog values but is never passed to the PDF or scan renderer. Clean cases are only `auto_post_candidate`; no approval or inventory posting is implemented. This is a small evaluation fixture set, not the planned 60-invoice corpus.
+The [manifest](output/evaluation/manifest.json) maps each case ID to its files in [output/evaluation](output/evaluation/), records the degradation profile, and lists expected findings and a processing decision. Run the command from any directory; it always writes to the repository's `output/evaluation/`. The fixed seed is 2029 and resolution is 150 DPI. Repeating generation in the same environment produces byte-identical files. Ground truth contains expected PO and catalog values but is never passed to the PDF or scan renderer. Clean cases are only `auto_post_candidate`; fixture generation does not approve or post them. This is a small evaluation fixture set, not the planned 60-invoice corpus.
 
 ## Tesseract OCR observations
 

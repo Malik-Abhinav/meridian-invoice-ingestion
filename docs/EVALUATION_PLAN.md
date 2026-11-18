@@ -119,7 +119,14 @@ This checks transaction behavior with controlled accurately transcribed values, 
 
 `docker compose run --rm test python scripts/run_api_demo.py` creates and drops a temporary PostgreSQL database and PDF storage directory. It uploads the existing fictional scanned A fixture through FastAPI, runs real OCR and the deterministic mock, retrieves the Task 12 line-extension finding, records a staff correction of the second quantity from OCR `53` to invoice-visible `3`, re-runs local and trusted checks, approves an explicit location and PO-line allocation, posts one receipt set, and verifies that the same-key retry returns `already_posted`. It checks two receipt movements, inventory balances of 2 and 3, and audit actions. The original PDF, OCR words, and extraction record remain unchanged; the corrected value is separate staff evidence. This demonstrates workflow wiring, not live model accuracy. No stored evaluation outputs or persistent application inventory are changed.
 
+## Task 16 disposable browser check
+
+The frontend browser check uses `scripts/serve_frontend_e2e.py` with a temporary PostgreSQL database and the existing fictional A scan. It starts the real FastAPI app with trusted fictional supplier, catalog, PO, and location rows, then signs in through the dashboard with a temporary development token stored outside logs. The browser uploads and processes the scan itself. Original OCR and extraction quantity stays `53`; current reviewed quantity becomes `3` after an audited correction. Explicit approval binds the location and two PO lines. After browser refresh and reauthentication, the dashboard reads persisted authorization details and permits a separate post. Posting creates receipt quantities `2` and `3`; an identical retry returns `already_posted` with two total receipt movements. The disposable database holds balances `2` and `3`, one approval row, and the audit actions process, correct, approve, and post. The database is dropped on exit. This is workflow integration evidence, not an OCR, model, or UI performance benchmark.
+
+Frontend component tests use deterministic mocked API responses for authentication, upload, pagination, review, correction conflicts, unsaved changes, and posting controls. The complete backend Docker suite and existing disposable HTTP demo remain the regression gates. Original fixtures, ground truth, OCR, extraction, validation, and reconciliation outputs are not written by the dashboard check. UI status counts are fetched-sample counts; they should not be interpreted as dataset-wide metrics.
+
 ## Later full-dataset generation
+
 
 - Use varied, synthetic UPC and NDC identifiers that satisfy the contract rules; avoid repeating the all-zero review identifiers across the corpus.
 - Vary fictional products, quantities, invoice dates, unit prices, and line counts across suppliers and case categories while keeping arithmetic and ground truth consistent.

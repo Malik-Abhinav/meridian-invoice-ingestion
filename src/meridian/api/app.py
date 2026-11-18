@@ -326,6 +326,11 @@ def create_app(settings: ApiSettings | None = None,
             if invoice is None or review is None:
                 raise ApiProblem(404, "invoice_not_found", "Invoice review does not exist.")
             run = session.get(InvoiceProcessingAttempt, review.processing_id)
+            authorization = session.scalar(select(InvoicePostingAuthorization).where(
+                InvoicePostingAuthorization.invoice_id == invoice_id))
+            approved_authorization = (None if authorization is None or not review.approved_allocations_json
+                else {"authorization_id": authorization.id, "location_id": authorization.location_id,
+                      "allocations": review.approved_allocations_json})
             corrected = set(review.corrected_fields_json)
             def local_reviewed(finding: dict) -> bool:
                 if not finding.get("manual_review_required", True):
@@ -346,6 +351,7 @@ def create_app(settings: ApiSettings | None = None,
                     "allocation_candidates": [{"source_row_order": row["source_row_order"],
                         "po_line_ids": row["po_line_ids"]} for row in
                         review.reconciliation_json.get("product_matches", [])],
+                    "approved_authorization": approved_authorization,
                     "authorization_ready": invoice.status in ("validated", "review_required")
                         and all(local_reviewed(item) for item in review.validation_json.get("findings", []))
                         and not any(item.get("manual_review_required", True)
