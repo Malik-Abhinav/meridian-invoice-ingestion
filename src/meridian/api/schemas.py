@@ -149,6 +149,18 @@ class AllocationCandidateResponse(BaseModel):
     po_line_ids: list[UUID]
 
 
+class ApprovedAllocationResponse(BaseModel):
+    invoice_line_id: UUID
+    purchase_order_line_id: UUID
+    source_row_order: int
+
+
+class ApprovedAuthorizationResponse(BaseModel):
+    authorization_id: UUID
+    location_id: UUID
+    allocations: list[ApprovedAllocationResponse]
+
+
 class ReviewResponse(BaseModel):
     invoice: InvoiceDetailResponse
     original_extraction: dict[str, Any]
@@ -159,3 +171,4 @@ class ReviewResponse(BaseModel):
     corrected_fields: list[str]
     allocation_candidates: list[AllocationCandidateResponse]
     authorization_ready: bool
+    approved_authorization: ApprovedAuthorizationResponse | None

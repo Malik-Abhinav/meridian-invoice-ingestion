@@ -24,7 +24,7 @@ Importing `meridian.api.app` does not connect to PostgreSQL or require an OpenAI
 | GET | `/api/v1/invoices/{invoice_id}/audit` | System and staff audit history. |
 | GET | `/api/v1/invoices/{invoice_id}/movements` | Receipt movements linked to this invoice, with exact unit-cost strings. |
 | GET | `/api/v1/invoices/{invoice_id}/document` | Original PDF bytes, selected by linked hash; no filesystem path parameter. |
-| GET | `/api/v1/invoices/{invoice_id}/review` | Original and current values, confidence evidence, findings, unperformed checks, and PO-line allocation candidates. |
+| GET | `/api/v1/invoices/{invoice_id}/review` | Original and current values, confidence evidence, findings, unperformed checks, PO-line allocation candidates, and minimal persisted approval details when present. |
 | PATCH | `/api/v1/invoices/{invoice_id}` | Staff correction with `expected_revision`; returns new revision and fresh checks. |
 | POST | `/api/v1/invoices/{invoice_id}/approve` | Staff approval with revision, location ID, and explicit invoice-line-to-PO-line allocations. |
 | POST | `/api/v1/invoices/{invoice_id}/reject` | Staff rejection with revision and reason. |
@@ -49,6 +49,8 @@ curl -X POST -H "Authorization: Bearer $MERIDIAN_DEV_STAFF_TOKEN" \
 ```
 
 Get allocation candidates and persisted invoice-line IDs from `/review` before approval. The approval body has `expected_revision`, `location_id`, and `allocations`, each with `invoice_line_id`, `purchase_order_line_id`, and `source_row_order`. Posting accepts no quantity, price, product, or inventory delta from the client.
+
+After approval, authenticated `GET /review` returns `approved_authorization` with `authorization_id`, `location_id`, and the exact persisted `allocations`; before approval it is `null`. This lets a staff client recover the posting confirmation after a browser refresh without creating another approval. It does not return internal evidence fingerprints or credentials. The posting endpoint still reloads authorization and allocations from PostgreSQL and applies all Task 14 checks. A missing or inconsistent authorization must block the client; this read response is not permission to bypass posting validation.
 
 ## Processing, evidence, and correction policy
 

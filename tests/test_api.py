@@ -102,6 +102,7 @@ def test_scanned_invoice_staff_correction_approval_and_posting(api_db):
     review = client.get(f"/api/v1/invoices/{invoice_id}/review", headers=HEADERS)
     assert review.status_code == 200, review.text
     assert review.json()["authorization_ready"] is False
+    assert review.json()["approved_authorization"] is None
     assert review.json()["original_extraction"]["invoice"]["lines"][1]["quantity"]["value"] == 53
     correction = client.patch(f"/api/v1/invoices/{invoice_id}", headers=HEADERS,
         json={"expected_revision": 1, "lines": [{"source_row_order": 2, "quantity": 3}]})
@@ -124,6 +125,13 @@ def test_scanned_invoice_staff_correction_approval_and_posting(api_db):
         json={"expected_revision": 2, "location_id": str(location_id),
               "allocations": allocations})
     assert approval.status_code == 200, approval.text
+    recovered = client.get(f"/api/v1/invoices/{invoice_id}/review", headers=HEADERS)
+    assert recovered.status_code == 200, recovered.text
+    assert recovered.json()["approved_authorization"] == {
+        "authorization_id": approval.json()["authorization_id"],
+        "location_id": str(location_id), "allocations": allocations}
+    assert "fingerprint" not in str(recovered.json()["approved_authorization"])
+    assert client.get(f"/api/v1/invoices/{invoice_id}/review").status_code == 401
     first = client.post(f"/api/v1/invoices/{invoice_id}/post", headers=HEADERS,
         json={"idempotency_key": "http-post-1"})
     assert first.status_code == 200, first.text
