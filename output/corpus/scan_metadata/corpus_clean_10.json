@@ -1,0 +1,29 @@
+{
+  "source_case_id": "corpus_clean_10",
+  "source_invoice_number": "FICT_A-INV-66CED207",
+  "source_pdf_sha256": "3ab99131786c68b35f1635e1bf49f5c15c10b4f93517a9630e9c928c066bf1d8",
+  "supplier_code": "FICT_A",
+  "supplier_template": "traditional",
+  "degradation_type": "jpeg_artifacts",
+  "random_seed": 16005232219095224839,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "887f7809109cd3c0ba6c00a926b44b86a91f9905f518a22ef474b8f9168d0b74",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 2631500103329939417,
+      "source_width_px": 827,
+      "source_height_px": 1170,
+      "width_px": 827,
+      "height_px": 1170,
+      "resolution_dpi": 100,
+      "parameters": {
+        "blur_radius": 0.0,
+        "rotation_degrees": 0.0,
+        "contrast_factor": 1.0,
+        "jpeg_quality": 48
+      }
+    }
+  ]
+}

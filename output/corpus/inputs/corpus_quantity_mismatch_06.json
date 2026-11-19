@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_quantity_mismatch_06",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-EBA9BB71",
+  "invoice_date": "2029-12-07",
+  "purchase_order_reference": "FICT_C-PO-27616A9E",
+  "products": [
+    {
+      "sku": "FICT_C06_3_P1",
+      "description": "Fictional absorbent pad case",
+      "upc": "000708924936",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C06_3_P2",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "62371580074"
+    },
+    {
+      "sku": "FICT_C06_3_P3",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000865422870",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C06_3_P4",
+      "description": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "19335503249"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C06_3_P1",
+      "quantity": 6,
+      "unit_cost": "33.26",
+      "line_total": "199.56"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C06_3_P2",
+      "quantity": 9,
+      "unit_cost": "43.78",
+      "line_total": "394.02"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C06_3_P3",
+      "quantity": 3,
+      "unit_cost": "4.55",
+      "line_total": "13.65"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C06_3_P4",
+      "quantity": 9,
+      "unit_cost": "4.48",
+      "line_total": "40.32"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "647.55",
+    "tax": "12.6300",
+    "total": "660.1800"
+  },
+  "scan_blur": false
+}

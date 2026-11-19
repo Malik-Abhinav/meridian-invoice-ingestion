@@ -1,0 +1,44 @@
+{
+  "case_id": "corpus_missing_totals_01",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-B028612A",
+  "invoice_date": "2029-02-04",
+  "purchase_order_reference": "FICT_B-PO-14CEE8A6",
+  "products": [
+    {
+      "sku": "FICT_B01_1_P1",
+      "description": "Mock disposable drape packet",
+      "upc": "000983526467",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B01_1_P2",
+      "description": "Imaginary specimen tube bundle",
+      "upc": null,
+      "ndc": "19551903425"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B01_1_P1",
+      "quantity": 6,
+      "unit_cost": "58.86",
+      "line_total": "353.16"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B01_1_P2",
+      "quantity": 6,
+      "unit_cost": "12.87",
+      "line_total": "77.22"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

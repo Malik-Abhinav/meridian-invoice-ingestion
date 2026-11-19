@@ -1,0 +1,70 @@
+{
+  "case_id": "corpus_missing_totals_04",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-29FB13D2",
+  "invoice_date": "2029-12-20",
+  "purchase_order_reference": "FICT_B-PO-05574C3D",
+  "products": [
+    {
+      "sku": "FICT_B04_1_P1",
+      "description": "Mock disposable drape packet",
+      "upc": "000048659413",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B04_1_P2",
+      "description": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "75492032253"
+    },
+    {
+      "sku": "FICT_B04_1_P3",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000251136459",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B04_1_P4",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "99081730521"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B04_1_P1",
+      "quantity": 2,
+      "unit_cost": "3.2",
+      "line_total": "6.4"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B04_1_P2",
+      "quantity": 6,
+      "unit_cost": "40.41",
+      "line_total": "242.46"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B04_1_P3",
+      "quantity": 2,
+      "unit_cost": "39.65",
+      "line_total": "79.30"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_B04_1_P4",
+      "quantity": 9,
+      "unit_cost": "12.28",
+      "line_total": "110.52"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

@@ -1,0 +1,29 @@
+{
+  "source_case_id": "corpus_missing_totals_02",
+  "source_invoice_number": "FICT_C-INV-DACF5F22",
+  "source_pdf_sha256": "e86898ea3e758f75fa3d682848243abff09277e22570eb84e93c6dd568d64077",
+  "supplier_code": "FICT_C",
+  "supplier_template": "purchase_order",
+  "degradation_type": "jpeg_artifacts",
+  "random_seed": 15852925319151312674,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "e88efd1d7472a769bfa85f86494633aa0dc02ae5f88ad8f8dd97e6b59148cf5a",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 5661176787407613905,
+      "source_width_px": 827,
+      "source_height_px": 1170,
+      "width_px": 827,
+      "height_px": 1170,
+      "resolution_dpi": 100,
+      "parameters": {
+        "blur_radius": 0.0,
+        "rotation_degrees": 0.0,
+        "contrast_factor": 1.0,
+        "jpeg_quality": 48
+      }
+    }
+  ]
+}

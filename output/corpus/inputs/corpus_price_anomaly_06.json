@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_price_anomaly_06",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-2867E981",
+  "invoice_date": "2029-09-30",
+  "purchase_order_reference": "FICT_C-PO-B81A786A",
+  "products": [
+    {
+      "sku": "FICT_C06_6_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000129297206",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C06_6_P2",
+      "description": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "53193800593"
+    },
+    {
+      "sku": "FICT_C06_6_P3",
+      "description": "Fictional absorbent pad case",
+      "upc": "000066080664",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C06_6_P1",
+      "quantity": 6,
+      "unit_cost": "76.77",
+      "line_total": "460.62"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C06_6_P2",
+      "quantity": 5,
+      "unit_cost": "64.92",
+      "line_total": "324.60"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C06_6_P3",
+      "quantity": 6,
+      "unit_cost": "81.07",
+      "line_total": "486.42"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "1271.64",
+    "tax": "8.0100",
+    "total": "1279.6500"
+  },
+  "scan_blur": false
+}

@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_quantity_mismatch_05",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-430966DB",
+  "invoice_date": "2029-03-08",
+  "purchase_order_reference": "FICT_B-PO-C9C2C36C",
+  "products": [
+    {
+      "sku": "FICT_B05_3_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000333981700",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B05_3_P2",
+      "description": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "52848833329"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B05_3_P1",
+      "quantity": 6,
+      "unit_cost": "69.4",
+      "line_total": "416.4"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B05_3_P2",
+      "quantity": 4,
+      "unit_cost": "70.99",
+      "line_total": "283.96"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "700.36",
+    "tax": "1.6800",
+    "total": "702.0400"
+  },
+  "scan_blur": false
+}

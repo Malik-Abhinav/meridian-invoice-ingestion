@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_price_anomaly_08",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-3B990655",
+  "invoice_date": "2029-11-05",
+  "purchase_order_reference": "FICT_B-PO-E4D1F5DB",
+  "products": [
+    {
+      "sku": "FICT_B08_6_P1",
+      "description": "Fictional sterile sample tray",
+      "upc": "000553250631",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B08_6_P2",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "90755746531"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B08_6_P1",
+      "quantity": 5,
+      "unit_cost": "25.09",
+      "line_total": "125.45"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B08_6_P2",
+      "quantity": 4,
+      "unit_cost": "10.77",
+      "line_total": "43.08"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "168.53",
+    "tax": "1.5700",
+    "total": "170.1000"
+  },
+  "scan_blur": false
+}

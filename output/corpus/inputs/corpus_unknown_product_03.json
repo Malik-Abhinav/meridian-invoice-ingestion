@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_unknown_product_03",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-C6F69D8B",
+  "invoice_date": "2029-03-15",
+  "purchase_order_reference": "FICT_B-PO-EEB406F7",
+  "products": [
+    {
+      "sku": "FICT_B03_5_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000873867380",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B03_5_P2",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "74819740439"
+    },
+    {
+      "sku": "FICT_B03_5_P3",
+      "description": "Mock disposable drape packet",
+      "upc": "000451289986",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B03_5_P4",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "75586693987"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B03_5_P1",
+      "quantity": 4,
+      "unit_cost": "6.42",
+      "line_total": "25.68"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B03_5_P2",
+      "quantity": 9,
+      "unit_cost": "28.77",
+      "line_total": "258.93"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B03_5_P3",
+      "quantity": 9,
+      "unit_cost": "19.26",
+      "line_total": "173.34"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_B03_5_P4",
+      "quantity": 6,
+      "unit_cost": "32.5",
+      "line_total": "195.0"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "652.95",
+    "tax": "3.9200",
+    "total": "656.8700"
+  },
+  "scan_blur": false
+}

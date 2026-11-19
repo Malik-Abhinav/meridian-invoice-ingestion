@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_blurry_scan_04",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-AD3116D9",
+  "invoice_date": "2029-06-04",
+  "purchase_order_reference": "FICT_C-PO-315A8732",
+  "products": [
+    {
+      "sku": "FICT_C04_2_P1",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000786297564",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C04_2_P2",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "33995501991"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C04_2_P1",
+      "quantity": 4,
+      "unit_cost": "49.2",
+      "line_total": "196.8"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C04_2_P2",
+      "quantity": 9,
+      "unit_cost": "58.77",
+      "line_total": "528.93"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "725.73",
+    "tax": "13.1000",
+    "total": "738.8300"
+  },
+  "scan_blur": true
+}

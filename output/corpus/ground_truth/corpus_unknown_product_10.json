@@ -1,0 +1,216 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_unknown_product_10",
+      "supplier": {
+        "code": "FICT_C",
+        "name": "Northstar Fictional Supply",
+        "fictional": true,
+        "layout": "purchase_order"
+      },
+      "invoice_number": "FICT_C-INV-3BDCB986",
+      "invoice_date": "2029-08-28",
+      "purchase_order_reference": "FICT_C-PO-40EDC168",
+      "products": [
+        {
+          "sku": "FICT_C10_5_P1",
+          "description": "Imaginary specimen tube bundle",
+          "upc": "000100092646",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_5_P2",
+          "description": "Imaginary nitrile sample box",
+          "upc": null,
+          "ndc": "66371530183"
+        },
+        {
+          "sku": "FICT_C10_5_P3",
+          "description": "Mock clinical swab carton",
+          "upc": "000761754167",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_5_P4",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "77403471119"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C10_5_P1",
+          "quantity": 6,
+          "unit_cost": "14.93",
+          "line_total": "89.58"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C10_5_P2",
+          "quantity": 4,
+          "unit_cost": "56.63",
+          "line_total": "226.52"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_C10_5_P3",
+          "quantity": 1,
+          "unit_cost": "82.86",
+          "line_total": "82.86"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_C10_5_P4",
+          "quantity": 7,
+          "unit_cost": "47.65",
+          "line_total": "333.55"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "732.51",
+        "tax": "14.7800",
+        "total": "747.2900"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "unknown_product",
+      "expected_supplier_code": "FICT_C",
+      "expected_invoice_number": "FICT_C-INV-3BDCB986",
+      "expected_invoice_date": "2029-08-28",
+      "expected_purchase_order_reference": "FICT_C-PO-40EDC168",
+      "expected_products": [
+        {
+          "sku": "FICT_C10_5_P1",
+          "description": "Imaginary specimen tube bundle",
+          "upc": "000100092646",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_5_P2",
+          "description": "Imaginary nitrile sample box",
+          "upc": null,
+          "ndc": "66371530183"
+        },
+        {
+          "sku": "FICT_C10_5_P3",
+          "description": "Mock clinical swab carton",
+          "upc": "000761754167",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_5_P4",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "77403471119"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C10_5_P1",
+          "quantity": 6,
+          "unit_cost": "14.93",
+          "line_total": "89.58"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C10_5_P2",
+          "quantity": 4,
+          "unit_cost": "56.63",
+          "line_total": "226.52"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_C10_5_P3",
+          "quantity": 1,
+          "unit_cost": "82.86",
+          "line_total": "82.86"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_C10_5_P4",
+          "quantity": 7,
+          "unit_cost": "47.65",
+          "line_total": "333.55"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "732.51",
+        "tax": "14.7800",
+        "total": "747.2900"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [
+        "FICT_C10_5_P1"
+      ],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_C",
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_C10_5_P2",
+      "name": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "66371530183"
+    },
+    {
+      "id": "FICT_C10_5_P3",
+      "name": "Mock clinical swab carton",
+      "upc": "000761754167",
+      "ndc": null
+    },
+    {
+      "id": "FICT_C10_5_P4",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "77403471119"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_C-PO-40EDC168",
+    "order_number": "FICT_C-PO-40EDC168",
+    "supplier_id": "FICT_C",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_C-PO-40EDC168:2",
+        "product_id": "FICT_C10_5_P2",
+        "ordered_quantity": 4,
+        "expected_unit_cost": "56.63",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-40EDC168:3",
+        "product_id": "FICT_C10_5_P3",
+        "ordered_quantity": 1,
+        "expected_unit_cost": "82.86",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-40EDC168:4",
+        "product_id": "FICT_C10_5_P4",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "47.65",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "unknown_product"
+  ],
+  "duplicate_relationship": null
+}

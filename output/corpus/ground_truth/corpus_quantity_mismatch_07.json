@@ -1,0 +1,230 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_quantity_mismatch_07",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-3187A23B",
+      "invoice_date": "2029-10-12",
+      "purchase_order_reference": "FICT_A-PO-571933DB",
+      "products": [
+        {
+          "sku": "FICT_A07_3_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000345154826",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A07_3_P2",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "56626336536"
+        },
+        {
+          "sku": "FICT_A07_3_P3",
+          "description": "Mock disposable drape packet",
+          "upc": "000780651799",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A07_3_P4",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "64278708323"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A07_3_P1",
+          "quantity": 4,
+          "unit_cost": "26.53",
+          "line_total": "106.12"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A07_3_P2",
+          "quantity": 7,
+          "unit_cost": "6",
+          "line_total": "42"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A07_3_P3",
+          "quantity": 8,
+          "unit_cost": "28.87",
+          "line_total": "230.96"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_A07_3_P4",
+          "quantity": 4,
+          "unit_cost": "18.24",
+          "line_total": "72.96"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "452.04",
+        "tax": "10.7400",
+        "total": "462.7800"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "quantity_mismatch",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-3187A23B",
+      "expected_invoice_date": "2029-10-12",
+      "expected_purchase_order_reference": "FICT_A-PO-571933DB",
+      "expected_products": [
+        {
+          "sku": "FICT_A07_3_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000345154826",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A07_3_P2",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "56626336536"
+        },
+        {
+          "sku": "FICT_A07_3_P3",
+          "description": "Mock disposable drape packet",
+          "upc": "000780651799",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A07_3_P4",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "64278708323"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A07_3_P1",
+          "quantity": 4,
+          "unit_cost": "26.53",
+          "line_total": "106.12"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A07_3_P2",
+          "quantity": 7,
+          "unit_cost": "6",
+          "line_total": "42"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A07_3_P3",
+          "quantity": 8,
+          "unit_cost": "28.87",
+          "line_total": "230.96"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_A07_3_P4",
+          "quantity": 4,
+          "unit_cost": "18.24",
+          "line_total": "72.96"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "452.04",
+        "tax": "10.7400",
+        "total": "462.7800"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {
+        "1": 2
+      },
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A07_3_P1",
+      "name": "Fictional absorbent pad case",
+      "upc": "000345154826",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A07_3_P2",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "56626336536"
+    },
+    {
+      "id": "FICT_A07_3_P3",
+      "name": "Mock disposable drape packet",
+      "upc": "000780651799",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A07_3_P4",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "64278708323"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-571933DB",
+    "order_number": "FICT_A-PO-571933DB",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-571933DB:1",
+        "product_id": "FICT_A07_3_P1",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "26.53",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-571933DB:2",
+        "product_id": "FICT_A07_3_P2",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "6",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-571933DB:3",
+        "product_id": "FICT_A07_3_P3",
+        "ordered_quantity": 8,
+        "expected_unit_cost": "28.87",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-571933DB:4",
+        "product_id": "FICT_A07_3_P4",
+        "ordered_quantity": 4,
+        "expected_unit_cost": "18.24",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "po_quantity_mismatch"
+  ],
+  "duplicate_relationship": null
+}

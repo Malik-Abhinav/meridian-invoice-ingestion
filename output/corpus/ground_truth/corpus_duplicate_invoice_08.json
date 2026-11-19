@@ -1,0 +1,165 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_duplicate_invoice_08",
+      "supplier": {
+        "code": "FICT_C",
+        "name": "Northstar Fictional Supply",
+        "fictional": true,
+        "layout": "purchase_order"
+      },
+      "invoice_number": "FICT_C-INV-A235649E",
+      "invoice_date": "2029-11-07",
+      "purchase_order_reference": "FICT_C-PO-322C56C0",
+      "products": [
+        {
+          "sku": "FICT_C09_0_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000496004865",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C09_0_P2",
+          "description": "Mock disposable drape packet",
+          "upc": null,
+          "ndc": "68740602686"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C09_0_P1",
+          "quantity": 7,
+          "unit_cost": "23.57",
+          "line_total": "164.99"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C09_0_P2",
+          "quantity": 2,
+          "unit_cost": "60.56",
+          "line_total": "121.12"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "286.11",
+        "tax": "6.5000",
+        "total": "292.6100"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "duplicate_invoice",
+      "expected_supplier_code": "FICT_C",
+      "expected_invoice_number": "FICT_C-INV-A235649E",
+      "expected_invoice_date": "2029-11-07",
+      "expected_purchase_order_reference": "FICT_C-PO-322C56C0",
+      "expected_products": [
+        {
+          "sku": "FICT_C09_0_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000496004865",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C09_0_P2",
+          "description": "Mock disposable drape packet",
+          "upc": null,
+          "ndc": "68740602686"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C09_0_P1",
+          "quantity": 7,
+          "unit_cost": "23.57",
+          "line_total": "164.99"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C09_0_P2",
+          "quantity": 2,
+          "unit_cost": "60.56",
+          "line_total": "121.12"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "286.11",
+        "tax": "6.5000",
+        "total": "292.6100"
+      },
+      "duplicate_of_case_id": "corpus_clean_09",
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_C",
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_C09_0_P1",
+      "name": "Fable blue exam sleeve",
+      "upc": "000496004865",
+      "ndc": null
+    },
+    {
+      "id": "FICT_C09_0_P2",
+      "name": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "68740602686"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_C-PO-322C56C0",
+    "order_number": "FICT_C-PO-322C56C0",
+    "supplier_id": "FICT_C",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_C-PO-322C56C0:1",
+        "product_id": "FICT_C09_0_P1",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "23.57",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-322C56C0:2",
+        "product_id": "FICT_C09_0_P2",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "60.56",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [
+    {
+      "id": "prior:corpus_clean_09",
+      "supplier_id": "FICT_C",
+      "invoice_number_normalized": "FICT_C-INV-A235649E",
+      "source_sha256": "05a56a143cec0ec3efe4b00f89fcce9d6d8c8aed589e2a32d6bd89b410bd4798",
+      "status": "validated"
+    },
+    {
+      "id": "prior:repeat:corpus_duplicate_invoice_08",
+      "supplier_id": "FICT_C",
+      "invoice_number_normalized": "FICT_C-INV-A235649E",
+      "source_sha256": "979120f84e4c1e0bdbd6e67096ccc9bed044e5137ccacf60a98816eb375a59c5",
+      "status": "validated"
+    }
+  ],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "duplicate_invoice_identity",
+    "exact_repeat_submission",
+    "conflicting_invoice_document"
+  ],
+  "duplicate_relationship": "distinct_bytes_same_identity"
+}

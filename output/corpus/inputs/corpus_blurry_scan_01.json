@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_blurry_scan_01",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-DB161E21",
+  "invoice_date": "2029-02-18",
+  "purchase_order_reference": "FICT_C-PO-9B52E89A",
+  "products": [
+    {
+      "sku": "FICT_C01_2_P1",
+      "description": "Fictional absorbent pad case",
+      "upc": "000846811099",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C01_2_P2",
+      "description": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "16315943554"
+    },
+    {
+      "sku": "FICT_C01_2_P3",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000858758917",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C01_2_P1",
+      "quantity": 2,
+      "unit_cost": "32.15",
+      "line_total": "64.30"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C01_2_P2",
+      "quantity": 9,
+      "unit_cost": "58.47",
+      "line_total": "526.23"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C01_2_P3",
+      "quantity": 3,
+      "unit_cost": "18.18",
+      "line_total": "54.54"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "645.07",
+    "tax": "1.4900",
+    "total": "646.5600"
+  },
+  "scan_blur": true
+}

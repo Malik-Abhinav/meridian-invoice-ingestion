@@ -1,0 +1,146 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_clean_04",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-8003FC0D",
+      "invoice_date": "2029-11-11",
+      "purchase_order_reference": "FICT_A-PO-D8E15ABA",
+      "products": [
+        {
+          "sku": "FICT_A04_0_P1",
+          "description": "Fictional amber storage vial",
+          "upc": "000119575390",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A04_0_P2",
+          "description": "Fictional absorbent pad case",
+          "upc": null,
+          "ndc": "44333162974"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A04_0_P1",
+          "quantity": 7,
+          "unit_cost": "61.14",
+          "line_total": "427.98"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A04_0_P2",
+          "quantity": 8,
+          "unit_cost": "14.65",
+          "line_total": "117.20"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "545.18",
+        "tax": "8.4500",
+        "total": "553.6300"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "clean",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-8003FC0D",
+      "expected_invoice_date": "2029-11-11",
+      "expected_purchase_order_reference": "FICT_A-PO-D8E15ABA",
+      "expected_products": [
+        {
+          "sku": "FICT_A04_0_P1",
+          "description": "Fictional amber storage vial",
+          "upc": "000119575390",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A04_0_P2",
+          "description": "Fictional absorbent pad case",
+          "upc": null,
+          "ndc": "44333162974"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A04_0_P1",
+          "quantity": 7,
+          "unit_cost": "61.14",
+          "line_total": "427.98"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A04_0_P2",
+          "quantity": 8,
+          "unit_cost": "14.65",
+          "line_total": "117.20"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "545.18",
+        "tax": "8.4500",
+        "total": "553.6300"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A04_0_P1",
+      "name": "Fictional amber storage vial",
+      "upc": "000119575390",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A04_0_P2",
+      "name": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "44333162974"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-D8E15ABA",
+    "order_number": "FICT_A-PO-D8E15ABA",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-D8E15ABA:1",
+        "product_id": "FICT_A04_0_P1",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "61.14",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-D8E15ABA:2",
+        "product_id": "FICT_A04_0_P2",
+        "ordered_quantity": 8,
+        "expected_unit_cost": "14.65",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [],
+  "duplicate_relationship": null
+}

@@ -1,0 +1,226 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_blurry_scan_10",
+      "supplier": {
+        "code": "FICT_C",
+        "name": "Northstar Fictional Supply",
+        "fictional": true,
+        "layout": "purchase_order"
+      },
+      "invoice_number": "FICT_C-INV-2D8B6A51",
+      "invoice_date": "2029-03-19",
+      "purchase_order_reference": "FICT_C-PO-F12064FE",
+      "products": [
+        {
+          "sku": "FICT_C10_2_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000593925971",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_2_P2",
+          "description": "Fictional sterile sample tray",
+          "upc": null,
+          "ndc": "84301798937"
+        },
+        {
+          "sku": "FICT_C10_2_P3",
+          "description": "Fable blue exam sleeve",
+          "upc": "000487703937",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_2_P4",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "58196353592"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C10_2_P1",
+          "quantity": 2,
+          "unit_cost": "78.75",
+          "line_total": "157.50"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C10_2_P2",
+          "quantity": 6,
+          "unit_cost": "52.15",
+          "line_total": "312.90"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_C10_2_P3",
+          "quantity": 6,
+          "unit_cost": "11.55",
+          "line_total": "69.30"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_C10_2_P4",
+          "quantity": 5,
+          "unit_cost": "43.96",
+          "line_total": "219.80"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "759.50",
+        "tax": "11.9900",
+        "total": "771.4900"
+      },
+      "scan_blur": true
+    },
+    "ground_truth": {
+      "category": "blurry_scan",
+      "expected_supplier_code": "FICT_C",
+      "expected_invoice_number": "FICT_C-INV-2D8B6A51",
+      "expected_invoice_date": "2029-03-19",
+      "expected_purchase_order_reference": "FICT_C-PO-F12064FE",
+      "expected_products": [
+        {
+          "sku": "FICT_C10_2_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000593925971",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_2_P2",
+          "description": "Fictional sterile sample tray",
+          "upc": null,
+          "ndc": "84301798937"
+        },
+        {
+          "sku": "FICT_C10_2_P3",
+          "description": "Fable blue exam sleeve",
+          "upc": "000487703937",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C10_2_P4",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "58196353592"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C10_2_P1",
+          "quantity": 2,
+          "unit_cost": "78.75",
+          "line_total": "157.50"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C10_2_P2",
+          "quantity": 6,
+          "unit_cost": "52.15",
+          "line_total": "312.90"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_C10_2_P3",
+          "quantity": 6,
+          "unit_cost": "11.55",
+          "line_total": "69.30"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_C10_2_P4",
+          "quantity": 5,
+          "unit_cost": "43.96",
+          "line_total": "219.80"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "759.50",
+        "tax": "11.9900",
+        "total": "771.4900"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_C",
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_C10_2_P1",
+      "name": "Fictional absorbent pad case",
+      "upc": "000593925971",
+      "ndc": null
+    },
+    {
+      "id": "FICT_C10_2_P2",
+      "name": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "84301798937"
+    },
+    {
+      "id": "FICT_C10_2_P3",
+      "name": "Fable blue exam sleeve",
+      "upc": "000487703937",
+      "ndc": null
+    },
+    {
+      "id": "FICT_C10_2_P4",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "58196353592"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_C-PO-F12064FE",
+    "order_number": "FICT_C-PO-F12064FE",
+    "supplier_id": "FICT_C",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_C-PO-F12064FE:1",
+        "product_id": "FICT_C10_2_P1",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "78.75",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-F12064FE:2",
+        "product_id": "FICT_C10_2_P2",
+        "ordered_quantity": 6,
+        "expected_unit_cost": "52.15",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-F12064FE:3",
+        "product_id": "FICT_C10_2_P3",
+        "ordered_quantity": 6,
+        "expected_unit_cost": "11.55",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-F12064FE:4",
+        "product_id": "FICT_C10_2_P4",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "43.96",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [],
+  "duplicate_relationship": null
+}

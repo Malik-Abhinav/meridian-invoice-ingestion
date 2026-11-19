@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_price_anomaly_01",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-EFA658E6",
+  "invoice_date": "2029-03-29",
+  "purchase_order_reference": "FICT_A-PO-F8BFD464",
+  "products": [
+    {
+      "sku": "FICT_A01_6_P1",
+      "description": "Fictional absorbent pad case",
+      "upc": "000967211914",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A01_6_P2",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "93075565692"
+    },
+    {
+      "sku": "FICT_A01_6_P3",
+      "description": "Fictional amber storage vial",
+      "upc": "000278723137",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A01_6_P1",
+      "quantity": 7,
+      "unit_cost": "30.96",
+      "line_total": "216.72"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A01_6_P2",
+      "quantity": 7,
+      "unit_cost": "30.89",
+      "line_total": "216.23"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A01_6_P3",
+      "quantity": 2,
+      "unit_cost": "15.71",
+      "line_total": "31.42"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "464.37",
+    "tax": "4.2200",
+    "total": "468.5900"
+  },
+  "scan_blur": false
+}

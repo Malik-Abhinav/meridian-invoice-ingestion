@@ -1,0 +1,245 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_duplicate_invoice_07",
+      "supplier": {
+        "code": "FICT_B",
+        "name": "Fable Ridge Distribution",
+        "fictional": true,
+        "layout": "compact"
+      },
+      "invoice_number": "FICT_B-INV-E8BE9250",
+      "invoice_date": "2029-05-11",
+      "purchase_order_reference": "FICT_B-PO-5FA56218",
+      "products": [
+        {
+          "sku": "FICT_B08_0_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000511884267",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B08_0_P2",
+          "description": "Fable blue exam sleeve",
+          "upc": null,
+          "ndc": "63408640177"
+        },
+        {
+          "sku": "FICT_B08_0_P3",
+          "description": "Fable practice dressing kit",
+          "upc": "000955025707",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B08_0_P4",
+          "description": "Fictional absorbent pad case",
+          "upc": null,
+          "ndc": "32935125652"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B08_0_P1",
+          "quantity": 2,
+          "unit_cost": "61.53",
+          "line_total": "123.06"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B08_0_P2",
+          "quantity": 7,
+          "unit_cost": "66.18",
+          "line_total": "463.26"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B08_0_P3",
+          "quantity": 1,
+          "unit_cost": "59.29",
+          "line_total": "59.29"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_B08_0_P4",
+          "quantity": 3,
+          "unit_cost": "30.95",
+          "line_total": "92.85"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "738.46",
+        "tax": "1.7800",
+        "total": "740.2400"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "duplicate_invoice",
+      "expected_supplier_code": "FICT_B",
+      "expected_invoice_number": "FICT_B-INV-E8BE9250",
+      "expected_invoice_date": "2029-05-11",
+      "expected_purchase_order_reference": "FICT_B-PO-5FA56218",
+      "expected_products": [
+        {
+          "sku": "FICT_B08_0_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000511884267",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B08_0_P2",
+          "description": "Fable blue exam sleeve",
+          "upc": null,
+          "ndc": "63408640177"
+        },
+        {
+          "sku": "FICT_B08_0_P3",
+          "description": "Fable practice dressing kit",
+          "upc": "000955025707",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B08_0_P4",
+          "description": "Fictional absorbent pad case",
+          "upc": null,
+          "ndc": "32935125652"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B08_0_P1",
+          "quantity": 2,
+          "unit_cost": "61.53",
+          "line_total": "123.06"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B08_0_P2",
+          "quantity": 7,
+          "unit_cost": "66.18",
+          "line_total": "463.26"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B08_0_P3",
+          "quantity": 1,
+          "unit_cost": "59.29",
+          "line_total": "59.29"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_B08_0_P4",
+          "quantity": 3,
+          "unit_cost": "30.95",
+          "line_total": "92.85"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "738.46",
+        "tax": "1.7800",
+        "total": "740.2400"
+      },
+      "duplicate_of_case_id": "corpus_clean_08",
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_B",
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_B08_0_P1",
+      "name": "Fable blue exam sleeve",
+      "upc": "000511884267",
+      "ndc": null
+    },
+    {
+      "id": "FICT_B08_0_P2",
+      "name": "Fable blue exam sleeve",
+      "upc": null,
+      "ndc": "63408640177"
+    },
+    {
+      "id": "FICT_B08_0_P3",
+      "name": "Fable practice dressing kit",
+      "upc": "000955025707",
+      "ndc": null
+    },
+    {
+      "id": "FICT_B08_0_P4",
+      "name": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "32935125652"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_B-PO-5FA56218",
+    "order_number": "FICT_B-PO-5FA56218",
+    "supplier_id": "FICT_B",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_B-PO-5FA56218:1",
+        "product_id": "FICT_B08_0_P1",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "61.53",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-5FA56218:2",
+        "product_id": "FICT_B08_0_P2",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "66.18",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-5FA56218:3",
+        "product_id": "FICT_B08_0_P3",
+        "ordered_quantity": 1,
+        "expected_unit_cost": "59.29",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-5FA56218:4",
+        "product_id": "FICT_B08_0_P4",
+        "ordered_quantity": 3,
+        "expected_unit_cost": "30.95",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [
+    {
+      "id": "prior:corpus_clean_08",
+      "supplier_id": "FICT_B",
+      "invoice_number_normalized": "FICT_B-INV-E8BE9250",
+      "source_sha256": "df7b90f811941765ea48f52645a9de7694cf72de36fa37dba5c690862d43a2de",
+      "status": "validated"
+    },
+    {
+      "id": "prior:repeat:corpus_duplicate_invoice_07",
+      "supplier_id": "FICT_B",
+      "invoice_number_normalized": "FICT_B-INV-E8BE9250",
+      "source_sha256": "1df122f0a8b7de38737042bc77b8311793d5d8729c4127025ec55be84968a291",
+      "status": "validated"
+    }
+  ],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "duplicate_invoice_identity",
+    "exact_repeat_submission",
+    "conflicting_invoice_document"
+  ],
+  "duplicate_relationship": "distinct_bytes_same_identity"
+}

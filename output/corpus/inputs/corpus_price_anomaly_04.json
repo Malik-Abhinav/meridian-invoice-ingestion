@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_price_anomaly_04",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-D604AB6D",
+  "invoice_date": "2029-08-13",
+  "purchase_order_reference": "FICT_A-PO-116DB4C4",
+  "products": [
+    {
+      "sku": "FICT_A04_6_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000067535576",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A04_6_P2",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "27617123671"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A04_6_P1",
+      "quantity": 4,
+      "unit_cost": "35.98",
+      "line_total": "143.92"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A04_6_P2",
+      "quantity": 5,
+      "unit_cost": "47.15",
+      "line_total": "235.75"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "379.67",
+    "tax": "7.8100",
+    "total": "387.4800"
+  },
+  "scan_blur": false
+}

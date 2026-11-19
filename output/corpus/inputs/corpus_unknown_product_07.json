@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_unknown_product_07",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-DFB98CCA",
+  "invoice_date": "2029-03-17",
+  "purchase_order_reference": "FICT_C-PO-2E4A9BA3",
+  "products": [
+    {
+      "sku": "FICT_C07_5_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000347744834",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C07_5_P2",
+      "description": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "40518792551"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C07_5_P1",
+      "quantity": 9,
+      "unit_cost": "12.49",
+      "line_total": "112.41"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C07_5_P2",
+      "quantity": 1,
+      "unit_cost": "20.43",
+      "line_total": "20.43"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "132.84",
+    "tax": "2.1900",
+    "total": "135.0300"
+  },
+  "scan_blur": false
+}

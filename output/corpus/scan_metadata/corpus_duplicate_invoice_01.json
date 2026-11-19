@@ -1,0 +1,29 @@
+{
+  "source_case_id": "corpus_duplicate_invoice_01",
+  "source_invoice_number": "FICT_B-INV-15CB8262",
+  "source_pdf_sha256": "44298da8a3b1f4b4ea8468d68f56704c2a4c884003e4606dce5ac8f5f98b0da4",
+  "supplier_code": "FICT_B",
+  "supplier_template": "compact",
+  "degradation_type": "rotation",
+  "random_seed": 4891837593904569677,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "d0546d9ed63928d38fdc429dd8e5f52ab5168de9999207741f2b13117584f793",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 10735950661842922740,
+      "source_width_px": 827,
+      "source_height_px": 1170,
+      "width_px": 841,
+      "height_px": 1180,
+      "resolution_dpi": 100,
+      "parameters": {
+        "blur_radius": 0.0,
+        "rotation_degrees": 0.646,
+        "contrast_factor": 1.0,
+        "jpeg_quality": null
+      }
+    }
+  ]
+}

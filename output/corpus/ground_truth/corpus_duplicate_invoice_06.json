@@ -1,0 +1,205 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_duplicate_invoice_06",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-9A3E439E",
+      "invoice_date": "2029-07-30",
+      "purchase_order_reference": "FICT_A-PO-C95BC1F7",
+      "products": [
+        {
+          "sku": "FICT_A07_0_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000496571091",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A07_0_P2",
+          "description": "Fictional absorbent pad case",
+          "upc": null,
+          "ndc": "31442174742"
+        },
+        {
+          "sku": "FICT_A07_0_P3",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000873598086",
+          "ndc": null
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A07_0_P1",
+          "quantity": 2,
+          "unit_cost": "81.37",
+          "line_total": "162.74"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A07_0_P2",
+          "quantity": 9,
+          "unit_cost": "49.95",
+          "line_total": "449.55"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A07_0_P3",
+          "quantity": 5,
+          "unit_cost": "29.73",
+          "line_total": "148.65"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "760.94",
+        "tax": "10.3800",
+        "total": "771.3200"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "duplicate_invoice",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-9A3E439E",
+      "expected_invoice_date": "2029-07-30",
+      "expected_purchase_order_reference": "FICT_A-PO-C95BC1F7",
+      "expected_products": [
+        {
+          "sku": "FICT_A07_0_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000496571091",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A07_0_P2",
+          "description": "Fictional absorbent pad case",
+          "upc": null,
+          "ndc": "31442174742"
+        },
+        {
+          "sku": "FICT_A07_0_P3",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000873598086",
+          "ndc": null
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A07_0_P1",
+          "quantity": 2,
+          "unit_cost": "81.37",
+          "line_total": "162.74"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A07_0_P2",
+          "quantity": 9,
+          "unit_cost": "49.95",
+          "line_total": "449.55"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A07_0_P3",
+          "quantity": 5,
+          "unit_cost": "29.73",
+          "line_total": "148.65"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "760.94",
+        "tax": "10.3800",
+        "total": "771.3200"
+      },
+      "duplicate_of_case_id": "corpus_clean_07",
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A07_0_P1",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": "000496571091",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A07_0_P2",
+      "name": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "31442174742"
+    },
+    {
+      "id": "FICT_A07_0_P3",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": "000873598086",
+      "ndc": null
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-C95BC1F7",
+    "order_number": "FICT_A-PO-C95BC1F7",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-C95BC1F7:1",
+        "product_id": "FICT_A07_0_P1",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "81.37",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-C95BC1F7:2",
+        "product_id": "FICT_A07_0_P2",
+        "ordered_quantity": 9,
+        "expected_unit_cost": "49.95",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-C95BC1F7:3",
+        "product_id": "FICT_A07_0_P3",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "29.73",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [
+    {
+      "id": "prior:corpus_clean_07",
+      "supplier_id": "FICT_A",
+      "invoice_number_normalized": "FICT_A-INV-9A3E439E",
+      "source_sha256": "25d8219d4d7497a3e825ef5458eaf128e3d32c71d7213bb5f76ec25b83b9f1f5",
+      "status": "validated"
+    },
+    {
+      "id": "prior:repeat:corpus_duplicate_invoice_06",
+      "supplier_id": "FICT_A",
+      "invoice_number_normalized": "FICT_A-INV-9A3E439E",
+      "source_sha256": "711490f821022420bcf21d6b7ece3672a532197bf1052d2e1647f52a791195d2",
+      "status": "validated"
+    }
+  ],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "duplicate_invoice_identity",
+    "exact_repeat_submission",
+    "conflicting_invoice_document"
+  ],
+  "duplicate_relationship": "distinct_bytes_same_identity"
+}

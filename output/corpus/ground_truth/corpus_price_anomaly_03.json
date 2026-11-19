@@ -1,0 +1,150 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_price_anomaly_03",
+      "supplier": {
+        "code": "FICT_C",
+        "name": "Northstar Fictional Supply",
+        "fictional": true,
+        "layout": "purchase_order"
+      },
+      "invoice_number": "FICT_C-INV-D8D93415",
+      "invoice_date": "2029-06-29",
+      "purchase_order_reference": "FICT_C-PO-70DA10F3",
+      "products": [
+        {
+          "sku": "FICT_C03_6_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000961117601",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C03_6_P2",
+          "description": "Fictional amber storage vial",
+          "upc": null,
+          "ndc": "94482287830"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C03_6_P1",
+          "quantity": 7,
+          "unit_cost": "61.19",
+          "line_total": "428.33"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C03_6_P2",
+          "quantity": 5,
+          "unit_cost": "74.6",
+          "line_total": "373.0"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "801.33",
+        "tax": "13.7400",
+        "total": "815.0700"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "price_anomaly",
+      "expected_supplier_code": "FICT_C",
+      "expected_invoice_number": "FICT_C-INV-D8D93415",
+      "expected_invoice_date": "2029-06-29",
+      "expected_purchase_order_reference": "FICT_C-PO-70DA10F3",
+      "expected_products": [
+        {
+          "sku": "FICT_C03_6_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000961117601",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C03_6_P2",
+          "description": "Fictional amber storage vial",
+          "upc": null,
+          "ndc": "94482287830"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C03_6_P1",
+          "quantity": 7,
+          "unit_cost": "61.19",
+          "line_total": "428.33"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C03_6_P2",
+          "quantity": 5,
+          "unit_cost": "74.6",
+          "line_total": "373.0"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "801.33",
+        "tax": "13.7400",
+        "total": "815.0700"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {
+        "1": "62.1900"
+      }
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_C",
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_C03_6_P1",
+      "name": "Fictional absorbent pad case",
+      "upc": "000961117601",
+      "ndc": null
+    },
+    {
+      "id": "FICT_C03_6_P2",
+      "name": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "94482287830"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_C-PO-70DA10F3",
+    "order_number": "FICT_C-PO-70DA10F3",
+    "supplier_id": "FICT_C",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_C-PO-70DA10F3:1",
+        "product_id": "FICT_C03_6_P1",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "62.1900",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-70DA10F3:2",
+        "product_id": "FICT_C03_6_P2",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "74.6",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "po_price_mismatch"
+  ],
+  "duplicate_relationship": null
+}

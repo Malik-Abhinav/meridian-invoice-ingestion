@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_blurry_scan_07",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-7D9B0C82",
+  "invoice_date": "2029-04-05",
+  "purchase_order_reference": "FICT_C-PO-516B78C6",
+  "products": [
+    {
+      "sku": "FICT_C07_2_P1",
+      "description": "Mock disposable drape packet",
+      "upc": "000422054605",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C07_2_P2",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "66704424523"
+    },
+    {
+      "sku": "FICT_C07_2_P3",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000991775802",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C07_2_P4",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "97672571704"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C07_2_P1",
+      "quantity": 9,
+      "unit_cost": "79.25",
+      "line_total": "713.25"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C07_2_P2",
+      "quantity": 3,
+      "unit_cost": "48.14",
+      "line_total": "144.42"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C07_2_P3",
+      "quantity": 9,
+      "unit_cost": "5.92",
+      "line_total": "53.28"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C07_2_P4",
+      "quantity": 8,
+      "unit_cost": "38.71",
+      "line_total": "309.68"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "1220.63",
+    "tax": "14.5600",
+    "total": "1235.1900"
+  },
+  "scan_blur": true
+}

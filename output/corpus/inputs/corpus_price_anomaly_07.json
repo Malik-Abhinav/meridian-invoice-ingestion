@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_price_anomaly_07",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-A5404C20",
+  "invoice_date": "2029-03-18",
+  "purchase_order_reference": "FICT_A-PO-7A55E2ED",
+  "products": [
+    {
+      "sku": "FICT_A07_6_P1",
+      "description": "Fictional absorbent pad case",
+      "upc": "000804751603",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A07_6_P2",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "08309291145"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A07_6_P1",
+      "quantity": 8,
+      "unit_cost": "77",
+      "line_total": "616"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A07_6_P2",
+      "quantity": 5,
+      "unit_cost": "10.88",
+      "line_total": "54.40"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "670.40",
+    "tax": "7.8100",
+    "total": "678.2100"
+  },
+  "scan_blur": false
+}

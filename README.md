@@ -221,3 +221,24 @@ The evaluation uses controlled invoice-visible values and staff-event test data.
 The FastAPI application in `meridian.api.app` connects upload, OCR, structured extraction, validation, trusted reconciliation, audited staff correction, explicit approval, and Task 14 posting. Uploads start as document/upload-attempt records; processing creates a canonical invoice only when supplier identity is unique. Original OCR and extraction stay immutable, while a revisioned review snapshot tracks corrections and fresh findings. Processing never approves or posts inventory. Staff approval binds a destination location and explicit PO-line allocations; the posting route delegates to Task 14's atomic service.
 
 The default provider is the deterministic offline mock. All `/api/v1` routes, including read-only routes, fail closed without staff authentication; local bearer-token mode is opt-in and disabled by default. Multipart request bytes are bounded before parsing. The API imports without a database connection or OpenAI key. See the [API guide](docs/API.md) for migration, server startup, endpoints, storage, retry policy, security boundaries, and the disposable HTTP demo.
+
+## Synthetic evaluation corpus (Task 17)
+
+`output/corpus/` contains 70 entirely fictional invoices: ten each of clean, missing totals, blurry scan, PO quantity mismatch, duplicate identity, unknown product, and PO price anomaly. Three supplier templates occur 24, 23, and 23 times. `meridian.corpus` derives each case from master seed 2029 and a stable case ID, renders a selectable original PDF, and creates a 100 DPI image-only scanned PDF using an explicit scan profile. Invoice-visible inputs live in `inputs/`; evaluation-only mathematical truth and trusted supplier/catalog/PO/prior-invoice snapshots live in `ground_truth/`. Neither rendering nor scanning accepts a truth object. Syntactically valid synthetic UPC-A and normalized 11-digit NDC values make no claim of real registry membership.
+
+Generate and validate the corpus, then score it with Tesseract and the deterministic offline mock:
+
+```sh
+docker compose run --rm test python scripts/generate_corpus.py
+docker compose run --rm test python scripts/generate_corpus.py --validate-only
+docker compose run --rm test python scripts/check_corpus_reproducibility.py
+docker compose run --rm test python scripts/check_corpus_reproducibility.py --evaluate
+docker compose run --rm test python scripts/evaluate_corpus.py
+docker compose run --rm test python scripts/audit_corpus_report.py
+```
+
+The versioned manifest records relative artifact paths, SHA-256 hashes, seeds, supplier/layout distribution, scan profiles, and duplicate relationships. `output/corpus/reports/metrics.json` separates scanned OCR/mock observations from controlled invoice-visible rule checks; `analysis.md` summarizes failures. Controlled transcription has no OCR citations or confidence and is not an OCR/LLM accuracy score. The duplicate category uses the same supplier and invoice number as an earlier clean case with distinct bytes; its trusted prior history also includes an exact repeat hash to exercise both duplicate policies. No evaluation result is staff approval or inventory posting. Historical fixture and evaluation outputs remain untouched. See [evaluation plan](docs/EVALUATION_PLAN.md) for metric definitions and limitations.
+
+The versioned corpus includes all 140 PDFs in the repository so manifest paths resolve immediately in a fresh checkout and CI can run the complete test suite without a generation pre-step. The 70 scans occupy about 6.8 MB, originals about 280 KB, and the full corpus about 11 MB; this bounded size is acceptable for the first corpus revision. Regeneration and byte-comparison commands remain available above. Avoid committing temporary regeneration copies or runtime caches.
+
+The independent report audit recomputes per-case finding and review confusion counts, OCR micro-averaged edit rates, field denominators, extraction totals, and grouped metrics. The 90 controlled true positives are case/finding-code pairs: 30 missing-total codes, 30 PO/catalog discrepancy codes, and 30 duplicate-policy codes for ten duplicate cases. There are 50 underlying anomalous cases. Controlled local validation is a separate rule oracle, not a run of the production Task 12 validator; only controlled reconciliation calls production Task 13 code. The offline mock identifies just 29 of 203 printed product identifiers, a major limitation when interpreting its downstream findings.

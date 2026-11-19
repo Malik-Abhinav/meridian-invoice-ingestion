@@ -1,0 +1,57 @@
+{
+  "case_id": "corpus_missing_totals_09",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-15FE052D",
+  "invoice_date": "2029-01-18",
+  "purchase_order_reference": "FICT_A-PO-80BC10C5",
+  "products": [
+    {
+      "sku": "FICT_A09_1_P1",
+      "description": "Fable practice dressing kit",
+      "upc": "000344376717",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A09_1_P2",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "07658533856"
+    },
+    {
+      "sku": "FICT_A09_1_P3",
+      "description": "Fictional sterile sample tray",
+      "upc": "000635464857",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A09_1_P1",
+      "quantity": 5,
+      "unit_cost": "77.52",
+      "line_total": "387.60"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A09_1_P2",
+      "quantity": 5,
+      "unit_cost": "20.61",
+      "line_total": "103.05"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A09_1_P3",
+      "quantity": 6,
+      "unit_cost": "6.44",
+      "line_total": "38.64"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

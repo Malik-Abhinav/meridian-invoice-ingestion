@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_blurry_scan_02",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-AFF4CB71",
+  "invoice_date": "2029-07-15",
+  "purchase_order_reference": "FICT_A-PO-F0BC4536",
+  "products": [
+    {
+      "sku": "FICT_A02_2_P1",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000361859194",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A02_2_P2",
+      "description": "Imaginary specimen tube bundle",
+      "upc": null,
+      "ndc": "32275577308"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A02_2_P1",
+      "quantity": 6,
+      "unit_cost": "68.1",
+      "line_total": "408.6"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A02_2_P2",
+      "quantity": 2,
+      "unit_cost": "77.09",
+      "line_total": "154.18"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "562.78",
+    "tax": "0.6500",
+    "total": "563.4300"
+  },
+  "scan_blur": true
+}

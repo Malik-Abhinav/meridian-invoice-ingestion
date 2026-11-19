@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_unknown_product_09",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-20AFBECD",
+  "invoice_date": "2029-10-23",
+  "purchase_order_reference": "FICT_B-PO-6831D8E7",
+  "products": [
+    {
+      "sku": "FICT_B09_5_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000841322217",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B09_5_P2",
+      "description": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "56064117145"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B09_5_P1",
+      "quantity": 4,
+      "unit_cost": "5.13",
+      "line_total": "20.52"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B09_5_P2",
+      "quantity": 9,
+      "unit_cost": "49.54",
+      "line_total": "445.86"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "466.38",
+    "tax": "0.0400",
+    "total": "466.4200"
+  },
+  "scan_blur": false
+}

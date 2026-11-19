@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_unknown_product_04",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-0F4E421C",
+  "invoice_date": "2029-03-25",
+  "purchase_order_reference": "FICT_C-PO-29EF7286",
+  "products": [
+    {
+      "sku": "FICT_C04_5_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000752396925",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C04_5_P2",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "76066750071"
+    },
+    {
+      "sku": "FICT_C04_5_P3",
+      "description": "Fictional amber storage vial",
+      "upc": "000284468602",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C04_5_P1",
+      "quantity": 2,
+      "unit_cost": "75.24",
+      "line_total": "150.48"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C04_5_P2",
+      "quantity": 1,
+      "unit_cost": "30.18",
+      "line_total": "30.18"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C04_5_P3",
+      "quantity": 2,
+      "unit_cost": "9.11",
+      "line_total": "18.22"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "198.88",
+    "tax": "0.0500",
+    "total": "198.9300"
+  },
+  "scan_blur": false
+}

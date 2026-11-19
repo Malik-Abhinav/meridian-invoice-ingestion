@@ -1,0 +1,186 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_missing_totals_09",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-15FE052D",
+      "invoice_date": "2029-01-18",
+      "purchase_order_reference": "FICT_A-PO-80BC10C5",
+      "products": [
+        {
+          "sku": "FICT_A09_1_P1",
+          "description": "Fable practice dressing kit",
+          "upc": "000344376717",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A09_1_P2",
+          "description": "Fictional amber storage vial",
+          "upc": null,
+          "ndc": "07658533856"
+        },
+        {
+          "sku": "FICT_A09_1_P3",
+          "description": "Fictional sterile sample tray",
+          "upc": "000635464857",
+          "ndc": null
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A09_1_P1",
+          "quantity": 5,
+          "unit_cost": "77.52",
+          "line_total": "387.60"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A09_1_P2",
+          "quantity": 5,
+          "unit_cost": "20.61",
+          "line_total": "103.05"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A09_1_P3",
+          "quantity": 6,
+          "unit_cost": "6.44",
+          "line_total": "38.64"
+        }
+      ],
+      "displayed_totals": null,
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "missing_totals",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-15FE052D",
+      "expected_invoice_date": "2029-01-18",
+      "expected_purchase_order_reference": "FICT_A-PO-80BC10C5",
+      "expected_products": [
+        {
+          "sku": "FICT_A09_1_P1",
+          "description": "Fable practice dressing kit",
+          "upc": "000344376717",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A09_1_P2",
+          "description": "Fictional amber storage vial",
+          "upc": null,
+          "ndc": "07658533856"
+        },
+        {
+          "sku": "FICT_A09_1_P3",
+          "description": "Fictional sterile sample tray",
+          "upc": "000635464857",
+          "ndc": null
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A09_1_P1",
+          "quantity": 5,
+          "unit_cost": "77.52",
+          "line_total": "387.60"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A09_1_P2",
+          "quantity": 5,
+          "unit_cost": "20.61",
+          "line_total": "103.05"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A09_1_P3",
+          "quantity": 6,
+          "unit_cost": "6.44",
+          "line_total": "38.64"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "529.29",
+        "tax": "1.7900",
+        "total": "531.0800"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A09_1_P1",
+      "name": "Fable practice dressing kit",
+      "upc": "000344376717",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A09_1_P2",
+      "name": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "07658533856"
+    },
+    {
+      "id": "FICT_A09_1_P3",
+      "name": "Fictional sterile sample tray",
+      "upc": "000635464857",
+      "ndc": null
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-80BC10C5",
+    "order_number": "FICT_A-PO-80BC10C5",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-80BC10C5:1",
+        "product_id": "FICT_A09_1_P1",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "77.52",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-80BC10C5:2",
+        "product_id": "FICT_A09_1_P2",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "20.61",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-80BC10C5:3",
+        "product_id": "FICT_A09_1_P3",
+        "ordered_quantity": 6,
+        "expected_unit_cost": "6.44",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [
+    "missing_subtotal",
+    "missing_tax",
+    "missing_total"
+  ],
+  "expected_reconciliation_codes": [],
+  "duplicate_relationship": null
+}

@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_blurry_scan_10",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-2D8B6A51",
+  "invoice_date": "2029-03-19",
+  "purchase_order_reference": "FICT_C-PO-F12064FE",
+  "products": [
+    {
+      "sku": "FICT_C10_2_P1",
+      "description": "Fictional absorbent pad case",
+      "upc": "000593925971",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C10_2_P2",
+      "description": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "84301798937"
+    },
+    {
+      "sku": "FICT_C10_2_P3",
+      "description": "Fable blue exam sleeve",
+      "upc": "000487703937",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C10_2_P4",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "58196353592"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C10_2_P1",
+      "quantity": 2,
+      "unit_cost": "78.75",
+      "line_total": "157.50"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C10_2_P2",
+      "quantity": 6,
+      "unit_cost": "52.15",
+      "line_total": "312.90"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C10_2_P3",
+      "quantity": 6,
+      "unit_cost": "11.55",
+      "line_total": "69.30"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C10_2_P4",
+      "quantity": 5,
+      "unit_cost": "43.96",
+      "line_total": "219.80"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "759.50",
+    "tax": "11.9900",
+    "total": "771.4900"
+  },
+  "scan_blur": true
+}

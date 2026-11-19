@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_unknown_product_01",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-29BB2462",
+  "invoice_date": "2029-01-29",
+  "purchase_order_reference": "FICT_C-PO-596E765D",
+  "products": [
+    {
+      "sku": "FICT_C01_5_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000308298307",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C01_5_P2",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "98297687700"
+    },
+    {
+      "sku": "FICT_C01_5_P3",
+      "description": "Fictional amber storage vial",
+      "upc": "000897655307",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C01_5_P1",
+      "quantity": 3,
+      "unit_cost": "76.32",
+      "line_total": "228.96"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C01_5_P2",
+      "quantity": 2,
+      "unit_cost": "44.99",
+      "line_total": "89.98"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C01_5_P3",
+      "quantity": 6,
+      "unit_cost": "52.65",
+      "line_total": "315.90"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "634.84",
+    "tax": "7.2800",
+    "total": "642.1200"
+  },
+  "scan_blur": false
+}

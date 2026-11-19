@@ -1,0 +1,57 @@
+{
+  "case_id": "corpus_missing_totals_05",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-58AE8CF1",
+  "invoice_date": "2029-06-02",
+  "purchase_order_reference": "FICT_C-PO-75B83511",
+  "products": [
+    {
+      "sku": "FICT_C05_1_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000178358897",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C05_1_P2",
+      "description": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "80888184746"
+    },
+    {
+      "sku": "FICT_C05_1_P3",
+      "description": "Imaginary specimen tube bundle",
+      "upc": "000511536111",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C05_1_P1",
+      "quantity": 7,
+      "unit_cost": "67.14",
+      "line_total": "469.98"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C05_1_P2",
+      "quantity": 5,
+      "unit_cost": "17.61",
+      "line_total": "88.05"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C05_1_P3",
+      "quantity": 3,
+      "unit_cost": "57.95",
+      "line_total": "173.85"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

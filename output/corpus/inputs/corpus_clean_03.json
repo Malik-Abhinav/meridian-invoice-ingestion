@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_clean_03",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-77F9632E",
+  "invoice_date": "2029-06-21",
+  "purchase_order_reference": "FICT_C-PO-F5207460",
+  "products": [
+    {
+      "sku": "FICT_C03_0_P1",
+      "description": "Fable practice dressing kit",
+      "upc": "000635672542",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C03_0_P2",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "95045953372"
+    },
+    {
+      "sku": "FICT_C03_0_P3",
+      "description": "Fable blue exam sleeve",
+      "upc": "000258018734",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C03_0_P4",
+      "description": "Fable blue exam sleeve",
+      "upc": null,
+      "ndc": "59991956864"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C03_0_P1",
+      "quantity": 2,
+      "unit_cost": "53.53",
+      "line_total": "107.06"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C03_0_P2",
+      "quantity": 5,
+      "unit_cost": "2.24",
+      "line_total": "11.20"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C03_0_P3",
+      "quantity": 1,
+      "unit_cost": "77.06",
+      "line_total": "77.06"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C03_0_P4",
+      "quantity": 1,
+      "unit_cost": "71.86",
+      "line_total": "71.86"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "267.18",
+    "tax": "2.8300",
+    "total": "270.0100"
+  },
+  "scan_blur": false
+}

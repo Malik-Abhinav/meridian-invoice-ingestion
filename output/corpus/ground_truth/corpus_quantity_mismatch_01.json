@@ -1,0 +1,230 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_quantity_mismatch_01",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-510FB5B0",
+      "invoice_date": "2029-08-12",
+      "purchase_order_reference": "FICT_A-PO-8FC39EA8",
+      "products": [
+        {
+          "sku": "FICT_A01_3_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000294057049",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A01_3_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "67199285825"
+        },
+        {
+          "sku": "FICT_A01_3_P3",
+          "description": "Mock clinical swab carton",
+          "upc": "000391770513",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A01_3_P4",
+          "description": "Fictional sterile sample tray",
+          "upc": null,
+          "ndc": "08588057710"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A01_3_P1",
+          "quantity": 7,
+          "unit_cost": "26.53",
+          "line_total": "185.71"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A01_3_P2",
+          "quantity": 5,
+          "unit_cost": "65.17",
+          "line_total": "325.85"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A01_3_P3",
+          "quantity": 9,
+          "unit_cost": "20.75",
+          "line_total": "186.75"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_A01_3_P4",
+          "quantity": 3,
+          "unit_cost": "60.57",
+          "line_total": "181.71"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "880.02",
+        "tax": "5.3500",
+        "total": "885.3700"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "quantity_mismatch",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-510FB5B0",
+      "expected_invoice_date": "2029-08-12",
+      "expected_purchase_order_reference": "FICT_A-PO-8FC39EA8",
+      "expected_products": [
+        {
+          "sku": "FICT_A01_3_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000294057049",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A01_3_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "67199285825"
+        },
+        {
+          "sku": "FICT_A01_3_P3",
+          "description": "Mock clinical swab carton",
+          "upc": "000391770513",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A01_3_P4",
+          "description": "Fictional sterile sample tray",
+          "upc": null,
+          "ndc": "08588057710"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A01_3_P1",
+          "quantity": 7,
+          "unit_cost": "26.53",
+          "line_total": "185.71"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A01_3_P2",
+          "quantity": 5,
+          "unit_cost": "65.17",
+          "line_total": "325.85"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A01_3_P3",
+          "quantity": 9,
+          "unit_cost": "20.75",
+          "line_total": "186.75"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_A01_3_P4",
+          "quantity": 3,
+          "unit_cost": "60.57",
+          "line_total": "181.71"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "880.02",
+        "tax": "5.3500",
+        "total": "885.3700"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {
+        "1": 5
+      },
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A01_3_P1",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": "000294057049",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A01_3_P2",
+      "name": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "67199285825"
+    },
+    {
+      "id": "FICT_A01_3_P3",
+      "name": "Mock clinical swab carton",
+      "upc": "000391770513",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A01_3_P4",
+      "name": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "08588057710"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-8FC39EA8",
+    "order_number": "FICT_A-PO-8FC39EA8",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-8FC39EA8:1",
+        "product_id": "FICT_A01_3_P1",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "26.53",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-8FC39EA8:2",
+        "product_id": "FICT_A01_3_P2",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "65.17",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-8FC39EA8:3",
+        "product_id": "FICT_A01_3_P3",
+        "ordered_quantity": 9,
+        "expected_unit_cost": "20.75",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-8FC39EA8:4",
+        "product_id": "FICT_A01_3_P4",
+        "ordered_quantity": 3,
+        "expected_unit_cost": "60.57",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "po_quantity_mismatch"
+  ],
+  "duplicate_relationship": null
+}

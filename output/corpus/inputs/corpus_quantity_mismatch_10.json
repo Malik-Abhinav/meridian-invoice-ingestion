@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_quantity_mismatch_10",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-BE6AF3B6",
+  "invoice_date": "2029-08-05",
+  "purchase_order_reference": "FICT_A-PO-BADBBD55",
+  "products": [
+    {
+      "sku": "FICT_A10_3_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000262470900",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A10_3_P2",
+      "description": "Imaginary specimen tube bundle",
+      "upc": null,
+      "ndc": "26720064394"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A10_3_P1",
+      "quantity": 4,
+      "unit_cost": "82.88",
+      "line_total": "331.52"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A10_3_P2",
+      "quantity": 1,
+      "unit_cost": "81.67",
+      "line_total": "81.67"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "413.19",
+    "tax": "4.5700",
+    "total": "417.7600"
+  },
+  "scan_blur": false
+}

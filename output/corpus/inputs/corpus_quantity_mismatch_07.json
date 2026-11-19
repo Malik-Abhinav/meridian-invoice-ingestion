@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_quantity_mismatch_07",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-3187A23B",
+  "invoice_date": "2029-10-12",
+  "purchase_order_reference": "FICT_A-PO-571933DB",
+  "products": [
+    {
+      "sku": "FICT_A07_3_P1",
+      "description": "Fictional absorbent pad case",
+      "upc": "000345154826",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A07_3_P2",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "56626336536"
+    },
+    {
+      "sku": "FICT_A07_3_P3",
+      "description": "Mock disposable drape packet",
+      "upc": "000780651799",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A07_3_P4",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "64278708323"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A07_3_P1",
+      "quantity": 4,
+      "unit_cost": "26.53",
+      "line_total": "106.12"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A07_3_P2",
+      "quantity": 7,
+      "unit_cost": "6",
+      "line_total": "42"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A07_3_P3",
+      "quantity": 8,
+      "unit_cost": "28.87",
+      "line_total": "230.96"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A07_3_P4",
+      "quantity": 4,
+      "unit_cost": "18.24",
+      "line_total": "72.96"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "452.04",
+    "tax": "10.7400",
+    "total": "462.7800"
+  },
+  "scan_blur": false
+}

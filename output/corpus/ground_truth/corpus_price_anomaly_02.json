@@ -1,0 +1,150 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_price_anomaly_02",
+      "supplier": {
+        "code": "FICT_B",
+        "name": "Fable Ridge Distribution",
+        "fictional": true,
+        "layout": "compact"
+      },
+      "invoice_number": "FICT_B-INV-AFD97E75",
+      "invoice_date": "2029-04-17",
+      "purchase_order_reference": "FICT_B-PO-7B57D163",
+      "products": [
+        {
+          "sku": "FICT_B02_6_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000893389176",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B02_6_P2",
+          "description": "Fictional amber storage vial",
+          "upc": null,
+          "ndc": "64679223741"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B02_6_P1",
+          "quantity": 7,
+          "unit_cost": "8.18",
+          "line_total": "57.26"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B02_6_P2",
+          "quantity": 2,
+          "unit_cost": "50.31",
+          "line_total": "100.62"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "157.88",
+        "tax": "7.0600",
+        "total": "164.9400"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "price_anomaly",
+      "expected_supplier_code": "FICT_B",
+      "expected_invoice_number": "FICT_B-INV-AFD97E75",
+      "expected_invoice_date": "2029-04-17",
+      "expected_purchase_order_reference": "FICT_B-PO-7B57D163",
+      "expected_products": [
+        {
+          "sku": "FICT_B02_6_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000893389176",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B02_6_P2",
+          "description": "Fictional amber storage vial",
+          "upc": null,
+          "ndc": "64679223741"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B02_6_P1",
+          "quantity": 7,
+          "unit_cost": "8.18",
+          "line_total": "57.26"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B02_6_P2",
+          "quantity": 2,
+          "unit_cost": "50.31",
+          "line_total": "100.62"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "157.88",
+        "tax": "7.0600",
+        "total": "164.9400"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {
+        "1": "9.1800"
+      }
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_B",
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_B02_6_P1",
+      "name": "Fable blue exam sleeve",
+      "upc": "000893389176",
+      "ndc": null
+    },
+    {
+      "id": "FICT_B02_6_P2",
+      "name": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "64679223741"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_B-PO-7B57D163",
+    "order_number": "FICT_B-PO-7B57D163",
+    "supplier_id": "FICT_B",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_B-PO-7B57D163:1",
+        "product_id": "FICT_B02_6_P1",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "9.1800",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-7B57D163:2",
+        "product_id": "FICT_B02_6_P2",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "50.31",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "po_price_mismatch"
+  ],
+  "duplicate_relationship": null
+}

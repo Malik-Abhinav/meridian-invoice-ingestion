@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_price_anomaly_09",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-554ED320",
+  "invoice_date": "2029-03-25",
+  "purchase_order_reference": "FICT_C-PO-76E56574",
+  "products": [
+    {
+      "sku": "FICT_C09_6_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000046714251",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C09_6_P2",
+      "description": "Imaginary specimen tube bundle",
+      "upc": null,
+      "ndc": "89691764031"
+    },
+    {
+      "sku": "FICT_C09_6_P3",
+      "description": "Mock disposable drape packet",
+      "upc": "000410964497",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C09_6_P4",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "64319522290"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C09_6_P1",
+      "quantity": 9,
+      "unit_cost": "54.12",
+      "line_total": "487.08"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C09_6_P2",
+      "quantity": 1,
+      "unit_cost": "21.29",
+      "line_total": "21.29"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C09_6_P3",
+      "quantity": 4,
+      "unit_cost": "78.39",
+      "line_total": "313.56"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C09_6_P4",
+      "quantity": 8,
+      "unit_cost": "44.3",
+      "line_total": "354.4"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "1176.33",
+    "tax": "5.8500",
+    "total": "1182.1800"
+  },
+  "scan_blur": false
+}

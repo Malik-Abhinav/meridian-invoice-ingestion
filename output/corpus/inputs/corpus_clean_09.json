@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_clean_09",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-A235649E",
+  "invoice_date": "2029-11-24",
+  "purchase_order_reference": "FICT_C-PO-322C56C0",
+  "products": [
+    {
+      "sku": "FICT_C09_0_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000496004865",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C09_0_P2",
+      "description": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "68740602686"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C09_0_P1",
+      "quantity": 7,
+      "unit_cost": "23.57",
+      "line_total": "164.99"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C09_0_P2",
+      "quantity": 2,
+      "unit_cost": "60.56",
+      "line_total": "121.12"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "286.11",
+    "tax": "8.6800",
+    "total": "294.7900"
+  },
+  "scan_blur": false
+}

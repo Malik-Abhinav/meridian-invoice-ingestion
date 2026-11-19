@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_duplicate_invoice_04",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-481F1A6A",
+  "invoice_date": "2029-01-08",
+  "purchase_order_reference": "FICT_B-PO-4FE8EE88",
+  "products": [
+    {
+      "sku": "FICT_B05_0_P1",
+      "description": "Mock clinical swab carton",
+      "upc": "000931141117",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B05_0_P2",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "24608596173"
+    },
+    {
+      "sku": "FICT_B05_0_P3",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000692641536",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B05_0_P1",
+      "quantity": 1,
+      "unit_cost": "77.95",
+      "line_total": "77.95"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B05_0_P2",
+      "quantity": 6,
+      "unit_cost": "82.34",
+      "line_total": "494.04"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B05_0_P3",
+      "quantity": 7,
+      "unit_cost": "50.65",
+      "line_total": "354.55"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "926.54",
+    "tax": "5.5800",
+    "total": "932.1200"
+  },
+  "scan_blur": false
+}
