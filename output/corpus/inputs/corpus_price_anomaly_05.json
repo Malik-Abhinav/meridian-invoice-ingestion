@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_price_anomaly_05",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-6D2E96A0",
+  "invoice_date": "2029-09-29",
+  "purchase_order_reference": "FICT_B-PO-59F90791",
+  "products": [
+    {
+      "sku": "FICT_B05_6_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000817015792",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B05_6_P2",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "12480863787"
+    },
+    {
+      "sku": "FICT_B05_6_P3",
+      "description": "Fictional absorbent pad case",
+      "upc": "000344007918",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B05_6_P1",
+      "quantity": 1,
+      "unit_cost": "84.02",
+      "line_total": "84.02"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B05_6_P2",
+      "quantity": 1,
+      "unit_cost": "69.38",
+      "line_total": "69.38"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B05_6_P3",
+      "quantity": 5,
+      "unit_cost": "20.27",
+      "line_total": "101.35"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "254.75",
+    "tax": "2.2800",
+    "total": "257.0300"
+  },
+  "scan_blur": false
+}

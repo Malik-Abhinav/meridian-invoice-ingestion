@@ -1,0 +1,190 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_price_anomaly_05",
+      "supplier": {
+        "code": "FICT_B",
+        "name": "Fable Ridge Distribution",
+        "fictional": true,
+        "layout": "compact"
+      },
+      "invoice_number": "FICT_B-INV-6D2E96A0",
+      "invoice_date": "2029-09-29",
+      "purchase_order_reference": "FICT_B-PO-59F90791",
+      "products": [
+        {
+          "sku": "FICT_B05_6_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000817015792",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B05_6_P2",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "12480863787"
+        },
+        {
+          "sku": "FICT_B05_6_P3",
+          "description": "Fictional absorbent pad case",
+          "upc": "000344007918",
+          "ndc": null
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B05_6_P1",
+          "quantity": 1,
+          "unit_cost": "84.02",
+          "line_total": "84.02"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B05_6_P2",
+          "quantity": 1,
+          "unit_cost": "69.38",
+          "line_total": "69.38"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B05_6_P3",
+          "quantity": 5,
+          "unit_cost": "20.27",
+          "line_total": "101.35"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "254.75",
+        "tax": "2.2800",
+        "total": "257.0300"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "price_anomaly",
+      "expected_supplier_code": "FICT_B",
+      "expected_invoice_number": "FICT_B-INV-6D2E96A0",
+      "expected_invoice_date": "2029-09-29",
+      "expected_purchase_order_reference": "FICT_B-PO-59F90791",
+      "expected_products": [
+        {
+          "sku": "FICT_B05_6_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000817015792",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B05_6_P2",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": null,
+          "ndc": "12480863787"
+        },
+        {
+          "sku": "FICT_B05_6_P3",
+          "description": "Fictional absorbent pad case",
+          "upc": "000344007918",
+          "ndc": null
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B05_6_P1",
+          "quantity": 1,
+          "unit_cost": "84.02",
+          "line_total": "84.02"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B05_6_P2",
+          "quantity": 1,
+          "unit_cost": "69.38",
+          "line_total": "69.38"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B05_6_P3",
+          "quantity": 5,
+          "unit_cost": "20.27",
+          "line_total": "101.35"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "254.75",
+        "tax": "2.2800",
+        "total": "257.0300"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {
+        "1": "85.0200"
+      }
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_B",
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_B05_6_P1",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": "000817015792",
+      "ndc": null
+    },
+    {
+      "id": "FICT_B05_6_P2",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "12480863787"
+    },
+    {
+      "id": "FICT_B05_6_P3",
+      "name": "Fictional absorbent pad case",
+      "upc": "000344007918",
+      "ndc": null
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_B-PO-59F90791",
+    "order_number": "FICT_B-PO-59F90791",
+    "supplier_id": "FICT_B",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_B-PO-59F90791:1",
+        "product_id": "FICT_B05_6_P1",
+        "ordered_quantity": 1,
+        "expected_unit_cost": "85.0200",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-59F90791:2",
+        "product_id": "FICT_B05_6_P2",
+        "ordered_quantity": 1,
+        "expected_unit_cost": "69.38",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-59F90791:3",
+        "product_id": "FICT_B05_6_P3",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "20.27",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "po_price_mismatch"
+  ],
+  "duplicate_relationship": null
+}

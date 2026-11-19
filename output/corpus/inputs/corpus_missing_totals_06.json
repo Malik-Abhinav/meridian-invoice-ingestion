@@ -1,0 +1,70 @@
+{
+  "case_id": "corpus_missing_totals_06",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-93D3417D",
+  "invoice_date": "2029-04-05",
+  "purchase_order_reference": "FICT_A-PO-992AEB3C",
+  "products": [
+    {
+      "sku": "FICT_A06_1_P1",
+      "description": "Fictional sterile sample tray",
+      "upc": "000288420262",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A06_1_P2",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "65066742697"
+    },
+    {
+      "sku": "FICT_A06_1_P3",
+      "description": "Mock clinical swab carton",
+      "upc": "000977612824",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A06_1_P4",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "20951608104"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A06_1_P1",
+      "quantity": 8,
+      "unit_cost": "48.73",
+      "line_total": "389.84"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A06_1_P2",
+      "quantity": 9,
+      "unit_cost": "19.59",
+      "line_total": "176.31"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A06_1_P3",
+      "quantity": 7,
+      "unit_cost": "82.8",
+      "line_total": "579.6"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A06_1_P4",
+      "quantity": 1,
+      "unit_cost": "53.45",
+      "line_total": "53.45"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

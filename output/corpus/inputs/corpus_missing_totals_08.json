@@ -1,0 +1,70 @@
+{
+  "case_id": "corpus_missing_totals_08",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-974F0272",
+  "invoice_date": "2029-07-01",
+  "purchase_order_reference": "FICT_C-PO-269BB41C",
+  "products": [
+    {
+      "sku": "FICT_C08_1_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000904544457",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C08_1_P2",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "56483600520"
+    },
+    {
+      "sku": "FICT_C08_1_P3",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000380191107",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C08_1_P4",
+      "description": "Fictional amber storage vial",
+      "upc": null,
+      "ndc": "69703001972"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C08_1_P1",
+      "quantity": 6,
+      "unit_cost": "41.25",
+      "line_total": "247.50"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C08_1_P2",
+      "quantity": 4,
+      "unit_cost": "63.11",
+      "line_total": "252.44"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C08_1_P3",
+      "quantity": 4,
+      "unit_cost": "43.67",
+      "line_total": "174.68"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_C08_1_P4",
+      "quantity": 9,
+      "unit_cost": "27.25",
+      "line_total": "245.25"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

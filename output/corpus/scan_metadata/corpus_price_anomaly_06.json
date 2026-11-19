@@ -1,0 +1,29 @@
+{
+  "source_case_id": "corpus_price_anomaly_06",
+  "source_invoice_number": "FICT_C-INV-2867E981",
+  "source_pdf_sha256": "cb0ba741cc2a55d76d548b034bc87daf08f6640d67292e7f1253111f608fb982",
+  "supplier_code": "FICT_C",
+  "supplier_template": "purchase_order",
+  "degradation_type": "mild_blur",
+  "random_seed": 13266048049712982401,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "d675163b150840abf559a57c6938e719dc22df1fbc02b2a0876a0bc037fb5b3b",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 13770531129567796435,
+      "source_width_px": 827,
+      "source_height_px": 1170,
+      "width_px": 827,
+      "height_px": 1170,
+      "resolution_dpi": 100,
+      "parameters": {
+        "blur_radius": 0.8,
+        "rotation_degrees": 0.0,
+        "contrast_factor": 1.0,
+        "jpeg_quality": null
+      }
+    }
+  ]
+}

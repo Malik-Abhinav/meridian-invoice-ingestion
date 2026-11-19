@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_quantity_mismatch_03",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-BCA4E142",
+  "invoice_date": "2029-04-29",
+  "purchase_order_reference": "FICT_C-PO-195EBD17",
+  "products": [
+    {
+      "sku": "FICT_C03_3_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000494504831",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C03_3_P2",
+      "description": "Fable blue exam sleeve",
+      "upc": null,
+      "ndc": "25954166058"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C03_3_P1",
+      "quantity": 9,
+      "unit_cost": "78.94",
+      "line_total": "710.46"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C03_3_P2",
+      "quantity": 6,
+      "unit_cost": "67.19",
+      "line_total": "403.14"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "1113.60",
+    "tax": "1.6200",
+    "total": "1115.2200"
+  },
+  "scan_blur": false
+}

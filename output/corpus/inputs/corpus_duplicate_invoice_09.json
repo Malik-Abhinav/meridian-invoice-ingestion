@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_duplicate_invoice_09",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-66CED207",
+  "invoice_date": "2029-06-23",
+  "purchase_order_reference": "FICT_A-PO-DE1E01E7",
+  "products": [
+    {
+      "sku": "FICT_A10_0_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000458685811",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A10_0_P2",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "63843100763"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A10_0_P1",
+      "quantity": 6,
+      "unit_cost": "60.48",
+      "line_total": "362.88"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A10_0_P2",
+      "quantity": 3,
+      "unit_cost": "67.51",
+      "line_total": "202.53"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "565.41",
+    "tax": "11.5300",
+    "total": "576.9400"
+  },
+  "scan_blur": false
+}

@@ -1,0 +1,2058 @@
+{
+  "version": "1",
+  "generator_version": "task17-v1",
+  "master_seed": 2029,
+  "dpi": 100,
+  "case_count": 70,
+  "category_counts": {
+    "clean": 10,
+    "missing_totals": 10,
+    "blurry_scan": 10,
+    "quantity_mismatch": 10,
+    "duplicate_invoice": 10,
+    "unknown_product": 10,
+    "price_anomaly": 10
+  },
+  "supplier_counts": {
+    "FICT_A": 24,
+    "FICT_B": 23,
+    "FICT_C": 23
+  },
+  "layout_counts": {
+    "traditional": 24,
+    "compact": 23,
+    "purchase_order": 23
+  },
+  "entries": [
+    {
+      "case_id": "corpus_clean_01",
+      "category": "clean",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 2630522399315186004,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_01.pdf",
+      "input_path": "inputs/corpus_clean_01.json",
+      "ground_truth_path": "ground_truth/corpus_clean_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_01.json",
+      "sha256": {
+        "original_pdf_path": "bab3ff7557b8f6e79db73b02ef192c659e0eae16ae5fa443d9a289c2df24a414",
+        "scanned_pdf_path": "28af1a7fdac6f4d20013c4570ee4c16c6b15d5a0b647c0ae578c4ea524522d45",
+        "input_path": "39cc933123215a0f2281181b3b3a6a288f1a631c48f91c9d86f6e6342b64db3d",
+        "ground_truth_path": "51bcc487a09f93850b70350b2d061d4851ee9445d6ce04ff0693061ec69b6e1d",
+        "scan_metadata_path": "16cb754188f5bb7ea0676379951899c8afb3d49fb9b8972fa70827e1ec3adbbc"
+      }
+    },
+    {
+      "case_id": "corpus_clean_02",
+      "category": "clean",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 9000267246610383458,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_02.pdf",
+      "input_path": "inputs/corpus_clean_02.json",
+      "ground_truth_path": "ground_truth/corpus_clean_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_02.json",
+      "sha256": {
+        "original_pdf_path": "c61431dd8a47df86d5b043aa79af2a1f92c1f3d5300d58c2f6372c9e0c63f5a9",
+        "scanned_pdf_path": "d4acb2b827ca784270b2564fecfb15e13d05189977f598f5b576c6e16c0dcebb",
+        "input_path": "97cfc935cb7724e674fe6679856a37ca3d611b83b1fa616c2c5fabbfe0a2b936",
+        "ground_truth_path": "81f7b2fdd1f95351c76a65399411b9668fe773a6a85bfa856341e848ec5dffc8",
+        "scan_metadata_path": "ff83339bbf9c3c255827479c4b564b203727ef1de3e574689fef2072f76852cd"
+      }
+    },
+    {
+      "case_id": "corpus_clean_03",
+      "category": "clean",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 17663245696225600302,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.659,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_03.pdf",
+      "input_path": "inputs/corpus_clean_03.json",
+      "ground_truth_path": "ground_truth/corpus_clean_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_03.json",
+      "sha256": {
+        "original_pdf_path": "f7704590ff1d5f2d26d6467b687e705b72a9b0f88171a160d936ffe904f0fc6c",
+        "scanned_pdf_path": "a18fe5d5781700e732aed8df1864769312e01d7e49ee3f0e80e4bb298edf6d43",
+        "input_path": "68eca1ed6fe1cb304f2e35822617616ee4837353dc7cfb865a633c1684159213",
+        "ground_truth_path": "a28119ae7b5b0b7b8da963d1820919eca36a5670e3a8dc67e8c453bc28ffb06f",
+        "scan_metadata_path": "3346cc68347c38ca3edefc2475705e2d4d2e8da64e6a0ab0e6ae019d0d03e7c2"
+      }
+    },
+    {
+      "case_id": "corpus_clean_04",
+      "category": "clean",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 15627871939010493453,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_04.pdf",
+      "input_path": "inputs/corpus_clean_04.json",
+      "ground_truth_path": "ground_truth/corpus_clean_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_04.json",
+      "sha256": {
+        "original_pdf_path": "cef61f6e87369ff87f33eb48021766ef5a19873c919b6bb6a5f1768a7652c37b",
+        "scanned_pdf_path": "aef23bb4e0ff662b1df411d8a498175e0eb566b799533a040addac909f94ca92",
+        "input_path": "1098ddb26aac21b632e69db820c198bd8c2d3e2883763dfe2cc41d479939b5cf",
+        "ground_truth_path": "664b696e4ab423468731717134a883f9ba16827357b37a86703ef36edc5c5133",
+        "scan_metadata_path": "1faecb9dbe560d694f91e951a4db723c6963426f7e141c35ef0b6a1f64676db3"
+      }
+    },
+    {
+      "case_id": "corpus_clean_05",
+      "category": "clean",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 5758114392686140010,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_05.pdf",
+      "input_path": "inputs/corpus_clean_05.json",
+      "ground_truth_path": "ground_truth/corpus_clean_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_05.json",
+      "sha256": {
+        "original_pdf_path": "5d0f6f3f2b3508b064a3c1efebbec56190fc0508919115b3018cebc2c2e87062",
+        "scanned_pdf_path": "8749dc00cd4b66969e7b081bf85553af9b5dc8bc7b298c4263eb12d044ce20d8",
+        "input_path": "b962cb45d6a655d6e79f13bb9f56ed20bc3412833190ec3e00bf5c11c40e8336",
+        "ground_truth_path": "74755cc16121bc2dbbd9598e84accbdb81d07200cd54a38ab64ada73c520eb87",
+        "scan_metadata_path": "ef573ef533d2e5b2ce519c982cba5dbb1111971cc53ffae0f1ac49343f16cd62"
+      }
+    },
+    {
+      "case_id": "corpus_clean_06",
+      "category": "clean",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 4009313002286007124,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_06.pdf",
+      "input_path": "inputs/corpus_clean_06.json",
+      "ground_truth_path": "ground_truth/corpus_clean_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_06.json",
+      "sha256": {
+        "original_pdf_path": "0c0b17cff5e64ff35393c9bcd42b384bb69256773c64cecd01a7d2e753d77332",
+        "scanned_pdf_path": "0d5d999c44d7687f799c73a2d106c00669b4cfc681c8c0a9c81fc681adf47b52",
+        "input_path": "668e6769a9362bb8a79211d38bdd319c6503de711489922420989fb849276e62",
+        "ground_truth_path": "8d857416bd0cbada661d253a0bc280c27e2bf2409eff9ea3552f48772278318f",
+        "scan_metadata_path": "a04dd2cbe7b59ffda30a70e6cd0ad39ef49c95b4245d66448575820b219e4ac6"
+      }
+    },
+    {
+      "case_id": "corpus_clean_07",
+      "category": "clean",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 14509403893693039518,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_07.pdf",
+      "input_path": "inputs/corpus_clean_07.json",
+      "ground_truth_path": "ground_truth/corpus_clean_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_07.json",
+      "sha256": {
+        "original_pdf_path": "6b0ed1a040e6ce52195aae5169de9b9399ccd31691e08a39fbc173d2a49fa1b2",
+        "scanned_pdf_path": "25d8219d4d7497a3e825ef5458eaf128e3d32c71d7213bb5f76ec25b83b9f1f5",
+        "input_path": "e7c9a918f1bb131429840c0709657cea77dbf986609fc96db53bc4a1068691f9",
+        "ground_truth_path": "36eed03ace975dc234dfa5cbd1c36d1eb7ed9351326c3b88aec91bb8e329e1e2",
+        "scan_metadata_path": "30e354c353cee97a8d3ab629a7306272795aab175a4e28ef564eef72397c0158"
+      }
+    },
+    {
+      "case_id": "corpus_clean_08",
+      "category": "clean",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 6892022663883952720,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_08.pdf",
+      "input_path": "inputs/corpus_clean_08.json",
+      "ground_truth_path": "ground_truth/corpus_clean_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_08.json",
+      "sha256": {
+        "original_pdf_path": "8b1513171eeb98cdb0a8d0b637ae46aa47ab21fe345123af1cf4ccc7b22fa12c",
+        "scanned_pdf_path": "df7b90f811941765ea48f52645a9de7694cf72de36fa37dba5c690862d43a2de",
+        "input_path": "cda6ceca20b3a3461654eb0c39e9efff91c4b764ec7137988c242448f6deebd1",
+        "ground_truth_path": "8a88d8b4b445f9adf07b1834d2d24f919314b6098d6aec505a3e5fe0a9dc7f94",
+        "scan_metadata_path": "27781a2793f3a2d667f8b28009c351256032632edc92effb659df1a835a5df7c"
+      }
+    },
+    {
+      "case_id": "corpus_clean_09",
+      "category": "clean",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 3615359986226783390,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_09.pdf",
+      "input_path": "inputs/corpus_clean_09.json",
+      "ground_truth_path": "ground_truth/corpus_clean_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_09.json",
+      "sha256": {
+        "original_pdf_path": "1e7caeb784d1fb164f7af167c961f86c5ce25b379999a2d2665b103749ab7418",
+        "scanned_pdf_path": "05a56a143cec0ec3efe4b00f89fcce9d6d8c8aed589e2a32d6bd89b410bd4798",
+        "input_path": "8a24edcab3991d8f6c8489a8d314fff60fa4dd61cd23d31931d6d8370b9fce72",
+        "ground_truth_path": "39cdc19250b537c71be5091d0efc506dbf60ad0e5e4f97296a4c4abd7223f558",
+        "scan_metadata_path": "5c17dfb37729e47329777f783163a0d9e09f2ee80cd46309e3e3bc25714eb7cb"
+      }
+    },
+    {
+      "case_id": "corpus_clean_10",
+      "category": "clean",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 16005232219095224839,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_clean_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_clean_10.pdf",
+      "input_path": "inputs/corpus_clean_10.json",
+      "ground_truth_path": "ground_truth/corpus_clean_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_clean_10.json",
+      "sha256": {
+        "original_pdf_path": "3ab99131786c68b35f1635e1bf49f5c15c10b4f93517a9630e9c928c066bf1d8",
+        "scanned_pdf_path": "887f7809109cd3c0ba6c00a926b44b86a91f9905f518a22ef474b8f9168d0b74",
+        "input_path": "2a4bf52a745fb35d96d676662239cca3ee86e80c66c5371ec482b4c42686fc5f",
+        "ground_truth_path": "60151b0a529ea0a521062570ddce2e8f567471094ab26d4b7d68ad7ba9127e93",
+        "scan_metadata_path": "a3e290ef3dfcc97445cfe901cc7208eb17611aa3ba5958f937c9d7af645922c6"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_01",
+      "category": "missing_totals",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 1499391528578605354,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_01.pdf",
+      "input_path": "inputs/corpus_missing_totals_01.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_01.json",
+      "sha256": {
+        "original_pdf_path": "5d8b5b798c8e07f43ef75d21ef9882f7b873d16f7f7ed57ce4601b2e80a98685",
+        "scanned_pdf_path": "557e7112f00331acf284f5b86f8bc0ba1fcd899d06e18238e311dfe96329f77f",
+        "input_path": "16f4c14da74f2152051fa56d2ac33af24664f9cce99465540ea69182992e5b21",
+        "ground_truth_path": "12f17c7a08566e3aed1eebe25e3b3de50000ec6b851e0c7ed3fe042e2d376978",
+        "scan_metadata_path": "43d94c2ab46eccd7082922f6033ab4073b1341a556a2f21e5c9e89690e0ec13c"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_02",
+      "category": "missing_totals",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 15852925319151312674,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_02.pdf",
+      "input_path": "inputs/corpus_missing_totals_02.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_02.json",
+      "sha256": {
+        "original_pdf_path": "e86898ea3e758f75fa3d682848243abff09277e22570eb84e93c6dd568d64077",
+        "scanned_pdf_path": "e88efd1d7472a769bfa85f86494633aa0dc02ae5f88ad8f8dd97e6b59148cf5a",
+        "input_path": "383879fd2d4066b4e24564db85c4136f9e1e9344160dfd84a9c544701c5e9e2d",
+        "ground_truth_path": "49558bda1d39f2aac59656d13359c5973b9cf05b691915cdbecf815cf51d55c7",
+        "scan_metadata_path": "5a343cc4a366ca5667e0b89c9b40904a3d61f19a300ed4ac4cfc2ad2394254b2"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_03",
+      "category": "missing_totals",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 18414017833227138718,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_03.pdf",
+      "input_path": "inputs/corpus_missing_totals_03.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_03.json",
+      "sha256": {
+        "original_pdf_path": "1c7bcf2a630d0d6783d98b043080d0d7a86ff234fbac00bbd30022e6f837f0f0",
+        "scanned_pdf_path": "797b89bd9358d8023553b6348a8288806884350fa047feca33c37535a4565d1f",
+        "input_path": "234e8335c07ab3a2e1570818824c7214032e9763d9c897af746872a81cccfa74",
+        "ground_truth_path": "b5e22ff1e30507bf8a1dd5d879e5341b5356da2cc45e960a07429c4c9c7b3c7a",
+        "scan_metadata_path": "43d476d7221e618566e84018d7832b2d86332a14c947458e8e4e84a9514dff4d"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_04",
+      "category": "missing_totals",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 384860118744503250,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_04.pdf",
+      "input_path": "inputs/corpus_missing_totals_04.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_04.json",
+      "sha256": {
+        "original_pdf_path": "440f118220344ce415e086f75ba8584e6732c50df51e84ad604721e34f34ba7f",
+        "scanned_pdf_path": "18f8bed423c14ed50b6113b88d590ec49ba53b56105458ee090bf4af25b2b2f2",
+        "input_path": "86de905d7fc1a2aafdb6e63d95391205c11f6d75fd2f5c7d7fbca2990d6e934f",
+        "ground_truth_path": "2eae945ce4d8c2184f903c5986ae4db12b5d8219cc5fa2279114a31de50dfa11",
+        "scan_metadata_path": "f1eb0394b4355a5e3d9f47285dfb8c6279fd7d2b66ea1b03ed897569fbd456a7"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_05",
+      "category": "missing_totals",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 8482588246770879729,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_05.pdf",
+      "input_path": "inputs/corpus_missing_totals_05.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_05.json",
+      "sha256": {
+        "original_pdf_path": "2f7a6904a490a2a1bd86f4e36127f2f28a30989af3c9329b9f414ce0df21e95c",
+        "scanned_pdf_path": "9578ce68e401234e3190ff419a101cf2737189f050229920d94068e410a5d1f3",
+        "input_path": "4148e5a2adb95f86621b12e9ae81e54b1dfc18a2819c851068d7a762140a8574",
+        "ground_truth_path": "1531cf00b78ef09dd0df9d5e1cab73f92dbc16542cc7ffb6335a60423079b412",
+        "scan_metadata_path": "d963774245b41f82b1f02508371f77307fd0ef16d8e93a25e396feb5f2186bde"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_06",
+      "category": "missing_totals",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 11036892482235482493,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_06.pdf",
+      "input_path": "inputs/corpus_missing_totals_06.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_06.json",
+      "sha256": {
+        "original_pdf_path": "ffc512fb96a54702e9a1e4566fb3abe9c8a0c66cf6a9985b35495133ee48b8da",
+        "scanned_pdf_path": "efedb4d07027a64b3e8dd331a4aaeafce6e13b3e351e61a5ad3e42620f9a2109",
+        "input_path": "9ee08c57a4b60b22d53bdb14f951199ce14a29c1d4ecaa50ab7e6596f906931b",
+        "ground_truth_path": "59dc1454673ad0a90a176b82d31ce4e4a3a537a972fafd088ac8b0bfb432d368",
+        "scan_metadata_path": "07885d7617e01b6c864f6e59946fa08eb7185c8e6095090503af7031d794f2f2"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_07",
+      "category": "missing_totals",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 9395900615125359857,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.992,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_07.pdf",
+      "input_path": "inputs/corpus_missing_totals_07.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_07.json",
+      "sha256": {
+        "original_pdf_path": "5ca5b8471f73af0bbce49eaa2e594f54ecdaad63c011016f49ec85cdf61e90a9",
+        "scanned_pdf_path": "c7d0a42d75eb53aa1f4e81cd6fd1c5580eeaa3481365667ecd26b349c45ae14f",
+        "input_path": "db213a533f5c5fb85ab555d481223b2236b856b4eea29b862e770a4a37d17100",
+        "ground_truth_path": "cc681d79cba1a7085275ef2e1b05a5b3a8fef938f3dc04a61d2a8f3fdeb2f93e",
+        "scan_metadata_path": "51bddb114e4d42944dd328e02acd789a90b329848d1bd538da380a2265149fc9"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_08",
+      "category": "missing_totals",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 2782015229722034802,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": -0.935,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_08.pdf",
+      "input_path": "inputs/corpus_missing_totals_08.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_08.json",
+      "sha256": {
+        "original_pdf_path": "2609824b9e75fe55e3dbbb773331a862177f0a3cc6e139cc426d0a28150885c0",
+        "scanned_pdf_path": "6c8d90c306d4c1e93d5650db26a432236e8c235e9addbf3627b17d49e55b437c",
+        "input_path": "755c8301e648ce96e45ffc79b79cf0ffc0356e280c6e9c0d216d970ca80a0842",
+        "ground_truth_path": "d182464fc751bb2cc2c9deaac7a71cfecfccc3a87aa5570a2005e0b199e4392e",
+        "scan_metadata_path": "850bc3981f8f539061d64df8920e3e8f2c4489e334736196d71ebbc6a583b562"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_09",
+      "category": "missing_totals",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 9276307771139949869,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_09.pdf",
+      "input_path": "inputs/corpus_missing_totals_09.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_09.json",
+      "sha256": {
+        "original_pdf_path": "02cd0d6d7ebba1c3c548a00fe8fa8acd1c3bc5199005e5f854b3decbb0affc6b",
+        "scanned_pdf_path": "7f80dc6a0bd4688a645e8f8e6845a583dbc0464ddd8ce3d70f8418b93ac24fe8",
+        "input_path": "9b68e7f2810a5445ebd7090b63ae524630b9a64a3612f923553dc6779b3db38c",
+        "ground_truth_path": "b2a9002c739a85849224bce38807a2f75c031993fb9c6366dc762bf863651db6",
+        "scan_metadata_path": "6206f901bab9d910b56ad305ac09fd042b6ff68d29919050d58afe31f3b85fb4"
+      }
+    },
+    {
+      "case_id": "corpus_missing_totals_10",
+      "category": "missing_totals",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 5298004093789184238,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_missing_totals_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_missing_totals_10.pdf",
+      "input_path": "inputs/corpus_missing_totals_10.json",
+      "ground_truth_path": "ground_truth/corpus_missing_totals_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_missing_totals_10.json",
+      "sha256": {
+        "original_pdf_path": "2c158654493db0907142250692fb7001e1d7af7fcb4bc25a7b73f2e881f04a26",
+        "scanned_pdf_path": "295d6182ca2948d2173c2d93078128ce0da8b2be9516b49c678ef150e85bc5b3",
+        "input_path": "65c05ba0c614207af9b46906f96e428e82b43dd8fa422f017a8bebbcebe15f02",
+        "ground_truth_path": "901ee3bdf2b3d9a7d93696efad35aaebc6b8e9a2f3cf696b8c3220e709577cca",
+        "scan_metadata_path": "2daa592dc44468cdf827bc5a3db99d1a2f3172983bc0d6bbd19a8222652b98d5"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_01",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 11192263775767371297,
+      "scan_profile": "combined",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.0,
+          "rotation_degrees": -0.359,
+          "contrast_factor": 0.78,
+          "jpeg_quality": 55
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_01.pdf",
+      "input_path": "inputs/corpus_blurry_scan_01.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_01.json",
+      "sha256": {
+        "original_pdf_path": "1e5da7e82cd97e3df07d72a39d694bf95c9efe1b2dc20cf8db198bf102fa61cd",
+        "scanned_pdf_path": "0a434ffb6f461c471bb9669fc03792eb51f7162cc83a9f8ef888917d5d08c325",
+        "input_path": "ad849b963b7893042429d82080de324dfd323df88432694d25da1e2a7f49a5eb",
+        "ground_truth_path": "866e13956bd201cfe6a42c9541057cf27058a30f061e855065e2aa077c7af1b2",
+        "scan_metadata_path": "0a4cc1debe3c941b9a66500dc0320fa62559e9ce476db7464a20ed7beedf4580"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_02",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 17346815965906914161,
+      "scan_profile": "combined",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.0,
+          "rotation_degrees": 0.783,
+          "contrast_factor": 0.78,
+          "jpeg_quality": 55
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_02.pdf",
+      "input_path": "inputs/corpus_blurry_scan_02.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_02.json",
+      "sha256": {
+        "original_pdf_path": "3fabfa517b1c2c4ce701a858c0767ccedac1e01c321899c3fc08c754e14db443",
+        "scanned_pdf_path": "e6c38db1e0b22a9c570ebcafac46be1a3aa47383d63557e9e1223bec2eab33aa",
+        "input_path": "00f82929ac110ebea2e0862c5f2baa71f53fd4fd72c4c3cedf43ef7fec5fe70f",
+        "ground_truth_path": "3be8d044b3c6b100cb74f4f80651c0399389a0605952027a869727a2f231214e",
+        "scan_metadata_path": "5edf75862f932e223bbf0d8ac0874b0f3f53d68b3dff375e366bc2649b6bcde1"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_03",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 3320911289904633747,
+      "scan_profile": "combined",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.0,
+          "rotation_degrees": 0.59,
+          "contrast_factor": 0.78,
+          "jpeg_quality": 55
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_03.pdf",
+      "input_path": "inputs/corpus_blurry_scan_03.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_03.json",
+      "sha256": {
+        "original_pdf_path": "72b57b2f3a343f52039071e749b546481c5fccc68463cffe0e9a02950e70f77e",
+        "scanned_pdf_path": "e52f84e1c8eae962740813e2bc20946310588c54214fef8a82e20075584bba84",
+        "input_path": "235967ac310acf89ba1d268824bc6645c3eaf435e692b16dba3a18b45328a0e1",
+        "ground_truth_path": "63f39aedd887767294db67dde7bd234002159835ae643733a1f63dcea9dc569a",
+        "scan_metadata_path": "8556b22c6a775a9ded509c6905360ea807af59ca61e953c950aaf84871e805c6"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_04",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 3556303507486217945,
+      "scan_profile": "combined",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.0,
+          "rotation_degrees": -0.611,
+          "contrast_factor": 0.78,
+          "jpeg_quality": 55
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_04.pdf",
+      "input_path": "inputs/corpus_blurry_scan_04.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_04.json",
+      "sha256": {
+        "original_pdf_path": "19ee725156dd2e443792775664458afc2b543b1a5fe8b3aed227f65f5caa017d",
+        "scanned_pdf_path": "63163fd98296480049785bd1c78811ae984ba3ac0e52548785b67e53a86a0c82",
+        "input_path": "3b42f8e0965b8279f06f3ba960cec1606d6d519f4485293f577640ff9ca32aac",
+        "ground_truth_path": "5e298b895311796366cb16636a17e7a0aacd1be60b370c089d51eda15b044cf6",
+        "scan_metadata_path": "27fe383f317186a17690a1c16ef2b660e7f667ece61389d29a2aaafdbd963177"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_05",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 16593933596609403227,
+      "scan_profile": "combined",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.0,
+          "rotation_degrees": -0.387,
+          "contrast_factor": 0.78,
+          "jpeg_quality": 55
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_05.pdf",
+      "input_path": "inputs/corpus_blurry_scan_05.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_05.json",
+      "sha256": {
+        "original_pdf_path": "e1cb9d47442a31ed78dff6a4c04795083647dfc10705d39338a3731ee25daf6c",
+        "scanned_pdf_path": "91fbffbd785c47e28aa464752cb263425d39295b4bf5dad0264d126130f007a6",
+        "input_path": "b28113ab55d2f7c5ee9b822d619fde5229e687d7df04d3ee1a6d02331caa558e",
+        "ground_truth_path": "e59c08ca8ab2ead9096a5dd74a5e74683ad16b3d0608560f557bb38f28a2c3a3",
+        "scan_metadata_path": "f00e4cdde7664b9af33b5286c25cf374d74db29dffcb177fc29dae46bd1a977a"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_06",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 3279621563271787360,
+      "scan_profile": "moderate_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.5,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_06.pdf",
+      "input_path": "inputs/corpus_blurry_scan_06.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_06.json",
+      "sha256": {
+        "original_pdf_path": "17341ec5b92e631e1678876e95c3a0b61cf929e1bef4fee9d7fc49a44cd1a041",
+        "scanned_pdf_path": "6bbe3d3c5d5c248ddf0998fcaf8574b0076543cd7de32949cc733a0923d5a557",
+        "input_path": "391369dda269ac4bf94be598ada53e5e179002f5bad12942dd1de5ba1ecdcb8b",
+        "ground_truth_path": "fd709b4c835b942e074685567d8bb86ddf580dd584c7f4ca364ac7ba0f3e5777",
+        "scan_metadata_path": "7229a424ee4c5a0a3441920d6770517f044247537657b85a2469fe2262451cf8"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_07",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 5866915733486374018,
+      "scan_profile": "moderate_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.5,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_07.pdf",
+      "input_path": "inputs/corpus_blurry_scan_07.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_07.json",
+      "sha256": {
+        "original_pdf_path": "25d5e95a768d1771f60e7f8b209677b2d99c26e5d719a0640f1058a56d825e2c",
+        "scanned_pdf_path": "2e5ff8062d9331fcf46834ef6b0f1a6715dd4eccedfcddccd34890d87d0c510f",
+        "input_path": "c862ec452b80bd3bea391e872e1522d0260493aa6990156990a3465a949c7899",
+        "ground_truth_path": "042d2691331778c1c9d3eb6907c03782182da5f8e8eb17b67ec241668b3dcb82",
+        "scan_metadata_path": "1a74de4af1b310d771add075e2fc225ae5230823c47ead8b6c4d304d5fbc9388"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_08",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 2275524406941389500,
+      "scan_profile": "moderate_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.5,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_08.pdf",
+      "input_path": "inputs/corpus_blurry_scan_08.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_08.json",
+      "sha256": {
+        "original_pdf_path": "b885cf31123f2264cc1a4eb7780a303d5faff7084404d412125968b2cee2b9bc",
+        "scanned_pdf_path": "162f3a001c6cc801de9287e2d00083dffeb0575b695cb3e30eca0075a9aa1de4",
+        "input_path": "814f4bfff1ae5b93eedd27963918f5ba7a4bcbca9d703ca7aada71e71fad5bde",
+        "ground_truth_path": "0a0a55180ea7805fcf23652c01c2c378c01db9e8809819a5265baa5066ee5e39",
+        "scan_metadata_path": "d132300ba629f21d0be68e149ce27e735a424f3c63e4b5d660550bb447cb30c2"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_09",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 12687266482266995428,
+      "scan_profile": "moderate_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.5,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_09.pdf",
+      "input_path": "inputs/corpus_blurry_scan_09.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_09.json",
+      "sha256": {
+        "original_pdf_path": "41fc0c7a5e1558a1dcb2d6f80c1b361f1aaf69c4aa793ac70e6e88120454b3ca",
+        "scanned_pdf_path": "3ce3d2e83f554b68430affe1988e0721f6c50f39e004a1a9314da89067c1e466",
+        "input_path": "eec445b860afa82d3bc65ced7aa0994b88e0b09563cb039f92028b491571c192",
+        "ground_truth_path": "9480ff7ad9c15f1c2d9032bd4298a6ba8afa2c86a49fb42dedcfee12092661d8",
+        "scan_metadata_path": "2aae11df84920c5f4808515dc4946944c8d6139cfc3e09fb169911290b972289"
+      }
+    },
+    {
+      "case_id": "corpus_blurry_scan_10",
+      "category": "blurry_scan",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 17374998405243955793,
+      "scan_profile": "combined",
+      "scan_parameters": [
+        {
+          "blur_radius": 1.0,
+          "rotation_degrees": -0.347,
+          "contrast_factor": 0.78,
+          "jpeg_quality": 55
+        }
+      ],
+      "original_pdf_path": "original/corpus_blurry_scan_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_blurry_scan_10.pdf",
+      "input_path": "inputs/corpus_blurry_scan_10.json",
+      "ground_truth_path": "ground_truth/corpus_blurry_scan_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_blurry_scan_10.json",
+      "sha256": {
+        "original_pdf_path": "23725849b6b7e066d8bc31b1c89107defa703c512642d44b010d058bcf0557bd",
+        "scanned_pdf_path": "1ad34300d22399f3704b4e923018cc0e3799598796a6bf19cd0fe70d0c2923e5",
+        "input_path": "f3d242c952a555b08806fe16ef4b4fcd3d2c90bb67c57ec54a6002b6f326ba2a",
+        "ground_truth_path": "1960f0e38ff6e87e176506e376d99c4547a4466f8021480f6ce9588279ea1c1e",
+        "scan_metadata_path": "4827e6d207280acf71f3e92fdb204c21fe943ebb8e19b168809076a9f688ef81"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_01",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 10359298013633951152,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": -0.88,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_01.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_01.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_01.json",
+      "sha256": {
+        "original_pdf_path": "13a35f8c7a6d4e2387311ee742b849f77712639a010534cc1eca2f38f6648ca3",
+        "scanned_pdf_path": "08d5729c5593827f259656a2114eef25b5c76778865f06e0ca153804a3972503",
+        "input_path": "65db5a94a0747ab7cfe974527bc89e9fd92ea820bf28e1e3e165fdf267d63f68",
+        "ground_truth_path": "4c48996d0015afc8988c75d8a0cfa76ee86db01e447c7481488913133b5f0e06",
+        "scan_metadata_path": "390c2a0ff02176f03234a6946a29838b0033a61ca344a7b268b9672d8b11bba4"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_02",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 9210832638260594498,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_02.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_02.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_02.json",
+      "sha256": {
+        "original_pdf_path": "45acedd60f061935817af613f46bc98f900f564ea657a5bf878a5b2b23c50f4c",
+        "scanned_pdf_path": "9353c25912f0af16ba740206c0365ee0010e6c72c988f42e7b14bf5f20b98483",
+        "input_path": "4d4c65a5bddbfe28c08e54699974721a8a6e4081bc6f0477ce75886d4836e2cf",
+        "ground_truth_path": "3dc3eee581ca9cf0f81bb5acb8a9a915d99132227906ca1e8e137f955727607c",
+        "scan_metadata_path": "ad2ff8ccbb289c19cafaa2da5b85e2163d13f6773923cf4aca6f30c4a3579648"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_03",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 1828106408405819714,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_03.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_03.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_03.json",
+      "sha256": {
+        "original_pdf_path": "9f1b494b3867381b44782fde2327199b6e0a5fa66080ea08d7fa7162b5c71b90",
+        "scanned_pdf_path": "eced7271d8d35387cb56abec1b7c3fdd15e8bc7fbf8aa22e2935bb98d589481e",
+        "input_path": "931132181d0524abf770d952e02dca6adf5649a10615c8177b0e14943fd01c20",
+        "ground_truth_path": "0b92635058a6138820435377d1840e7f3ae717eabc5301161134ef40fb8f675d",
+        "scan_metadata_path": "2767f0677c1dd9392d15989d498c1704a58c54e5891da8014371b0bf2ab0ae3c"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_04",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 2154998179403880601,
+      "scan_profile": "mild_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.8,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_04.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_04.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_04.json",
+      "sha256": {
+        "original_pdf_path": "020cade7db98620728a825636fc303db2f4cd501e043c989da608a387adfb071",
+        "scanned_pdf_path": "eb695e0df71552a2db41b65648bf5bcbd9c75a9ebca1146b2e22683a4c7cd984",
+        "input_path": "702f37924d62b36ab37ceea5cfa5230a0d092a8cb662cfbb731f8d243669ffa0",
+        "ground_truth_path": "b908f965fd4a83a0f38c4f2811a5a8acc1b5630ef36352aa75486b68a4f770b6",
+        "scan_metadata_path": "88de8033de15e02032cc38b1f5e10ca075a46bdd7baa5ad20663f23417e34bda"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_05",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 14538397416853956315,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_05.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_05.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_05.json",
+      "sha256": {
+        "original_pdf_path": "14e355f27e5f4c0017ee255f17dc86482be19995289acce9ae37a666c5438714",
+        "scanned_pdf_path": "b1d1e3ae29883bd7eec56fd7f94c45bfa85f82b52f87271e01691dd4f43200c7",
+        "input_path": "796ea85d63e542fafd4b277a05f3c7dd36245036de81fd6aef1186e53f513a59",
+        "ground_truth_path": "0f7b2311b2b4a4f71913e07fc8335f8bfc51b9c5a73ec48d6ebc059e2827e9ca",
+        "scan_metadata_path": "ec28c869597bc8291823a0b7623a4f209f3a6483e4cd3b7430b857e103054619"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_06",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 2837666471011269489,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_06.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_06.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_06.json",
+      "sha256": {
+        "original_pdf_path": "61ace826843ae5b4fa7b437248c10c9f11e290a9bf6d534e9707d66bba718b58",
+        "scanned_pdf_path": "5af0e99af07296a75bd7d0fc4250709d3470860a979c6cad1ad3db2ac0b3dedc",
+        "input_path": "3009d7e0b2358344a93dce2b1ea626b8e03de9b37fe2edba890e78f9da760dc8",
+        "ground_truth_path": "3a4f80c3ae1f1a280cfd70ff6411eb3c97525041494504e0c39cbe94c9d61909",
+        "scan_metadata_path": "adab6a63c64b628827f690613034731e7281eed0815eb2930c57e42085f927dd"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_07",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 6276104572239323707,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.66,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_07.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_07.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_07.json",
+      "sha256": {
+        "original_pdf_path": "0e957c8075cd1301200ecd3992a5ce6d2e3665411716eff75ca968d43620283f",
+        "scanned_pdf_path": "1a5b7f9084ea4cf79c7752035470a283b91290d1e4d93e6d898ea31991908e5b",
+        "input_path": "aa65d0656b49c784a63c2fed03aa7779611953b3a448ae9208e59a902abb6b6d",
+        "ground_truth_path": "ff53b2ca3638ec5a044e4cb759877148d5c953b158816ab67d31d0562c2865c8",
+        "scan_metadata_path": "764c1e99991cf89a54325318acaa16588020d062c13cf572062a6621ee1e4e60"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_08",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 4201656557864980830,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_08.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_08.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_08.json",
+      "sha256": {
+        "original_pdf_path": "a221b033628b6a80c631982c18eddd4007c0fc82cab7faf4762fc719a37c8733",
+        "scanned_pdf_path": "2a65ece5fbd1ce29a09be42728b1d377a0076f5fed8d6bd33b902258983bd293",
+        "input_path": "b8ea3412af47c419a57d43e7a0834f9a53e98e99997bef0799fda1710487a58a",
+        "ground_truth_path": "fac8a4e364326a3352a25b5ebfd93796836f8a3e65d468a40330f3bd0a553752",
+        "scan_metadata_path": "310889b655795aa989f229801f1305c1b9f0baabe9db3b97f3a601e6f2206f07"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_09",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 13456509971722111728,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_09.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_09.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_09.json",
+      "sha256": {
+        "original_pdf_path": "705effd4413cf0225322c6efef0ca69553158c60d2c52842d940c327555111b4",
+        "scanned_pdf_path": "7fc7710818d97b59cbe486be75afd1c1f4867162a3e7e8ea1016234e42ae0f25",
+        "input_path": "b0fd83e4d15a438a3324cce3698ce39cedd4f9a0a5f8facbf4b265266c6fdb0e",
+        "ground_truth_path": "fe2a602b5e8ea1bcb14914292e2383deeebd7994bd222aae453bd087dbd204d6",
+        "scan_metadata_path": "581c69866be5983d0b24b5892ca8db095915207447c2de9a6e13e780e4107504"
+      }
+    },
+    {
+      "case_id": "corpus_quantity_mismatch_10",
+      "category": "quantity_mismatch",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 13464563686918779830,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_quantity_mismatch_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_quantity_mismatch_10.pdf",
+      "input_path": "inputs/corpus_quantity_mismatch_10.json",
+      "ground_truth_path": "ground_truth/corpus_quantity_mismatch_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_quantity_mismatch_10.json",
+      "sha256": {
+        "original_pdf_path": "b2aa2c7dde2257e61a4678296ba6c2c03154c0064bf66ba8cbd97af851860cdb",
+        "scanned_pdf_path": "bbdde2ee5f892229520057564b7c72017f91e5c7a6f95cb87c2931d4b4392dc7",
+        "input_path": "c10eec32686c0886fa5869d192af9e8754c2af69aae867482c798e9cc9e869d1",
+        "ground_truth_path": "14516400817968459122350d1e57058df90d518bf78f5e9fe64cab02332593a5",
+        "scan_metadata_path": "04313dcfa5005832c67cdd45c89ac83b97dc52ab1ef160b0dd42feb3341fc4df"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_01",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": "corpus_clean_02",
+      "case_seed": 4891837593904569677,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.646,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_01.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_01.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_01.json",
+      "sha256": {
+        "original_pdf_path": "44298da8a3b1f4b4ea8468d68f56704c2a4c884003e4606dce5ac8f5f98b0da4",
+        "scanned_pdf_path": "d0546d9ed63928d38fdc429dd8e5f52ab5168de9999207741f2b13117584f793",
+        "input_path": "54252985573ec7fce7200e6593808960f98e039c0c796ecdb8afbc46f65a1090",
+        "ground_truth_path": "1151ae546581ed9c50cb63e5f3c2246121c603a89d5892f74534741a304d7cb9",
+        "scan_metadata_path": "5a2d1506a03ae5a48230f53ced7dbdc66611dbde54007b2d381f61ae6defabab"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_02",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": "corpus_clean_03",
+      "case_seed": 14639580354048192063,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_02.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_02.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_02.json",
+      "sha256": {
+        "original_pdf_path": "c987658cb95372b64e14d89c13642377ac0e8c6483db8a248f1d5c7ca52838e0",
+        "scanned_pdf_path": "5f380331af7a2e61468093c723eca33dc03c9fc0a04fe5bedf39e179d703fd47",
+        "input_path": "760a3802e45faddbcdb61e7290b38c17fa354d8b994a86fa57ce778a18f90a3e",
+        "ground_truth_path": "ffb34ee4be488cebafbaa3df171853f0aa6c1f9887a60fecfa98591e23271852",
+        "scan_metadata_path": "cf61ab8967edb7b49f33f58cc09ea659c8b49fda1d60e9d3a84749683606e4ea"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_03",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": "corpus_clean_04",
+      "case_seed": 242337282725588216,
+      "scan_profile": "mild_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.8,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_03.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_03.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_03.json",
+      "sha256": {
+        "original_pdf_path": "0ed7775b56145ebdd9ee8ead29b4053631b7d642dab4b32cdeda21c77e9065cb",
+        "scanned_pdf_path": "64b9ad506e05a9e8f23473acb4c082f3eba3355149e88979c9d11a2f2e312dd4",
+        "input_path": "00c977b0df8805277ffcb09309fa08bae1a3d47a241a994ea512658852a99578",
+        "ground_truth_path": "97ff3cf105623fb6bd4ea817cacd2cd5f12b96c68d29c79b75a22b10a467031f",
+        "scan_metadata_path": "6308105513c9cb88e1c1bda263eee15dfa4d684c3b4b3fd5cae8365d17f2fd2c"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_04",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": "corpus_clean_05",
+      "case_seed": 10877153362419063592,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": -1.189,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_04.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_04.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_04.json",
+      "sha256": {
+        "original_pdf_path": "e24a99a948a97ab76ccc97ddee74dfe2e9fd15d16e5214efac369606e445709c",
+        "scanned_pdf_path": "8ac8a0f025a48867e447eb0c3557f4cb68fff6c5a832fc442eaeb24c80caf2cb",
+        "input_path": "8b23cfcbecd2d7b340966906d35e93f21f5760d2d42c0667d2e0edc209d34016",
+        "ground_truth_path": "990d5b718731d53bf039dc3a51a97c658df07015142e90bb4cc1364b9b9b4514",
+        "scan_metadata_path": "c88ef13dc810d71ed9cc857c03fee44decc6cd34dd0bd8d74173e0df24629afe"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_05",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": "corpus_clean_06",
+      "case_seed": 16306619900408770705,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_05.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_05.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_05.json",
+      "sha256": {
+        "original_pdf_path": "cb2e9c4e26127a839fa686a8da9d917bc08e8aeb24b8c0a5801c7b3228796bb6",
+        "scanned_pdf_path": "3ac43279cf17be100a56b90b89fe20a35d037484876db5095947a6b0e108ad40",
+        "input_path": "329f79103a5b9b9944dc69e9b8af7aac4d2298b4e0c29776761f35854df23326",
+        "ground_truth_path": "4556e184501706ed70e44894594f0b99a079de08f3c1f81258a965ff314ca71f",
+        "scan_metadata_path": "1d9d2e25f964c9a9b1adf0ee1fec42ff68ff84f05e7fe81b1191f269b1ff60e2"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_06",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": "corpus_clean_07",
+      "case_seed": 14156343429861227542,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 1.078,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_06.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_06.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_06.json",
+      "sha256": {
+        "original_pdf_path": "65a63199030805aee93e901cfdc96f86eb2ebd678619566bdf59f0a804b31e24",
+        "scanned_pdf_path": "711490f821022420bcf21d6b7ece3672a532197bf1052d2e1647f52a791195d2",
+        "input_path": "24aa5eb813d253bd7e424910732cb4ba41d749d12efe622800606fac4e8eb09f",
+        "ground_truth_path": "926deabcac50aedd848b75be960091b359b410dbd0f60cdf8fd18abbd6343761",
+        "scan_metadata_path": "a3ca1c9e4bf0c314ab1dcb37caadcbf0166592055f6178a906a14d06fa242e93"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_07",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": "corpus_clean_08",
+      "case_seed": 14412799666354106098,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_07.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_07.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_07.json",
+      "sha256": {
+        "original_pdf_path": "223c980d904d0ab7f594a4e1a9ce46e0095ba8635af7831a5348b289ad54cbba",
+        "scanned_pdf_path": "1df122f0a8b7de38737042bc77b8311793d5d8729c4127025ec55be84968a291",
+        "input_path": "7af82a1d0af6549a3d863d321a582aa4e4cc876338e7f5fa74a655ffed70b6d9",
+        "ground_truth_path": "82813a53fda7ebba41aa6e5aefe4d625fee430bec9a6868c6b9bbe68777ed191",
+        "scan_metadata_path": "3400747853d8dd9eee1975f79ca48720daa94079f66c62a0ca23e366e5f62fbb"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_08",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": "corpus_clean_09",
+      "case_seed": 3332119424335613861,
+      "scan_profile": "mild_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.8,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_08.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_08.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_08.json",
+      "sha256": {
+        "original_pdf_path": "d48a4e6ec1ba5b4e5d9a657f24cf323dac3323ce3afebbf41f8c0501e88d3237",
+        "scanned_pdf_path": "979120f84e4c1e0bdbd6e67096ccc9bed044e5137ccacf60a98816eb375a59c5",
+        "input_path": "b1fa4d40702ca28e5374cb1e56c0ebaa53b05141dae76c1917852ef165527be4",
+        "ground_truth_path": "35b1f685d4590e88a5aaac0bc383d1bd91dbc3b57b2e367b2bf73a8eb826510c",
+        "scan_metadata_path": "d8aa2b93063087df6eec057dd721c0be419dbf9dd00d51f937054d6522539fd7"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_09",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": "corpus_clean_10",
+      "case_seed": 1204717078838442598,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_09.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_09.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_09.json",
+      "sha256": {
+        "original_pdf_path": "1dae50a12934dc6f4f364af9a2c371636f7ef8932268e2be2a15b74351a0f18c",
+        "scanned_pdf_path": "3db79d4d3d5a8882c5326fcd43af1b8060eb6ef26f47c8c0624f320f8c68e5c6",
+        "input_path": "9f7dcdd740d437e83385e01b2f0dab1aa581a913108b2a9ce82d4a5bebc51b97",
+        "ground_truth_path": "77937aadda83355d4d2eba3e924dc2be555373ff2e435f19a1a1d4a345cafe29",
+        "scan_metadata_path": "b29b2fb29a3d6c613142af2c160bd692a7d5755dcf642df398039c2e6d3a9eb7"
+      }
+    },
+    {
+      "case_id": "corpus_duplicate_invoice_10",
+      "category": "duplicate_invoice",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": "corpus_clean_02",
+      "case_seed": 11753139128458011093,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_duplicate_invoice_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_duplicate_invoice_10.pdf",
+      "input_path": "inputs/corpus_duplicate_invoice_10.json",
+      "ground_truth_path": "ground_truth/corpus_duplicate_invoice_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_duplicate_invoice_10.json",
+      "sha256": {
+        "original_pdf_path": "73bd786d2ece0012a6bcf938784a4b3f1ec0f4a0b350877d5c35d60468bc5d0d",
+        "scanned_pdf_path": "7657b61a0a5a8c6336fc503c4aaf2463c8027b10d58c84d7f7ef060d309d9fb6",
+        "input_path": "dca60d516a992cd4526e30bd5097afb0eae23d800e2e76ac5c18db6dbb353f3f",
+        "ground_truth_path": "91dd13dd5ee940c458d31436f100142364b82c92c8dd14febd75d4cc5ab2414a",
+        "scan_metadata_path": "4f3cfc47fb3960e103fe82a25e9d5dbbbdc35f07186f11e00414d27ed42250eb"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_01",
+      "category": "unknown_product",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 6444218259317924962,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": -0.868,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_01.pdf",
+      "input_path": "inputs/corpus_unknown_product_01.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_01.json",
+      "sha256": {
+        "original_pdf_path": "c1d2a4d24be4500a33acbb6de983dcf560839ffbd3b78463f78e9596fec6bce8",
+        "scanned_pdf_path": "a7ebd8ca6074082876c21f990ecaa37de49e1fadfb8381156c8c5275656f90fd",
+        "input_path": "24adea21391b23544b81271d0a4044bab038c9cb085cf95bc55f886c749fc6a4",
+        "ground_truth_path": "f849a4cdddf8eb9be1f64aecf3925dab362de828ff1bf5b87576f81887bfa2c9",
+        "scan_metadata_path": "173d28406a8e3dd7e7eb8c3cece593bd59ff16cbba5cdc20b3952d5df5abb7fe"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_02",
+      "category": "unknown_product",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 8025851785009651080,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_02.pdf",
+      "input_path": "inputs/corpus_unknown_product_02.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_02.json",
+      "sha256": {
+        "original_pdf_path": "682e5cacfce48958c9717c9ad733f44bc8a5f53fc4b7a9cdf23fd58a8ffe82d8",
+        "scanned_pdf_path": "ca8d1468bab3ab96c32b37def7b1ad8e20f013b202be926be9eb5ab48b950aa6",
+        "input_path": "a14bc561b3b6acc4834a4ccded284b86b1ffe434dbc8e4b26e336f10acea0d4e",
+        "ground_truth_path": "980647fe889948d9bdbc2eea401ad51ef1fe07f5f822c50c9606fb90108deb66",
+        "scan_metadata_path": "b0b55f58bb0fbb1d1fbdb18da17864398e37b6aad0cf8a377d895854c6f40353"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_03",
+      "category": "unknown_product",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 17200380538099506571,
+      "scan_profile": "mild_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.8,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_03.pdf",
+      "input_path": "inputs/corpus_unknown_product_03.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_03.json",
+      "sha256": {
+        "original_pdf_path": "8035c52230bbb7a458003f5096e23b5b0298165d0adf7b9c80499e40b13f1b68",
+        "scanned_pdf_path": "79f4c10305c284c0c737b29ae82fcecf8a1b5a3dc28f12adcf83da322770e49d",
+        "input_path": "cd8eeca0a2d1a505ae02c63006cccf7e169247864a4177bca52a8dc7ab83316d",
+        "ground_truth_path": "500ee13716aa26672a603e6c9c51d4a306391fe8f8f0a23313a132bb81971551",
+        "scan_metadata_path": "57033adfaedf2b43528bf9f4c23290c4631a3705a069eb05ff6fd4942a9704ff"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_04",
+      "category": "unknown_product",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 3021759795096863260,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_04.pdf",
+      "input_path": "inputs/corpus_unknown_product_04.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_04.json",
+      "sha256": {
+        "original_pdf_path": "005230624f0fb711021a8733ff41042845edaac0c711ad94525cf6d10c3d9445",
+        "scanned_pdf_path": "b35daf2547c6d571655a2391b8e743cfda5887b26716195292e061b27c69fd99",
+        "input_path": "8c92630f55e4331187bc8e5dfedaddd0ab06f67ff7421f337e598314eff5e58e",
+        "ground_truth_path": "b4ad97249aed4f55bddab111b68dbbefe81005458be0cd40fd5304d498f65673",
+        "scan_metadata_path": "743e91af22b47d0781caa363591372ad6a783c82952dbc23bb7c766fe6a21372"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_05",
+      "category": "unknown_product",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 8732531350080344875,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_05.pdf",
+      "input_path": "inputs/corpus_unknown_product_05.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_05.json",
+      "sha256": {
+        "original_pdf_path": "1c2b7a1d116b9710dd79a00a6134dbcb7932795e7b06e7d28dfadd9ace92b4f8",
+        "scanned_pdf_path": "dbd784fd0061ba3a6b2b6e6c80d8048adba150fd9837575ff96960eb46a1dcb6",
+        "input_path": "ec81487817c9cf29885e0fb6326b6617e47e84ec3a4f37350afb59488057289d",
+        "ground_truth_path": "f47315f583906a0ccc64ca78105cfd5dc8d6093f0d7ffe1cdde1c053330c8557",
+        "scan_metadata_path": "efa14ed5d14d9c2ee6203ba1b17117c3cfb2bbf84905717046f0666d135adeec"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_06",
+      "category": "unknown_product",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 15941690011556418990,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_06.pdf",
+      "input_path": "inputs/corpus_unknown_product_06.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_06.json",
+      "sha256": {
+        "original_pdf_path": "0f33b4448c5b280875245f2f3ed2bed7608aeb7ffaacd6910cbb4c2980f3bc01",
+        "scanned_pdf_path": "f3aa7072da7397f8fa775a5ab619a519da07601e88a3809a25dd904cb0aaedcb",
+        "input_path": "30dce46439e99e6f00d160cfc692d1994ff12594818dbe7456c2bb1155d0f606",
+        "ground_truth_path": "bcf6042bff9fe8f4ef7fbf1168242854fc9b4dead353791b0fd113d25942f075",
+        "scan_metadata_path": "938d727467d20aeef8c166a3dec0deb8b8f5365b76e78aa01b85a2338aa62f0c"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_07",
+      "category": "unknown_product",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 3335649602156727498,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_07.pdf",
+      "input_path": "inputs/corpus_unknown_product_07.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_07.json",
+      "sha256": {
+        "original_pdf_path": "b1b5c5fd1865b1abceb9533ad8246dffb802509600246465b2c6dbcaed6f0bd1",
+        "scanned_pdf_path": "f61be80cc8a90bf600e8b5e8f4f97b01fb5e5ebc1ead93f4feea81f9c30bd3fd",
+        "input_path": "5f4bd12f27de2c1a01f1f756e1f37381af5871c03df7beb3a8ae7d4d4e5bfb7f",
+        "ground_truth_path": "2ed42a459fc204e3a2f93565a8476fd8cfde5ea836166248d176428a669524f5",
+        "scan_metadata_path": "91399cbcc14522751ca48aeb977a9a51f74adcb33b2d1573cf38271e91f16f82"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_08",
+      "category": "unknown_product",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 1643496806796897214,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_08.pdf",
+      "input_path": "inputs/corpus_unknown_product_08.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_08.json",
+      "sha256": {
+        "original_pdf_path": "8257da84e7da0ba2f0147f904552e69ffc589036d0e23ec1b0d6e700a4118d9f",
+        "scanned_pdf_path": "0ff5cb4f312e2e5bcdaf1df58ab3d68bc1fdd32128a066356858eba8bdbc0a79",
+        "input_path": "5c3d741223535e164bd6fc4291764b810584e769bcd795b5efa772e4078f65fc",
+        "ground_truth_path": "7c672db352df349af45b24ca8460078a5043bb36954b206b0f3e2faf4a473c99",
+        "scan_metadata_path": "3e319776e2544af8a35fe0b17712de234b453c071296cc446ab9e34d145ec868"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_09",
+      "category": "unknown_product",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 7508020541000761037,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 1.2,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_09.pdf",
+      "input_path": "inputs/corpus_unknown_product_09.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_09.json",
+      "sha256": {
+        "original_pdf_path": "5a9816e6ffa9c8f9e943806c05e1e304b1fe5ac7401298e2dae23be0ff2b70dc",
+        "scanned_pdf_path": "cba2d2d924ed3067e9630aa781be5b6098df1180c70af733c3e20848dd86e7ca",
+        "input_path": "dc87881199090272ec6910b04cf5e0e32cb163f79250d59761c0302fb784853c",
+        "ground_truth_path": "34dee263bdeb0c3532d2451cbeb0583ca7ba7e4706c838e8ed35965a18a0ca40",
+        "scan_metadata_path": "866636cdfadea2ba580b3a30bca118c7b99bd6671d3276d18207e6be5333be93"
+      }
+    },
+    {
+      "case_id": "corpus_unknown_product_10",
+      "category": "unknown_product",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 4678608241332894086,
+      "scan_profile": "mild_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.8,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_unknown_product_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_unknown_product_10.pdf",
+      "input_path": "inputs/corpus_unknown_product_10.json",
+      "ground_truth_path": "ground_truth/corpus_unknown_product_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_unknown_product_10.json",
+      "sha256": {
+        "original_pdf_path": "091aafcf2ccc407248eaf5dc5dde9de6971fcb28aadaf339e10ff16938fd913b",
+        "scanned_pdf_path": "cb513be8503fe2f6b68043dd220f8d45587075cb08d5367a8ae04da430cc4d14",
+        "input_path": "c27a16f79a53a7764faf9611ef0ed60fe6796da57370f481269e0765a3d1771d",
+        "ground_truth_path": "ec19c9c1401ab37607dc5d3a16c5480dcd6eda679677ddd0a90da06ad519cf95",
+        "scan_metadata_path": "439fdb815dd35cdad073aeab35749cd8377deaefd8352a3e8376f9c199955253"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_01",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 17924278571940337894,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_01.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_01.pdf",
+      "input_path": "inputs/corpus_price_anomaly_01.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_01.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_01.json",
+      "sha256": {
+        "original_pdf_path": "41d69ad71b3b52fabe978d151a2ffbe12a04bab172dafc837e33fe317405e6ed",
+        "scanned_pdf_path": "9b8668e7bc34cfc80df564d93adde6e2444840c39fe4ec20261f1ec4cdef1f10",
+        "input_path": "78e1c50a64bfb4eda2638073df931da375c4dd99675ae53a78ab99c6a5588cc7",
+        "ground_truth_path": "2e174ae3ed58804fe7c273ca06917f19d809919403359604a1ed7317a6b4a21b",
+        "scan_metadata_path": "f5b67f8a211e13c0730e7606477eeb4fbe711a579afde6d5b30d4e4ad74a6191"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_02",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 8887802615721197173,
+      "scan_profile": "low_contrast",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 0.72,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_02.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_02.pdf",
+      "input_path": "inputs/corpus_price_anomaly_02.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_02.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_02.json",
+      "sha256": {
+        "original_pdf_path": "127fac5e9b9c09642d164d456002101503e432cac7a02e4206eab0b47b4040c3",
+        "scanned_pdf_path": "0a49ccc248d0ce19d7f3f53bf3098820f813bc547cdb2c71b3c4b6c52c076a93",
+        "input_path": "3d4ca72995ec1260ca0d3c4074cd4a404be077565722caeede5d0ce0c8c70598",
+        "ground_truth_path": "0954fc42a4d782b4c46f20d55b6bc6373b5fc42c65ea41b2e6875d78912a83ae",
+        "scan_metadata_path": "438d8609b00ebd1cd3eb34561bfc42b6b846e317aa2557857916c027c3e82ddd"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_03",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 8131830716672062485,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_03.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_03.pdf",
+      "input_path": "inputs/corpus_price_anomaly_03.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_03.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_03.json",
+      "sha256": {
+        "original_pdf_path": "67684daa15cd313ae32283bf234e801ba6be71d72c8c5fd29853aa7efbf6a286",
+        "scanned_pdf_path": "8e97782e89929898d500bd4aeb3a9023bd6a13ad2624e6d62545491ad3b67021",
+        "input_path": "d4a67a8c84eeafc70aae0441ecdedef022f9689ead4b5f4ef6f15b206c51326f",
+        "ground_truth_path": "4d2bb7778c69b31268ba9ee58711a4da94686db7efab8f74aa6c38957b4eac57",
+        "scan_metadata_path": "3d6adc6fa9d94a9b69f7555e661c8972d69fa9fe6a040bd414eb7724b74cda99"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_04",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 1255858628603456365,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_04.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_04.pdf",
+      "input_path": "inputs/corpus_price_anomaly_04.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_04.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_04.json",
+      "sha256": {
+        "original_pdf_path": "f03bbced4f79ad121993cd9c8fd602996f57f369e88c1cf2cf68d5b7e00361e3",
+        "scanned_pdf_path": "25745a52ac09153b43bc2479b3080c31aaf254c7a87038777ed6aff7f65708a2",
+        "input_path": "de8ea78fe1bc9410359b66143ebb4ae084fc3fb12f82189daeb41d6e436e03c3",
+        "ground_truth_path": "537e383e004233251e8afc39285ce8c47f6d1bc71b26ba588b12ecc281e3e64e",
+        "scan_metadata_path": "d5ab2c30e94cb92034816c2bbf242d633895fc3c579d6e6dd2eb6b5c905176ab"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_05",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 6483221459759961760,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_05.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_05.pdf",
+      "input_path": "inputs/corpus_price_anomaly_05.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_05.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_05.json",
+      "sha256": {
+        "original_pdf_path": "51347a890d39bef1ad20275aa157b10539c3fbc7d3a2ec33a696e1c282422f2f",
+        "scanned_pdf_path": "9b7a5b4dc95149bbbcddf0b5f528a8638a7dff0736b201b6f4b2b60ad7303ac3",
+        "input_path": "dc525ce39c0ee53f923e3410ae0d6ca80ba43bf691442fe722f359930063c334",
+        "ground_truth_path": "1a78b1d77754902aff0784184e43a81003496b560401813f9b4ec5c6484dac2c",
+        "scan_metadata_path": "96becdeda8bcbd6606f12947532c672a491b0e0e3f2584febbcf4b8e52652367"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_06",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 13266048049712982401,
+      "scan_profile": "mild_blur",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.8,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_06.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_06.pdf",
+      "input_path": "inputs/corpus_price_anomaly_06.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_06.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_06.json",
+      "sha256": {
+        "original_pdf_path": "cb0ba741cc2a55d76d548b034bc87daf08f6640d67292e7f1253111f608fb982",
+        "scanned_pdf_path": "d675163b150840abf559a57c6938e719dc22df1fbc02b2a0876a0bc037fb5b3b",
+        "input_path": "9fc025853ac6a37506271be74b99bf2a294afe81f32b4106151646c70140a615",
+        "ground_truth_path": "c2516eb4afbc519419a4b48caf6b029d15f7424ca75cc20da927babe9298874c",
+        "scan_metadata_path": "b6b7bd8d79e6e1599334034618e867b36730f3ae1178e85224040767e4859855"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_07",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 8815201355955194912,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.913,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_07.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_07.pdf",
+      "input_path": "inputs/corpus_price_anomaly_07.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_07.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_07.json",
+      "sha256": {
+        "original_pdf_path": "526cbb827bf10211cd7922cc7ba9c47c781a184c758951cb9a94d686cb20ba22",
+        "scanned_pdf_path": "02e6c2985b5dce51cce8e6e756271c7761813d93a3a52a2c732294c833be85ce",
+        "input_path": "00cb14ffc63cbe9125329b744a7267223c92ba91abd1e523b0773ef7ed48aa81",
+        "ground_truth_path": "b7dc0472d3f78310c19f18fe888fff534ffe74ca156f36ee6164209365b38aba",
+        "scan_metadata_path": "9e247be1ee97e70602ea838d1a433282ff153065c5b97f5c00dcbe9cfb08b518"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_08",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_B",
+      "layout": "compact",
+      "related_duplicate_case_id": null,
+      "case_seed": 16488230032726623829,
+      "scan_profile": "jpeg_artifacts",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": 48
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_08.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_08.pdf",
+      "input_path": "inputs/corpus_price_anomaly_08.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_08.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_08.json",
+      "sha256": {
+        "original_pdf_path": "9996a165157b5815d3db61cb9e37a25248f076937c41950b0e98001d299310c1",
+        "scanned_pdf_path": "6cf3f992bc0fbcd739315b1af7fffbcb1394fbe7fbdbcd5567580d6173270376",
+        "input_path": "734e60d4dd3be9402399f817e404279186e3acb8b74c86547f38edabc3c948e5",
+        "ground_truth_path": "e8cb079bd39763e6469ff6e81019d8069ed07b60f091596548dcbb1f7cf54139",
+        "scan_metadata_path": "30ca4053810243f8c53b4876d524d33de0a97e89ea1b5ee6a6a2933b3f702496"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_09",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_C",
+      "layout": "purchase_order",
+      "related_duplicate_case_id": null,
+      "case_seed": 8567365416464077600,
+      "scan_profile": "clean_raster",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.0,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_09.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_09.pdf",
+      "input_path": "inputs/corpus_price_anomaly_09.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_09.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_09.json",
+      "sha256": {
+        "original_pdf_path": "2f335ea0a017c5cf4f6ac515a681447b917f0360b46a2a6e085835c27ff80dca",
+        "scanned_pdf_path": "71d59e4bfaa726a67dbe4479df00b3734c9b18164a68cd1d4cd5bd63a6d8447a",
+        "input_path": "da2b5f7ad288400277381b9f5501361465628207402abbc0f271e27a0d5608e7",
+        "ground_truth_path": "658ac306e682efd0b7226cf592bd77fbeaef953dabfd5d0119dbdfe350fb7bcd",
+        "scan_metadata_path": "3c1d7d695fe0de08b8940ba1350052f3e1cb2ffb68da5de0476af1e3998eff67"
+      }
+    },
+    {
+      "case_id": "corpus_price_anomaly_10",
+      "category": "price_anomaly",
+      "supplier_code": "FICT_A",
+      "layout": "traditional",
+      "related_duplicate_case_id": null,
+      "case_seed": 13451186071033180862,
+      "scan_profile": "rotation",
+      "scan_parameters": [
+        {
+          "blur_radius": 0.0,
+          "rotation_degrees": 0.511,
+          "contrast_factor": 1.0,
+          "jpeg_quality": null
+        }
+      ],
+      "original_pdf_path": "original/corpus_price_anomaly_10.pdf",
+      "scanned_pdf_path": "scanned/corpus_price_anomaly_10.pdf",
+      "input_path": "inputs/corpus_price_anomaly_10.json",
+      "ground_truth_path": "ground_truth/corpus_price_anomaly_10.json",
+      "scan_metadata_path": "scan_metadata/corpus_price_anomaly_10.json",
+      "sha256": {
+        "original_pdf_path": "fa627a7453149d0712d4fbd83b52316667a8992a6c401e9a670afe8551c510e2",
+        "scanned_pdf_path": "d463db1556bb5b1219a0a3f9e7bbddfd578e87528f552152bdecff4ea2479350",
+        "input_path": "dc62f76e4a4673a2b3f5695ba19cb5ad86d85fa25bde8ae07f9c2701dbb64d3b",
+        "ground_truth_path": "9b57f5031f40aa72642b68f0ac18155761d82b983a1dfdd1b1f7ec87610aacfb",
+        "scan_metadata_path": "7443cd64b2c3f8b9814d6be44c3f38514920803d6710d13fadc194c1229611d5"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_blurry_scan_08",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-517912BC",
+  "invoice_date": "2029-10-18",
+  "purchase_order_reference": "FICT_A-PO-1F944964",
+  "products": [
+    {
+      "sku": "FICT_A08_2_P1",
+      "description": "Mock disposable drape packet",
+      "upc": "000590154930",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A08_2_P2",
+      "description": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "01657145653"
+    },
+    {
+      "sku": "FICT_A08_2_P3",
+      "description": "Fable practice dressing kit",
+      "upc": "000289244577",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A08_2_P4",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "95884010450"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A08_2_P1",
+      "quantity": 7,
+      "unit_cost": "84.59",
+      "line_total": "592.13"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A08_2_P2",
+      "quantity": 9,
+      "unit_cost": "58.4",
+      "line_total": "525.6"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A08_2_P3",
+      "quantity": 8,
+      "unit_cost": "40.74",
+      "line_total": "325.92"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A08_2_P4",
+      "quantity": 7,
+      "unit_cost": "10.72",
+      "line_total": "75.04"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "1518.69",
+    "tax": "12.1500",
+    "total": "1530.8400"
+  },
+  "scan_blur": true
+}

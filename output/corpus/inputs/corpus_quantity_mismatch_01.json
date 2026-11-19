@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_quantity_mismatch_01",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-510FB5B0",
+  "invoice_date": "2029-08-12",
+  "purchase_order_reference": "FICT_A-PO-8FC39EA8",
+  "products": [
+    {
+      "sku": "FICT_A01_3_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000294057049",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A01_3_P2",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "67199285825"
+    },
+    {
+      "sku": "FICT_A01_3_P3",
+      "description": "Mock clinical swab carton",
+      "upc": "000391770513",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A01_3_P4",
+      "description": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "08588057710"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A01_3_P1",
+      "quantity": 7,
+      "unit_cost": "26.53",
+      "line_total": "185.71"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A01_3_P2",
+      "quantity": 5,
+      "unit_cost": "65.17",
+      "line_total": "325.85"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A01_3_P3",
+      "quantity": 9,
+      "unit_cost": "20.75",
+      "line_total": "186.75"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A01_3_P4",
+      "quantity": 3,
+      "unit_cost": "60.57",
+      "line_total": "181.71"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "880.02",
+    "tax": "5.3500",
+    "total": "885.3700"
+  },
+  "scan_blur": false
+}

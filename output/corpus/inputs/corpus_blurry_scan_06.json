@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_blurry_scan_06",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-8486B360",
+  "invoice_date": "2029-07-28",
+  "purchase_order_reference": "FICT_B-PO-2D838E6F",
+  "products": [
+    {
+      "sku": "FICT_B06_2_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000662635633",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B06_2_P2",
+      "description": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "09449264652"
+    },
+    {
+      "sku": "FICT_B06_2_P3",
+      "description": "Fictional amber storage vial",
+      "upc": "000320044494",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B06_2_P4",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "69603584649"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B06_2_P1",
+      "quantity": 3,
+      "unit_cost": "72.07",
+      "line_total": "216.21"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B06_2_P2",
+      "quantity": 6,
+      "unit_cost": "7.51",
+      "line_total": "45.06"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B06_2_P3",
+      "quantity": 1,
+      "unit_cost": "36.1",
+      "line_total": "36.1"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_B06_2_P4",
+      "quantity": 8,
+      "unit_cost": "48.21",
+      "line_total": "385.68"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "683.05",
+    "tax": "14.7000",
+    "total": "697.7500"
+  },
+  "scan_blur": true
+}

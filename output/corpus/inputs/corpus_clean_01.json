@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_clean_01",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-60E3D154",
+  "invoice_date": "2029-08-13",
+  "purchase_order_reference": "FICT_A-PO-24817E2F",
+  "products": [
+    {
+      "sku": "FICT_A01_0_P1",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000616157204",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A01_0_P2",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "86445260102"
+    },
+    {
+      "sku": "FICT_A01_0_P3",
+      "description": "Fable blue exam sleeve",
+      "upc": "000773378061",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A01_0_P4",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "60020533537"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A01_0_P1",
+      "quantity": 3,
+      "unit_cost": "49.12",
+      "line_total": "147.36"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A01_0_P2",
+      "quantity": 5,
+      "unit_cost": "7.8",
+      "line_total": "39.0"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A01_0_P3",
+      "quantity": 8,
+      "unit_cost": "81.51",
+      "line_total": "652.08"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A01_0_P4",
+      "quantity": 1,
+      "unit_cost": "64.58",
+      "line_total": "64.58"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "903.02",
+    "tax": "5.3600",
+    "total": "908.3800"
+  },
+  "scan_blur": false
+}

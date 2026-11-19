@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_quantity_mismatch_09",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-0CFF8AF0",
+  "invoice_date": "2029-07-26",
+  "purchase_order_reference": "FICT_C-PO-BABF2086",
+  "products": [
+    {
+      "sku": "FICT_C09_3_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000507535142",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C09_3_P2",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "50356302494"
+    },
+    {
+      "sku": "FICT_C09_3_P3",
+      "description": "Imaginary specimen tube bundle",
+      "upc": "000082496562",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C09_3_P1",
+      "quantity": 7,
+      "unit_cost": "43.64",
+      "line_total": "305.48"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C09_3_P2",
+      "quantity": 9,
+      "unit_cost": "73.88",
+      "line_total": "664.92"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C09_3_P3",
+      "quantity": 4,
+      "unit_cost": "73.52",
+      "line_total": "294.08"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "1264.48",
+    "tax": "9.1000",
+    "total": "1273.5800"
+  },
+  "scan_blur": false
+}

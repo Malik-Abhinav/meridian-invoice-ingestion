@@ -1,0 +1,216 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_unknown_product_08",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-5E9E2BBE",
+      "invoice_date": "2029-05-28",
+      "purchase_order_reference": "FICT_A-PO-16CEDFA3",
+      "products": [
+        {
+          "sku": "FICT_A08_5_P1",
+          "description": "Mock disposable drape packet",
+          "upc": "000975121977",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A08_5_P2",
+          "description": "Imaginary specimen tube bundle",
+          "upc": null,
+          "ndc": "12633782878"
+        },
+        {
+          "sku": "FICT_A08_5_P3",
+          "description": "Fictional sterile sample tray",
+          "upc": "000190783929",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A08_5_P4",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "56783742634"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A08_5_P1",
+          "quantity": 3,
+          "unit_cost": "13.64",
+          "line_total": "40.92"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A08_5_P2",
+          "quantity": 7,
+          "unit_cost": "75.9",
+          "line_total": "531.3"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A08_5_P3",
+          "quantity": 5,
+          "unit_cost": "22.73",
+          "line_total": "113.65"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_A08_5_P4",
+          "quantity": 1,
+          "unit_cost": "34.54",
+          "line_total": "34.54"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "720.41",
+        "tax": "5.5700",
+        "total": "725.9800"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "unknown_product",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-5E9E2BBE",
+      "expected_invoice_date": "2029-05-28",
+      "expected_purchase_order_reference": "FICT_A-PO-16CEDFA3",
+      "expected_products": [
+        {
+          "sku": "FICT_A08_5_P1",
+          "description": "Mock disposable drape packet",
+          "upc": "000975121977",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A08_5_P2",
+          "description": "Imaginary specimen tube bundle",
+          "upc": null,
+          "ndc": "12633782878"
+        },
+        {
+          "sku": "FICT_A08_5_P3",
+          "description": "Fictional sterile sample tray",
+          "upc": "000190783929",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A08_5_P4",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "56783742634"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A08_5_P1",
+          "quantity": 3,
+          "unit_cost": "13.64",
+          "line_total": "40.92"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A08_5_P2",
+          "quantity": 7,
+          "unit_cost": "75.9",
+          "line_total": "531.3"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A08_5_P3",
+          "quantity": 5,
+          "unit_cost": "22.73",
+          "line_total": "113.65"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_A08_5_P4",
+          "quantity": 1,
+          "unit_cost": "34.54",
+          "line_total": "34.54"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "720.41",
+        "tax": "5.5700",
+        "total": "725.9800"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [
+        "FICT_A08_5_P1"
+      ],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A08_5_P2",
+      "name": "Imaginary specimen tube bundle",
+      "upc": null,
+      "ndc": "12633782878"
+    },
+    {
+      "id": "FICT_A08_5_P3",
+      "name": "Fictional sterile sample tray",
+      "upc": "000190783929",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A08_5_P4",
+      "name": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "56783742634"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-16CEDFA3",
+    "order_number": "FICT_A-PO-16CEDFA3",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-16CEDFA3:2",
+        "product_id": "FICT_A08_5_P2",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "75.9",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-16CEDFA3:3",
+        "product_id": "FICT_A08_5_P3",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "22.73",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-16CEDFA3:4",
+        "product_id": "FICT_A08_5_P4",
+        "ordered_quantity": 1,
+        "expected_unit_cost": "34.54",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "unknown_product"
+  ],
+  "duplicate_relationship": null
+}

@@ -1,0 +1,190 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_price_anomaly_10",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-D39D72BE",
+      "invoice_date": "2029-01-07",
+      "purchase_order_reference": "FICT_A-PO-BAAC3676",
+      "products": [
+        {
+          "sku": "FICT_A10_6_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000750222905",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A10_6_P2",
+          "description": "Mock disposable drape packet",
+          "upc": null,
+          "ndc": "69982989634"
+        },
+        {
+          "sku": "FICT_A10_6_P3",
+          "description": "Fictional sterile sample tray",
+          "upc": "000518755348",
+          "ndc": null
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A10_6_P1",
+          "quantity": 3,
+          "unit_cost": "71.59",
+          "line_total": "214.77"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A10_6_P2",
+          "quantity": 5,
+          "unit_cost": "35.54",
+          "line_total": "177.70"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A10_6_P3",
+          "quantity": 3,
+          "unit_cost": "13.52",
+          "line_total": "40.56"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "433.03",
+        "tax": "12.6300",
+        "total": "445.6600"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "price_anomaly",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-D39D72BE",
+      "expected_invoice_date": "2029-01-07",
+      "expected_purchase_order_reference": "FICT_A-PO-BAAC3676",
+      "expected_products": [
+        {
+          "sku": "FICT_A10_6_P1",
+          "description": "Fictional absorbent pad case",
+          "upc": "000750222905",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A10_6_P2",
+          "description": "Mock disposable drape packet",
+          "upc": null,
+          "ndc": "69982989634"
+        },
+        {
+          "sku": "FICT_A10_6_P3",
+          "description": "Fictional sterile sample tray",
+          "upc": "000518755348",
+          "ndc": null
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A10_6_P1",
+          "quantity": 3,
+          "unit_cost": "71.59",
+          "line_total": "214.77"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A10_6_P2",
+          "quantity": 5,
+          "unit_cost": "35.54",
+          "line_total": "177.70"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_A10_6_P3",
+          "quantity": 3,
+          "unit_cost": "13.52",
+          "line_total": "40.56"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "433.03",
+        "tax": "12.6300",
+        "total": "445.6600"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {
+        "1": "72.5900"
+      }
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A10_6_P1",
+      "name": "Fictional absorbent pad case",
+      "upc": "000750222905",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A10_6_P2",
+      "name": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "69982989634"
+    },
+    {
+      "id": "FICT_A10_6_P3",
+      "name": "Fictional sterile sample tray",
+      "upc": "000518755348",
+      "ndc": null
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-BAAC3676",
+    "order_number": "FICT_A-PO-BAAC3676",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-BAAC3676:1",
+        "product_id": "FICT_A10_6_P1",
+        "ordered_quantity": 3,
+        "expected_unit_cost": "72.5900",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-BAAC3676:2",
+        "product_id": "FICT_A10_6_P2",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "35.54",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-BAAC3676:3",
+        "product_id": "FICT_A10_6_P3",
+        "ordered_quantity": 3,
+        "expected_unit_cost": "13.52",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "po_price_mismatch"
+  ],
+  "duplicate_relationship": null
+}

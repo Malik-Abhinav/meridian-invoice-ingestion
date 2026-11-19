@@ -1,0 +1,136 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_unknown_product_05",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-F780532B",
+      "invoice_date": "2029-03-05",
+      "purchase_order_reference": "FICT_A-PO-79302EFE",
+      "products": [
+        {
+          "sku": "FICT_A05_5_P1",
+          "description": "Fictional amber storage vial",
+          "upc": "000535901476",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A05_5_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "67027136082"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A05_5_P1",
+          "quantity": 1,
+          "unit_cost": "27.02",
+          "line_total": "27.02"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A05_5_P2",
+          "quantity": 6,
+          "unit_cost": "6.87",
+          "line_total": "41.22"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "68.24",
+        "tax": "8.9100",
+        "total": "77.1500"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "unknown_product",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-F780532B",
+      "expected_invoice_date": "2029-03-05",
+      "expected_purchase_order_reference": "FICT_A-PO-79302EFE",
+      "expected_products": [
+        {
+          "sku": "FICT_A05_5_P1",
+          "description": "Fictional amber storage vial",
+          "upc": "000535901476",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A05_5_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "67027136082"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A05_5_P1",
+          "quantity": 1,
+          "unit_cost": "27.02",
+          "line_total": "27.02"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A05_5_P2",
+          "quantity": 6,
+          "unit_cost": "6.87",
+          "line_total": "41.22"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "68.24",
+        "tax": "8.9100",
+        "total": "77.1500"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [
+        "FICT_A05_5_P1"
+      ],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A05_5_P2",
+      "name": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "67027136082"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-79302EFE",
+    "order_number": "FICT_A-PO-79302EFE",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-79302EFE:2",
+        "product_id": "FICT_A05_5_P2",
+        "ordered_quantity": 6,
+        "expected_unit_cost": "6.87",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "unknown_product"
+  ],
+  "duplicate_relationship": null
+}

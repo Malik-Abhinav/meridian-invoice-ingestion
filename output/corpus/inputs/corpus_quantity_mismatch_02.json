@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_quantity_mismatch_02",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-C118C742",
+  "invoice_date": "2029-11-20",
+  "purchase_order_reference": "FICT_B-PO-7FD3737B",
+  "products": [
+    {
+      "sku": "FICT_B02_3_P1",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000383695268",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B02_3_P2",
+      "description": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "30377183327"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B02_3_P1",
+      "quantity": 5,
+      "unit_cost": "20.83",
+      "line_total": "104.15"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B02_3_P2",
+      "quantity": 9,
+      "unit_cost": "46.31",
+      "line_total": "416.79"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "520.94",
+    "tax": "0.3400",
+    "total": "521.2800"
+  },
+  "scan_blur": false
+}

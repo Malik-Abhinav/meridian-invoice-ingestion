@@ -1,0 +1,186 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_clean_05",
+      "supplier": {
+        "code": "FICT_B",
+        "name": "Fable Ridge Distribution",
+        "fictional": true,
+        "layout": "compact"
+      },
+      "invoice_number": "FICT_B-INV-481F1A6A",
+      "invoice_date": "2029-04-26",
+      "purchase_order_reference": "FICT_B-PO-4FE8EE88",
+      "products": [
+        {
+          "sku": "FICT_B05_0_P1",
+          "description": "Mock clinical swab carton",
+          "upc": "000931141117",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B05_0_P2",
+          "description": "Imaginary nitrile sample box",
+          "upc": null,
+          "ndc": "24608596173"
+        },
+        {
+          "sku": "FICT_B05_0_P3",
+          "description": "Imaginary nitrile sample box",
+          "upc": "000692641536",
+          "ndc": null
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B05_0_P1",
+          "quantity": 1,
+          "unit_cost": "77.95",
+          "line_total": "77.95"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B05_0_P2",
+          "quantity": 6,
+          "unit_cost": "82.34",
+          "line_total": "494.04"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B05_0_P3",
+          "quantity": 7,
+          "unit_cost": "50.65",
+          "line_total": "354.55"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "926.54",
+        "tax": "12.2500",
+        "total": "938.7900"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "clean",
+      "expected_supplier_code": "FICT_B",
+      "expected_invoice_number": "FICT_B-INV-481F1A6A",
+      "expected_invoice_date": "2029-04-26",
+      "expected_purchase_order_reference": "FICT_B-PO-4FE8EE88",
+      "expected_products": [
+        {
+          "sku": "FICT_B05_0_P1",
+          "description": "Mock clinical swab carton",
+          "upc": "000931141117",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B05_0_P2",
+          "description": "Imaginary nitrile sample box",
+          "upc": null,
+          "ndc": "24608596173"
+        },
+        {
+          "sku": "FICT_B05_0_P3",
+          "description": "Imaginary nitrile sample box",
+          "upc": "000692641536",
+          "ndc": null
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B05_0_P1",
+          "quantity": 1,
+          "unit_cost": "77.95",
+          "line_total": "77.95"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B05_0_P2",
+          "quantity": 6,
+          "unit_cost": "82.34",
+          "line_total": "494.04"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B05_0_P3",
+          "quantity": 7,
+          "unit_cost": "50.65",
+          "line_total": "354.55"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "926.54",
+        "tax": "12.2500",
+        "total": "938.7900"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_B",
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_B05_0_P1",
+      "name": "Mock clinical swab carton",
+      "upc": "000931141117",
+      "ndc": null
+    },
+    {
+      "id": "FICT_B05_0_P2",
+      "name": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "24608596173"
+    },
+    {
+      "id": "FICT_B05_0_P3",
+      "name": "Imaginary nitrile sample box",
+      "upc": "000692641536",
+      "ndc": null
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_B-PO-4FE8EE88",
+    "order_number": "FICT_B-PO-4FE8EE88",
+    "supplier_id": "FICT_B",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_B-PO-4FE8EE88:1",
+        "product_id": "FICT_B05_0_P1",
+        "ordered_quantity": 1,
+        "expected_unit_cost": "77.95",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-4FE8EE88:2",
+        "product_id": "FICT_B05_0_P2",
+        "ordered_quantity": 6,
+        "expected_unit_cost": "82.34",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-4FE8EE88:3",
+        "product_id": "FICT_B05_0_P3",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "50.65",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [],
+  "duplicate_relationship": null
+}

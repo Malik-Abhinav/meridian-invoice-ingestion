@@ -1,0 +1,29 @@
+{
+  "source_case_id": "corpus_blurry_scan_04",
+  "source_invoice_number": "FICT_C-INV-AD3116D9",
+  "source_pdf_sha256": "19ee725156dd2e443792775664458afc2b543b1a5fe8b3aed227f65f5caa017d",
+  "supplier_code": "FICT_C",
+  "supplier_template": "purchase_order",
+  "degradation_type": "combined",
+  "random_seed": 3556303507486217945,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "63163fd98296480049785bd1c78811ae984ba3ac0e52548785b67e53a86a0c82",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 13418153638847283665,
+      "source_width_px": 827,
+      "source_height_px": 1170,
+      "width_px": 841,
+      "height_px": 1180,
+      "resolution_dpi": 100,
+      "parameters": {
+        "blur_radius": 1.0,
+        "rotation_degrees": -0.611,
+        "contrast_factor": 0.78,
+        "jpeg_quality": 55
+      }
+    }
+  ]
+}

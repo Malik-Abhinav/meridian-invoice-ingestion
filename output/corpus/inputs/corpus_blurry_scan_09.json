@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_blurry_scan_09",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-463E7AE4",
+  "invoice_date": "2029-09-23",
+  "purchase_order_reference": "FICT_B-PO-B01239A5",
+  "products": [
+    {
+      "sku": "FICT_B09_2_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000699200545",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B09_2_P2",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "98224770695"
+    },
+    {
+      "sku": "FICT_B09_2_P3",
+      "description": "Fictional amber storage vial",
+      "upc": "000019035239",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B09_2_P1",
+      "quantity": 8,
+      "unit_cost": "83.84",
+      "line_total": "670.72"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B09_2_P2",
+      "quantity": 2,
+      "unit_cost": "20.72",
+      "line_total": "41.44"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B09_2_P3",
+      "quantity": 8,
+      "unit_cost": "28.85",
+      "line_total": "230.80"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "942.96",
+    "tax": "5.9500",
+    "total": "948.9100"
+  },
+  "scan_blur": true
+}

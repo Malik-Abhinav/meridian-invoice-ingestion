@@ -1,0 +1,186 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_missing_totals_05",
+      "supplier": {
+        "code": "FICT_C",
+        "name": "Northstar Fictional Supply",
+        "fictional": true,
+        "layout": "purchase_order"
+      },
+      "invoice_number": "FICT_C-INV-58AE8CF1",
+      "invoice_date": "2029-06-02",
+      "purchase_order_reference": "FICT_C-PO-75B83511",
+      "products": [
+        {
+          "sku": "FICT_C05_1_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000178358897",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C05_1_P2",
+          "description": "Fictional sterile sample tray",
+          "upc": null,
+          "ndc": "80888184746"
+        },
+        {
+          "sku": "FICT_C05_1_P3",
+          "description": "Imaginary specimen tube bundle",
+          "upc": "000511536111",
+          "ndc": null
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C05_1_P1",
+          "quantity": 7,
+          "unit_cost": "67.14",
+          "line_total": "469.98"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C05_1_P2",
+          "quantity": 5,
+          "unit_cost": "17.61",
+          "line_total": "88.05"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_C05_1_P3",
+          "quantity": 3,
+          "unit_cost": "57.95",
+          "line_total": "173.85"
+        }
+      ],
+      "displayed_totals": null,
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "missing_totals",
+      "expected_supplier_code": "FICT_C",
+      "expected_invoice_number": "FICT_C-INV-58AE8CF1",
+      "expected_invoice_date": "2029-06-02",
+      "expected_purchase_order_reference": "FICT_C-PO-75B83511",
+      "expected_products": [
+        {
+          "sku": "FICT_C05_1_P1",
+          "description": "Imaginary gauze demonstration pack",
+          "upc": "000178358897",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_C05_1_P2",
+          "description": "Fictional sterile sample tray",
+          "upc": null,
+          "ndc": "80888184746"
+        },
+        {
+          "sku": "FICT_C05_1_P3",
+          "description": "Imaginary specimen tube bundle",
+          "upc": "000511536111",
+          "ndc": null
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_C05_1_P1",
+          "quantity": 7,
+          "unit_cost": "67.14",
+          "line_total": "469.98"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_C05_1_P2",
+          "quantity": 5,
+          "unit_cost": "17.61",
+          "line_total": "88.05"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_C05_1_P3",
+          "quantity": 3,
+          "unit_cost": "57.95",
+          "line_total": "173.85"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "731.88",
+        "tax": "7.1700",
+        "total": "739.0500"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_C",
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_C05_1_P1",
+      "name": "Imaginary gauze demonstration pack",
+      "upc": "000178358897",
+      "ndc": null
+    },
+    {
+      "id": "FICT_C05_1_P2",
+      "name": "Fictional sterile sample tray",
+      "upc": null,
+      "ndc": "80888184746"
+    },
+    {
+      "id": "FICT_C05_1_P3",
+      "name": "Imaginary specimen tube bundle",
+      "upc": "000511536111",
+      "ndc": null
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_C-PO-75B83511",
+    "order_number": "FICT_C-PO-75B83511",
+    "supplier_id": "FICT_C",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_C-PO-75B83511:1",
+        "product_id": "FICT_C05_1_P1",
+        "ordered_quantity": 7,
+        "expected_unit_cost": "67.14",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-75B83511:2",
+        "product_id": "FICT_C05_1_P2",
+        "ordered_quantity": 5,
+        "expected_unit_cost": "17.61",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_C-PO-75B83511:3",
+        "product_id": "FICT_C05_1_P3",
+        "ordered_quantity": 3,
+        "expected_unit_cost": "57.95",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [
+    "missing_subtotal",
+    "missing_tax",
+    "missing_total"
+  ],
+  "expected_reconciliation_codes": [],
+  "duplicate_relationship": null
+}

@@ -1,0 +1,61 @@
+{
+  "case_id": "corpus_clean_07",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-9A3E439E",
+  "invoice_date": "2029-02-19",
+  "purchase_order_reference": "FICT_A-PO-C95BC1F7",
+  "products": [
+    {
+      "sku": "FICT_A07_0_P1",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000496571091",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A07_0_P2",
+      "description": "Fictional absorbent pad case",
+      "upc": null,
+      "ndc": "31442174742"
+    },
+    {
+      "sku": "FICT_A07_0_P3",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000873598086",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A07_0_P1",
+      "quantity": 2,
+      "unit_cost": "81.37",
+      "line_total": "162.74"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A07_0_P2",
+      "quantity": 9,
+      "unit_cost": "49.95",
+      "line_total": "449.55"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A07_0_P3",
+      "quantity": 5,
+      "unit_cost": "29.73",
+      "line_total": "148.65"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "760.94",
+    "tax": "7.0700",
+    "total": "768.0100"
+  },
+  "scan_blur": false
+}

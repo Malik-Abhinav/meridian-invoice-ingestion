@@ -1,0 +1,57 @@
+{
+  "case_id": "corpus_missing_totals_07",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-ED6BDCF1",
+  "invoice_date": "2029-12-10",
+  "purchase_order_reference": "FICT_B-PO-8264F1D3",
+  "products": [
+    {
+      "sku": "FICT_B07_1_P1",
+      "description": "Fable blue exam sleeve",
+      "upc": "000739269334",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B07_1_P2",
+      "description": "Fable practice dressing kit",
+      "upc": null,
+      "ndc": "37133011428"
+    },
+    {
+      "sku": "FICT_B07_1_P3",
+      "description": "Imaginary specimen tube bundle",
+      "upc": "000949183208",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B07_1_P1",
+      "quantity": 1,
+      "unit_cost": "75.63",
+      "line_total": "75.63"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B07_1_P2",
+      "quantity": 9,
+      "unit_cost": "10.54",
+      "line_total": "94.86"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_B07_1_P3",
+      "quantity": 2,
+      "unit_cost": "28.48",
+      "line_total": "56.96"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

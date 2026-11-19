@@ -1,0 +1,216 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_unknown_product_06",
+      "supplier": {
+        "code": "FICT_B",
+        "name": "Fable Ridge Distribution",
+        "fictional": true,
+        "layout": "compact"
+      },
+      "invoice_number": "FICT_B-INV-523695AE",
+      "invoice_date": "2029-06-24",
+      "purchase_order_reference": "FICT_B-PO-DD3C429A",
+      "products": [
+        {
+          "sku": "FICT_B06_5_P1",
+          "description": "Mock disposable drape packet",
+          "upc": "000886849557",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B06_5_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "79109571627"
+        },
+        {
+          "sku": "FICT_B06_5_P3",
+          "description": "Fable blue exam sleeve",
+          "upc": "000616729739",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B06_5_P4",
+          "description": "Mock disposable drape packet",
+          "upc": null,
+          "ndc": "73417536357"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B06_5_P1",
+          "quantity": 3,
+          "unit_cost": "31.46",
+          "line_total": "94.38"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B06_5_P2",
+          "quantity": 8,
+          "unit_cost": "54.01",
+          "line_total": "432.08"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B06_5_P3",
+          "quantity": 4,
+          "unit_cost": "73.27",
+          "line_total": "293.08"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_B06_5_P4",
+          "quantity": 2,
+          "unit_cost": "5.42",
+          "line_total": "10.84"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "830.38",
+        "tax": "4.2400",
+        "total": "834.6200"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "unknown_product",
+      "expected_supplier_code": "FICT_B",
+      "expected_invoice_number": "FICT_B-INV-523695AE",
+      "expected_invoice_date": "2029-06-24",
+      "expected_purchase_order_reference": "FICT_B-PO-DD3C429A",
+      "expected_products": [
+        {
+          "sku": "FICT_B06_5_P1",
+          "description": "Mock disposable drape packet",
+          "upc": "000886849557",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B06_5_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "79109571627"
+        },
+        {
+          "sku": "FICT_B06_5_P3",
+          "description": "Fable blue exam sleeve",
+          "upc": "000616729739",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_B06_5_P4",
+          "description": "Mock disposable drape packet",
+          "upc": null,
+          "ndc": "73417536357"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_B06_5_P1",
+          "quantity": 3,
+          "unit_cost": "31.46",
+          "line_total": "94.38"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_B06_5_P2",
+          "quantity": 8,
+          "unit_cost": "54.01",
+          "line_total": "432.08"
+        },
+        {
+          "line_number": 3,
+          "product_sku": "FICT_B06_5_P3",
+          "quantity": 4,
+          "unit_cost": "73.27",
+          "line_total": "293.08"
+        },
+        {
+          "line_number": 4,
+          "product_sku": "FICT_B06_5_P4",
+          "quantity": 2,
+          "unit_cost": "5.42",
+          "line_total": "10.84"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "830.38",
+        "tax": "4.2400",
+        "total": "834.6200"
+      },
+      "duplicate_of_case_id": null,
+      "unknown_product_skus": [
+        "FICT_B06_5_P1"
+      ],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_B",
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_B06_5_P2",
+      "name": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "79109571627"
+    },
+    {
+      "id": "FICT_B06_5_P3",
+      "name": "Fable blue exam sleeve",
+      "upc": "000616729739",
+      "ndc": null
+    },
+    {
+      "id": "FICT_B06_5_P4",
+      "name": "Mock disposable drape packet",
+      "upc": null,
+      "ndc": "73417536357"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_B-PO-DD3C429A",
+    "order_number": "FICT_B-PO-DD3C429A",
+    "supplier_id": "FICT_B",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_B-PO-DD3C429A:2",
+        "product_id": "FICT_B06_5_P2",
+        "ordered_quantity": 8,
+        "expected_unit_cost": "54.01",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-DD3C429A:3",
+        "product_id": "FICT_B06_5_P3",
+        "ordered_quantity": 4,
+        "expected_unit_cost": "73.27",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_B-PO-DD3C429A:4",
+        "product_id": "FICT_B06_5_P4",
+        "ordered_quantity": 2,
+        "expected_unit_cost": "5.42",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "unknown_product"
+  ],
+  "duplicate_relationship": null
+}

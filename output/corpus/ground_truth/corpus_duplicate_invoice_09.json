@@ -1,0 +1,165 @@
+{
+  "case": {
+    "generation": {
+      "case_id": "corpus_duplicate_invoice_09",
+      "supplier": {
+        "code": "FICT_A",
+        "name": "Imaginary Harbor Wholesale",
+        "fictional": true,
+        "layout": "traditional"
+      },
+      "invoice_number": "FICT_A-INV-66CED207",
+      "invoice_date": "2029-06-23",
+      "purchase_order_reference": "FICT_A-PO-DE1E01E7",
+      "products": [
+        {
+          "sku": "FICT_A10_0_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000458685811",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A10_0_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "63843100763"
+        }
+      ],
+      "lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A10_0_P1",
+          "quantity": 6,
+          "unit_cost": "60.48",
+          "line_total": "362.88"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A10_0_P2",
+          "quantity": 3,
+          "unit_cost": "67.51",
+          "line_total": "202.53"
+        }
+      ],
+      "displayed_totals": {
+        "subtotal": "565.41",
+        "tax": "11.5300",
+        "total": "576.9400"
+      },
+      "scan_blur": false
+    },
+    "ground_truth": {
+      "category": "duplicate_invoice",
+      "expected_supplier_code": "FICT_A",
+      "expected_invoice_number": "FICT_A-INV-66CED207",
+      "expected_invoice_date": "2029-06-23",
+      "expected_purchase_order_reference": "FICT_A-PO-DE1E01E7",
+      "expected_products": [
+        {
+          "sku": "FICT_A10_0_P1",
+          "description": "Fable blue exam sleeve",
+          "upc": "000458685811",
+          "ndc": null
+        },
+        {
+          "sku": "FICT_A10_0_P2",
+          "description": "Mock clinical swab carton",
+          "upc": null,
+          "ndc": "63843100763"
+        }
+      ],
+      "expected_lines": [
+        {
+          "line_number": 1,
+          "product_sku": "FICT_A10_0_P1",
+          "quantity": 6,
+          "unit_cost": "60.48",
+          "line_total": "362.88"
+        },
+        {
+          "line_number": 2,
+          "product_sku": "FICT_A10_0_P2",
+          "quantity": 3,
+          "unit_cost": "67.51",
+          "line_total": "202.53"
+        }
+      ],
+      "expected_totals": {
+        "subtotal": "565.41",
+        "tax": "11.5300",
+        "total": "576.9400"
+      },
+      "duplicate_of_case_id": "corpus_clean_10",
+      "unknown_product_skus": [],
+      "po_quantities": {},
+      "reference_unit_costs": {}
+    }
+  },
+  "trusted_supplier": {
+    "id": "FICT_A",
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "aliases": []
+  },
+  "trusted_products": [
+    {
+      "id": "FICT_A10_0_P1",
+      "name": "Fable blue exam sleeve",
+      "upc": "000458685811",
+      "ndc": null
+    },
+    {
+      "id": "FICT_A10_0_P2",
+      "name": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "63843100763"
+    }
+  ],
+  "trusted_po": {
+    "id": "FICT_A-PO-DE1E01E7",
+    "order_number": "FICT_A-PO-DE1E01E7",
+    "supplier_id": "FICT_A",
+    "status": "open",
+    "lines": [
+      {
+        "id": "FICT_A-PO-DE1E01E7:1",
+        "product_id": "FICT_A10_0_P1",
+        "ordered_quantity": 6,
+        "expected_unit_cost": "60.48",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      },
+      {
+        "id": "FICT_A-PO-DE1E01E7:2",
+        "product_id": "FICT_A10_0_P2",
+        "ordered_quantity": 3,
+        "expected_unit_cost": "67.51",
+        "received_quantity": 0,
+        "receipt_history_complete": true
+      }
+    ]
+  },
+  "prior_invoices": [
+    {
+      "id": "prior:corpus_clean_10",
+      "supplier_id": "FICT_A",
+      "invoice_number_normalized": "FICT_A-INV-66CED207",
+      "source_sha256": "887f7809109cd3c0ba6c00a926b44b86a91f9905f518a22ef474b8f9168d0b74",
+      "status": "validated"
+    },
+    {
+      "id": "prior:repeat:corpus_duplicate_invoice_09",
+      "supplier_id": "FICT_A",
+      "invoice_number_normalized": "FICT_A-INV-66CED207",
+      "source_sha256": "3db79d4d3d5a8882c5326fcd43af1b8060eb6ef26f47c8c0624f320f8c68e5c6",
+      "status": "validated"
+    }
+  ],
+  "expected_validation_codes": [],
+  "expected_reconciliation_codes": [
+    "duplicate_invoice_identity",
+    "exact_repeat_submission",
+    "conflicting_invoice_document"
+  ],
+  "duplicate_relationship": "distinct_bytes_same_identity"
+}

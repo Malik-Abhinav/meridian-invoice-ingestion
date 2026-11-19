@@ -1,0 +1,74 @@
+{
+  "case_id": "corpus_quantity_mismatch_04",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-2EFB5899",
+  "invoice_date": "2029-09-21",
+  "purchase_order_reference": "FICT_A-PO-1DE8176D",
+  "products": [
+    {
+      "sku": "FICT_A04_3_P1",
+      "description": "Fictional sterile sample tray",
+      "upc": "000970601559",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A04_3_P2",
+      "description": "Imaginary nitrile sample box",
+      "upc": null,
+      "ndc": "57584331810"
+    },
+    {
+      "sku": "FICT_A04_3_P3",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": "000339654349",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A04_3_P4",
+      "description": "Imaginary specimen tube bundle",
+      "upc": null,
+      "ndc": "90540102798"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A04_3_P1",
+      "quantity": 8,
+      "unit_cost": "55.64",
+      "line_total": "445.12"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A04_3_P2",
+      "quantity": 1,
+      "unit_cost": "64.48",
+      "line_total": "64.48"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_A04_3_P3",
+      "quantity": 4,
+      "unit_cost": "39.78",
+      "line_total": "159.12"
+    },
+    {
+      "line_number": 4,
+      "product_sku": "FICT_A04_3_P4",
+      "quantity": 8,
+      "unit_cost": "11.28",
+      "line_total": "90.24"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "758.96",
+    "tax": "3.5300",
+    "total": "762.4900"
+  },
+  "scan_blur": false
+}

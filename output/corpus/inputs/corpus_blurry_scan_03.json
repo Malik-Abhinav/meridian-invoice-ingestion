@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_blurry_scan_03",
+  "supplier": {
+    "code": "FICT_B",
+    "name": "Fable Ridge Distribution",
+    "fictional": true,
+    "layout": "compact"
+  },
+  "invoice_number": "FICT_B-INV-25599793",
+  "invoice_date": "2029-08-30",
+  "purchase_order_reference": "FICT_B-PO-2E163F39",
+  "products": [
+    {
+      "sku": "FICT_B03_2_P1",
+      "description": "Fictional amber storage vial",
+      "upc": "000532805203",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_B03_2_P2",
+      "description": "Imaginary gauze demonstration pack",
+      "upc": null,
+      "ndc": "48415786897"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_B03_2_P1",
+      "quantity": 4,
+      "unit_cost": "33.3",
+      "line_total": "133.2"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_B03_2_P2",
+      "quantity": 1,
+      "unit_cost": "54.33",
+      "line_total": "54.33"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "187.53",
+    "tax": "9.4700",
+    "total": "197.0000"
+  },
+  "scan_blur": true
+}

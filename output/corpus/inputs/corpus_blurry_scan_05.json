@@ -1,0 +1,48 @@
+{
+  "case_id": "corpus_blurry_scan_05",
+  "supplier": {
+    "code": "FICT_A",
+    "name": "Imaginary Harbor Wholesale",
+    "fictional": true,
+    "layout": "traditional"
+  },
+  "invoice_number": "FICT_A-INV-0C52D95B",
+  "invoice_date": "2029-12-08",
+  "purchase_order_reference": "FICT_A-PO-E6497EB0",
+  "products": [
+    {
+      "sku": "FICT_A05_2_P1",
+      "description": "Mock disposable drape packet",
+      "upc": "000649159657",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_A05_2_P2",
+      "description": "Fable blue exam sleeve",
+      "upc": null,
+      "ndc": "46841044013"
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_A05_2_P1",
+      "quantity": 6,
+      "unit_cost": "51.99",
+      "line_total": "311.94"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_A05_2_P2",
+      "quantity": 6,
+      "unit_cost": "76.14",
+      "line_total": "456.84"
+    }
+  ],
+  "displayed_totals": {
+    "subtotal": "768.78",
+    "tax": "11.9000",
+    "total": "780.6800"
+  },
+  "scan_blur": true
+}

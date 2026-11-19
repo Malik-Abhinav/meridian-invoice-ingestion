@@ -1,0 +1,57 @@
+{
+  "case_id": "corpus_missing_totals_02",
+  "supplier": {
+    "code": "FICT_C",
+    "name": "Northstar Fictional Supply",
+    "fictional": true,
+    "layout": "purchase_order"
+  },
+  "invoice_number": "FICT_C-INV-DACF5F22",
+  "invoice_date": "2029-07-11",
+  "purchase_order_reference": "FICT_C-PO-DC00E795",
+  "products": [
+    {
+      "sku": "FICT_C02_1_P1",
+      "description": "Imaginary nitrile sample box",
+      "upc": "000171840368",
+      "ndc": null
+    },
+    {
+      "sku": "FICT_C02_1_P2",
+      "description": "Mock clinical swab carton",
+      "upc": null,
+      "ndc": "34693485202"
+    },
+    {
+      "sku": "FICT_C02_1_P3",
+      "description": "Fable practice dressing kit",
+      "upc": "000029636686",
+      "ndc": null
+    }
+  ],
+  "lines": [
+    {
+      "line_number": 1,
+      "product_sku": "FICT_C02_1_P1",
+      "quantity": 5,
+      "unit_cost": "12.3",
+      "line_total": "61.5"
+    },
+    {
+      "line_number": 2,
+      "product_sku": "FICT_C02_1_P2",
+      "quantity": 5,
+      "unit_cost": "44.01",
+      "line_total": "220.05"
+    },
+    {
+      "line_number": 3,
+      "product_sku": "FICT_C02_1_P3",
+      "quantity": 1,
+      "unit_cost": "9.59",
+      "line_total": "9.59"
+    }
+  ],
+  "displayed_totals": null,
+  "scan_blur": false
+}

@@ -1,0 +1,29 @@
+{
+  "source_case_id": "corpus_unknown_product_04",
+  "source_invoice_number": "FICT_C-INV-0F4E421C",
+  "source_pdf_sha256": "005230624f0fb711021a8733ff41042845edaac0c711ad94525cf6d10c3d9445",
+  "supplier_code": "FICT_C",
+  "supplier_template": "purchase_order",
+  "degradation_type": "clean_raster",
+  "random_seed": 3021759795096863260,
+  "output_format": "pdf",
+  "scanned_pdf_sha256": "b35daf2547c6d571655a2391b8e743cfda5887b26716195292e061b27c69fd99",
+  "page_count": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "page_seed": 377023876786977339,
+      "source_width_px": 827,
+      "source_height_px": 1170,
+      "width_px": 827,
+      "height_px": 1170,
+      "resolution_dpi": 100,
+      "parameters": {
+        "blur_radius": 0.0,
+        "rotation_degrees": 0.0,
+        "contrast_factor": 1.0,
+        "jpeg_quality": null
+      }
+    }
+  ]
+}
